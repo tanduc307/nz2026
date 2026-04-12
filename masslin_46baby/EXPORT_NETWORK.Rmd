@@ -1,0 +1,268 @@
+---
+title: "EXPORT_NETWORK"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# NETWORK 
+
+
+```{r}
+df_clean_SCFA <- read.csv("df_clean_SCFA.csv")
+
+df_clean_species <- read.csv("df_clean_species.csv")
+
+df_clean_pathway <- read.csv("df_clean_pathway.csv")
+
+df_clean_cell <- read.csv("df_clean_cell.csv")
+```
+
+
+```{r}
+df_SCFA_ready <- read.csv("df_SCFA_ready.csv")
+
+df_species_ready <- read.csv("df_species_ready.csv")
+
+df_pathway_ready <- read.csv("df_pathway_ready.csv")
+
+df_cell_ready <- read.csv("df_cell_ready.csv")
+
+df_all <- read.csv("df_all_raw.csv")
+
+data_cor <- read.csv("data_cor_spearman_46baby.csv")
+
+names(data_cor) <- c("Var1", "Var2", "cor",   "p", "FDR")
+
+length(unique( c(data_cor$Var1, data_cor$Var2) ))
+```
+
+```{r}
+dim(data_cor)
+
+data_cor_clean <- data_cor
+
+data_cor_clean <- as.data.frame(data_cor_clean)
+data_butyric <- data_cor_clean |> subset(Var1 == "butyrate" | Var2 == "butyrate")
+data_butyric
+# data_cor_clean <- data_cor |> subset((cor > 0.05 | cor < -0.05) )
+
+data_cor_clean$Var1 <- as.character(data_cor_clean$Var1)
+data_cor_clean$Var2 <- as.character(data_cor_clean$Var2)
+# data_cor_clean <- data_cor
+
+data_cor_clean[ , 1:3] -> links
+
+names(links) <- c("source", "target", "importance")
+
+
+```
+
+
+```{r}
+unique_all_col <- c(data_cor_clean$Var1, data_cor_clean$Var2)
+
+unique_all_col <- as.character(unique_all_col)
+
+unique_all_col <- unique(unique_all_col)
+
+unique_all_col %in% names(df_all)
+
+data_node <- data.frame(node = unique_all_col,
+                        type = NA)
+
+data_node$type[which(data_node$node %in% names(df_SCFA_ready))] <- "SCFA"
+
+data_node$type[which(data_node$node %in% names(df_species_ready))] <- "species"
+
+data_node$type[which(data_node$node %in% names(df_pathway_ready))] <- "pathway"
+
+data_node$type[which(data_node$node %in% names(df_cell_ready))] <- "cell"
+
+data_node[ , ]  -> nodes
+
+names(nodes) <- c("name", "carac")
+```
+
+
+
+```{r}
+# setdiff(links$source, links$target)
+# 
+# setdiff(links$target, links$source)
+
+nodes[which(nodes$name %in% union(links$target, links$source)), ] -> nodes
+
+nodes |> dplyr:::arrange(carac) -> nodes
+```
+
+
+
+```{r}
+# head(df_clean_SCFA)
+# head(df_clean_species)
+# head(df_clean_pathway)
+
+
+df_clean_pathway <- df_clean_pathway |> subset(metadata == "Termness")
+
+df_clean_species <- df_clean_species |> subset(metadata == "Termness")
+
+df_clean_SCFA <- df_clean_SCFA |> subset(metadata == "Termness")
+
+df_clean_cell <- df_clean_cell |> subset(metadata == "Termness")
+
+df_coef_master <- rbind(df_clean_SCFA[ , c(1,5)],
+                        df_clean_cell[ , c(1,5)],
+                        df_clean_pathway[ , c(1,5)],
+                        df_clean_species[ , c(1,5)]
+                     
+                        )
+
+
+names(df_coef_master) <- c("name", "coef")
+
+setdiff(df_coef_master$name, nodes$name)
+
+setdiff(nodes$name, df_coef_master$name)
+
+nodes_merge <- merge(x = nodes,
+                     y = df_coef_master,
+                     all.x = T,
+                     by = "name")
+
+nodes_merge$name <- as.character(nodes_merge$name)
+
+nodes_merge |> dplyr:::arrange(carac) -> nodes_merge
+
+nodes_merge$term_col <- ifelse(nodes_merge$coef >= 0,
+                           "preterm",
+                           "term")
+
+```
+
+
+```{r}
+library(igraph)
+# Turn it into igraph object
+network <- graph_from_data_frame(d=links, 
+                                 vertices=nodes,
+                                 directed = T) 
+
+deg <- degree(network, mode="all")
+
+summary(deg)
+
+# deg <- sqrt(deg)
+# 
+# deg + 0.1 -> deg
+
+df_deg <- as.data.frame(deg)
+```
+
+
+```{r}
+unclass(V(network)) -> vec_chuan
+
+names(vec_chuan) -> order_vec_chuan
+```
+
+```{r}
+nodes_merge <- nodes_merge[  order(match(nodes_merge$name, order_vec_chuan)) ,  ]
+
+identical(order_vec_chuan, nodes_merge$name)
+
+setdiff(order_vec_chuan,
+        nodes_merge$name)
+
+setdiff(nodes_merge$name,
+        order_vec_chuan)
+
+# sort(table(nodes_merge$name), decreasing = T)
+```
+
+```{r}
+V(network)$carac
+```
+
+# CHUAN FORMAT NETWORK
+
+```{r}
+df_deg$name <- row.names(df_deg)
+
+row.names(df_deg) <- NULL
+```
+
+
+```{r}
+links
+
+write.csv(links, "links_all_46baby.csv", row.names = F, quote = F)
+
+
+
+nodes_merge |> dplyr:::arrange(name) -> nodes_merge
+
+df_deg |> dplyr:::arrange(name) -> df_deg
+
+identical(df_deg$name, nodes_merge$name)
+
+nodes_merge_ok <- cbind(nodes_merge, df_deg[ , 1])
+
+# options(max.print = 1e9)
+
+names(nodes_merge_ok)[5] <- "deg"
+```
+
+
+```{r}
+write.csv(nodes_merge_ok, "nodes_merge_all_46baby.csv", row.names = F,  quote = F)
+```
+
+```{r}
+
+```
+
+<!-- https://www.youtube.com/watch?v=JOaQSsMGzNk -->
+
+
+
+NODE:
+
+1/ FILL: TÔ MÀU NODE THEO COEF MAASLIN:
+
+COEF > 0: PRETERM: màu tím
+
+COEF < 0: TERM: màu xanh lá
+
+2/ SHAPE:
+
+SCFA: tam giác
+
+PATHWAY: vuông
+
+SPECIES: tròn
+
+3/ Text label: màu đen
+
+EDGE:
+
+1/ Line color:
+
+cor > 0: red
+
+cor < 0: blue
+
+LAYOUT:
+
+sắp xếp sao cho ra thành từng cụm, đạt yêu cầu thẩm mỹ, khoa học
+
+1) Cytoscape: https://cytoscape.org/
+
+2) D3.js: https://d3js.org/
+
+3) Palladio: https://hdlab.stanford.edu/palladio/
+
+4) Nodegoat: https://nodegoat.net/
+
+

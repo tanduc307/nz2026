@@ -1,0 +1,268 @@
+---
+title: "FIGURE_3_SPARCC_SPECIES"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-title: "TOC"
+    toc-expand: 8
+    toc-depth: 6
+    toc-location: left
+    code-fold: true
+    code-summary: "Show the code"
+    number-sections: false
+    number-depth: 8
+    page-layout: full
+    embed-resources: true
+    anchor-sections: true
+    smooth-scroll: true
+engine: knitr
+knitr:
+  opts_chunk:
+    R.options:
+      width: 120
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, echo=FALSE, results='hide'}
+knitr::opts_chunk$set(message = FALSE,  
+                      warning = FALSE)   
+```
+
+`https://biovcnet.github.io/_pages/NetworkScience_SparCC.nb.html`
+
+`https://www.reddit.com/r/bioinformatics/comments/9d1vc0/anyone_have_experience_with_sparcc_are_there/`
+
+`https://rachaellappan.github.io/16S-analysis/correlation-between-otus-with-sparcc.html#running-sparcc`
+
+`https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-042720-124436`
+
+
+# PREPARE
+
+```{r}
+library(tidyverse) 
+library(SpiecEasi) 
+library(otuSummary)
+library(reshape2) 
+library(psych) 
+```
+
+```{r}
+## Helper functions
+# Get lower triangle of the correlation matrix
+  get_lower_tri<-function(cormat){
+    cormat[upper.tri(cormat)] <- NA
+    return(cormat)
+  }
+  # Get upper triangle of the correlation matrix
+  get_upper_tri <- function(cormat){
+    cormat[lower.tri(cormat)]<- NA
+    return(cormat)
+  }
+```
+
+First, species were filtered out in the data of all vaginal samples based on:
+
+1) prevalence <10%;
+
+2) mean relative abundance < 1‰;
+
+3) in <3 samples with a relative abundance lower than 1‰.
+
+Next, in the data of each time-point, a species would be filtered out if its relative abundance had less than five non-zero values
+
+https://www.nature.com/articles/s41467-024-52102-1
+
+
+# Import
+
+```{r}
+df_species <- read.delim("baby_species.tsv")
+names(df_species)[1] <- "Sample"
+library(readxl)
+df_clinic <- read_excel("df_clinic_final.xlsx")
+df_clinic <- as.data.frame(df_clinic)
+row.names(df_clinic) <- df_clinic$Sample
+```
+
+```{r}
+df_species <- df_species[df_species$Sample %in% df_clinic$Sample, ]
+```
+
+```{r}
+row.names(df_species) <- df_species$Sample
+
+df_species <- df_species[row.names(df_clinic), ]
+
+species <- df_species[ , -1]
+```
+
+
+```{r}
+# SPECIES LÀ FILE RELATIVE ABUNDANCE (SUM SPECIES TRONG MOI SAMPLE LA 1)
+sum(species[1,])
+
+apply(species,
+      MARGIN = 2,
+      FUN = mean) -> check1
+
+# head(check1)
+
+mean(species[ , 1])
+
+# PHUONG AN LOC RA CAC SPECIES CO MEAN RELATIVE ABUNDANCE > 0.1 %
+check1[check1 > 0.1] -> check2
+
+# length(check2)
+
+df_all <- species[ , which(colnames(species) %in% names(check2))]
+```
+
+
+# SPARCC
+
+```{r}
+set.seed(2026)
+out <- SpiecEasi:::sparcc(df_all)
+
+rownames(out$Cor) <- colnames(df_all)
+colnames(out$Cor) <- colnames(df_all)
+# out$Cor
+
+rownames(out$Cov) <- colnames(df_all)
+colnames(out$Cov) <- colnames(df_all)
+# out$Cov
+```
+
+
+```{r}
+plotableSparcc <- out$Cor %>% 
+  get_upper_tri() %>% 
+  reshape2::melt() %>% na.omit()
+
+Sparcc_plot <- plotableSparcc %>% ggplot(aes(x = Var2,
+                                             y = Var1, 
+                                             fill = value)) + 
+  geom_tile() + 
+  scale_fill_gradient2() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+# Sparcc_plot
+```
+
+# **p-value by boostraping**
+
+```{r}
+library(foreach)
+library(doParallel)
+
+# How many cores does your CPU have
+n_cores <- detectCores()
+n_cores
+cluster <- makeCluster(n_cores - 5)
+registerDoParallel(cluster)
+
+tp0 <- proc.time()
+out2 <- sparccboot(df_all,
+                   R = 10, # TANG GIAM O DAY DE RA P-VALUE CHINH XAC
+                   ncpus = 7)
+tp1 <- proc.time()
+tp1 - tp0
+
+stopCluster(cl = cluster)
+
+saveRDS(out2, "out2_SPCIES.rds")
+
+out2 <- readRDS("out2_SPCIES.rds")
+```
+
+
+```{r}
+set.seed(2026)
+
+outP <- pval.sparccboot(out2)
+
+# outP
+
+df_pvalue <- data.frame(outP$cors, outP$pvals)
+
+# df_pvalue
+```
+
+```{r}
+cors <- outP$cors
+
+pvals <- outP$pvals
+
+sparCCpcors <- diag(0.5, nrow = dim(out$Cor)[1], ncol = dim(out$Cor)[1])
+
+sparCCpcors[upper.tri(sparCCpcors, diag=FALSE)] <- cors
+
+sparCCpcors <- sparCCpcors + t(sparCCpcors)
+
+sparCCpval <- diag(0.5, nrow = dim(out$Cor)[1], ncol = dim(out$Cor)[1])
+sparCCpval[upper.tri(sparCCpval, diag=FALSE)] <- pvals
+sparCCpval <- sparCCpval + t(sparCCpval)
+
+rownames(sparCCpcors) <- colnames(df_all)
+colnames(sparCCpcors) <- colnames(df_all)
+rownames(sparCCpval) <-  colnames(df_all)
+colnames(sparCCpval) <-  colnames(df_all)
+
+# sparCCpcors
+
+# sparCCpval
+```
+
+
+```{r}
+sparccCor_processed <- sparCCpcors  %>% get_upper_tri() %>%
+  reshape2::melt() %>% na.omit() %>% rename(cor = value)
+
+sparccP_processed <- sparCCpval  %>% get_upper_tri() %>%
+  reshape2::melt() %>% na.omit() %>% rename(p = value)
+
+# join the two data frames
+
+SparccP <- merge(x = sparccCor_processed, 
+                 y = sparccP_processed, 
+                 all = T,
+                 by = c("Var1", "Var2")) %>%
+  # calculate the false discovery rate to adjust for multiple p values
+  mutate(fdr = p.adjust(p, method = "BH"))
+```
+
+
+```{r}
+fdrThresh <- 0.01
+
+sparccOkP <- SparccP %>% filter(fdr < fdrThresh) 
+
+png(filename = "sparcc_species.png",
+    width = 20,
+    height = 20,
+    res = 300,
+    units = "in")
+
+SparccP_plot <- SparccP %>% ggplot(aes(x = Var2,
+                                       y = Var1, 
+                                       fill = cor)) + 
+  geom_tile() +
+  scale_fill_gradient2() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  
+  geom_point(data = sparccOkP, shape = "*", size = 15, color = "red")
+
+SparccP_plot
+
+dev.off()
+```
+
+![](sparcc_species.png)
+
+
+
+
+
