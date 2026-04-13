@@ -1,3 +1,0 @@
-"feature"	"metadata"	"value"	"name"	"coef"	"null_hypothesis"	"stderr"	"pval_individual"	"qval_individual"	"pval_joint"	"qval_joint"	"error"	"model"	"N"	"N_not_zero"
-"propionate"	"Antibiotics"	"Yes"	"AntibioticsYes"	-2.39260980634898	0	0.719520256987793	0.00140876033821858	0.0788905789402407	0.00281553607074663	0.0900971542638922	NA	"abundance"	80	79
-"propionate"	"Antibiotics"	"Yes"	"AntibioticsYes"	-0.130156839369156	0	1.69893667150958	0.938933194294566	0.997925669598608	0.00281553607074663	0.0900971542638922	NA	"prevalence"	80	79
