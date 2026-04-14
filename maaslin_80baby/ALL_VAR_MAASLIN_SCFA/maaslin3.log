@@ -1,0 +1,178 @@
+2026-04-15 00:40:25.793783 INFO::Writing function arguments to log file
+2026-04-15 00:40:25.794745 DEBUG::Function arguments
+2026-04-15 00:40:25.795214 DEBUG::Output folder: ALL_VAR_MAASLIN_SCFA
+2026-04-15 00:40:25.795648 DEBUG::Formula: ~ Termness + Sex + Delivery_mode + Feeding_method + Antibiotics + Probiotics + Ethnicity + Read_depth
+2026-04-15 00:40:25.79608 DEBUG::Fixed effects:
+2026-04-15 00:40:25.796507 DEBUG::Reference:
+2026-04-15 00:40:25.79695 DEBUG::Random effects:
+2026-04-15 00:40:25.797377 DEBUG::Group effects:
+2026-04-15 00:40:25.797793 DEBUG::Ordered effects:
+2026-04-15 00:40:25.798242 DEBUG::Strata effects:
+2026-04-15 00:40:25.798689 DEBUG::Min Abundance: 0.000100
+2026-04-15 00:40:25.799114 DEBUG::Min Prevalence: 0.100000
+2026-04-15 00:40:25.799698 DEBUG::Max Prevalence: 1.010000
+2026-04-15 00:40:25.800155 DEBUG::Zero Threshold: 0.000000
+2026-04-15 00:40:25.8006 DEBUG::Min variance: 0.000000
+2026-04-15 00:40:25.801021 DEBUG::Max significance: 0.100000
+2026-04-15 00:40:25.801437 DEBUG::Normalization: NONE
+2026-04-15 00:40:25.801843 DEBUG::Transform: LOG
+2026-04-15 00:40:25.802256 DEBUG::Correction method: BH
+2026-04-15 00:40:25.802662 DEBUG::Standardize: TRUE
+2026-04-15 00:40:25.803059 DEBUG::Abundance median comparison: FALSE
+2026-04-15 00:40:25.803472 DEBUG::Prevalence median comparison: FALSE
+2026-04-15 00:40:25.803885 DEBUG::Abundance median comparison threshold: 0
+2026-04-15 00:40:25.804302 DEBUG::Prevalence median comparison threshold: 0
+2026-04-15 00:40:25.804735 DEBUG::Subtract median: FALSE
+2026-04-15 00:40:25.80514 DEBUG::Warn prevalence: TRUE
+2026-04-15 00:40:25.805534 DEBUG::Small random effects: FALSE
+2026-04-15 00:40:25.80592 DEBUG::Augment: TRUE
+2026-04-15 00:40:25.806321 DEBUG::Evaluate only:
+2026-04-15 00:40:25.806722 DEBUG::Cores: 1
+2026-04-15 00:40:25.807115 DEBUG::Balanced Summary plot: FALSE
+2026-04-15 00:40:25.807521 INFO::Verifying options selected are valid
+2026-04-15 00:40:25.808762 INFO::Determining format of input files
+2026-04-15 00:40:25.809618 INFO::Input format is data samples as rows and metadata samples as rows
+2026-04-15 00:40:25.810435 DEBUG::A total of 80 samples were found in both the data and metadata
+2026-04-15 00:40:25.810911 DEBUG::Reordering data/metadata to use same sample ordering
+2026-04-15 00:40:25.811729 INFO::Running selected normalization method: NONE
+2026-04-15 00:40:25.812737 INFO::Writing normalized data to file ALL_VAR_MAASLIN_SCFA/features/data_norm.tsv
+2026-04-15 00:40:25.815276 INFO::Filter data based on min abundance, min prevalence, and max prevalence
+2026-04-15 00:40:25.816499 INFO::Total samples in data: 80
+2026-04-15 00:40:25.818082 INFO::Min samples required with min abundance for a feature not to be filtered: 8.000000
+2026-04-15 00:40:25.818973 INFO::Max samples allowed with min abundance for a feature not to be filtered: 80.800000
+2026-04-15 00:40:25.820312 INFO::Total filtered features: 0
+2026-04-15 00:40:25.821162 INFO::Filtered feature names from abundance, min prevalence, and max prevalence filtering:
+2026-04-15 00:40:25.82209 INFO::Total features filtered by non-zero variance filtering: 0
+2026-04-15 00:40:25.822886 INFO::Filtered feature names from variance filtering:
+2026-04-15 00:40:25.823704 INFO::Writing filtered data to file ALL_VAR_MAASLIN_SCFA/features/filtered_data.tsv
+2026-04-15 00:40:25.825554 INFO::Running selected transform method: LOG
+2026-04-15 00:40:25.826589 INFO::Writing normalized, filtered, transformed data to file ALL_VAR_MAASLIN_SCFA/features/data_transformed.tsv
+2026-04-15 00:40:25.828571 INFO::Factor detected for categorial metadata 'Termness'. Using as-is.
+2026-04-15 00:40:25.829414 INFO::Factor detected for categorial metadata 'Sex'. Using as-is.
+2026-04-15 00:40:25.83054 INFO::Factor detected for categorial metadata 'Delivery_mode'. Using as-is.
+2026-04-15 00:40:25.832272 INFO::Factor detected for categorial metadata 'Feeding_method'. Using as-is.
+2026-04-15 00:40:25.833336 INFO::Factor detected for categorial metadata 'Antibiotics'. Using as-is.
+2026-04-15 00:40:25.834206 INFO::Factor detected for categorial metadata 'Probiotics'. Using as-is.
+2026-04-15 00:40:25.835051 INFO::Factor detected for categorial metadata 'Ethnicity'. Using as-is.
+2026-04-15 00:40:25.835914 INFO::Applying z-score to standardize continuous metadata
+2026-04-15 00:40:25.840817 INFO::Running the linear model component
+2026-04-15 00:40:25.845721 DEBUG::Object: augment, Size: 56
+2026-04-15 00:40:25.846314 DEBUG::Object: cluster, Size: 0
+2026-04-15 00:40:25.846879 DEBUG::Object: cores, Size: 56
+2026-04-15 00:40:25.848053 DEBUG::Object: correction, Size: 112
+2026-04-15 00:40:25.848608 DEBUG::Object: extract_out, Size: 3096
+2026-04-15 00:40:25.849212 DEBUG::Object: feature_specific_covariate, Size: 0
+2026-04-15 00:40:25.849689 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2026-04-15 00:40:25.850145 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2026-04-15 00:40:25.850585 DEBUG::Object: features, Size: 8784
+2026-04-15 00:40:25.851049 DEBUG::Object: formula, Size: 2688
+2026-04-15 00:40:25.851501 DEBUG::Object: fun_list, Size: 58768
+2026-04-15 00:40:25.852166 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:40:25.852645 DEBUG::Object: groups, Size: 48
+2026-04-15 00:40:25.853116 DEBUG::Object: median_comparison, Size: 56
+2026-04-15 00:40:25.853564 DEBUG::Object: median_comparison_threshold, Size: 56
+2026-04-15 00:40:25.854042 DEBUG::Object: metadata, Size: 30528
+2026-04-15 00:40:25.854469 DEBUG::Object: model, Size: 112
+2026-04-15 00:40:25.854893 DEBUG::Object: model_function, Size: 8864
+2026-04-15 00:40:25.855358 DEBUG::Object: ordereds, Size: 48
+2026-04-15 00:40:25.855805 DEBUG::Object: random_effects_formula, Size: 0
+2026-04-15 00:40:25.856272 DEBUG::Object: ranef_function, Size: 0
+2026-04-15 00:40:25.856768 DEBUG::Object: save_models, Size: 56
+2026-04-15 00:40:25.857235 DEBUG::Object: small_random_effects, Size: 56
+2026-04-15 00:40:25.857666 DEBUG::Object: strata, Size: 48
+2026-04-15 00:40:25.858087 DEBUG::Object: subtract_median, Size: 56
+2026-04-15 00:40:25.858527 DEBUG::Object: summary_function, Size: 49424
+2026-04-15 00:40:25.859039 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:40:25.859579 INFO::Fitting model to feature number 1, acetate
+2026-04-15 00:40:25.865098 INFO::Fitting model to feature number 2, propionate
+2026-04-15 00:40:25.873026 INFO::Fitting model to feature number 3, isobutyrate
+2026-04-15 00:40:25.879543 INFO::Fitting model to feature number 4, butyrate
+2026-04-15 00:40:25.888747 INFO::Counting total values for each feature
+2026-04-15 00:40:25.89073 INFO::Running the logistic model component
+2026-04-15 00:40:25.89618 DEBUG::Object: augment, Size: 56
+2026-04-15 00:40:25.897013 DEBUG::Object: cluster, Size: 0
+2026-04-15 00:40:25.89767 DEBUG::Object: cores, Size: 56
+2026-04-15 00:40:25.898323 DEBUG::Object: correction, Size: 112
+2026-04-15 00:40:25.898959 DEBUG::Object: extract_out, Size: 3096
+2026-04-15 00:40:25.899633 DEBUG::Object: feature_specific_covariate, Size: 0
+2026-04-15 00:40:25.900181 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2026-04-15 00:40:25.900725 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2026-04-15 00:40:25.90135 DEBUG::Object: features, Size: 8448
+2026-04-15 00:40:25.901941 DEBUG::Object: formula, Size: 2688
+2026-04-15 00:40:25.902599 DEBUG::Object: fun_list, Size: 70920
+2026-04-15 00:40:25.903191 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:40:25.903726 DEBUG::Object: groups, Size: 48
+2026-04-15 00:40:25.904243 DEBUG::Object: median_comparison, Size: 56
+2026-04-15 00:40:25.904746 DEBUG::Object: median_comparison_threshold, Size: 56
+2026-04-15 00:40:25.905285 DEBUG::Object: metadata, Size: 30528
+2026-04-15 00:40:25.905892 DEBUG::Object: model, Size: 120
+2026-04-15 00:40:25.906446 DEBUG::Object: model_function, Size: 21016
+2026-04-15 00:40:25.90702 DEBUG::Object: ordereds, Size: 48
+2026-04-15 00:40:25.907547 DEBUG::Object: random_effects_formula, Size: 0
+2026-04-15 00:40:25.908059 DEBUG::Object: ranef_function, Size: 0
+2026-04-15 00:40:25.908543 DEBUG::Object: save_models, Size: 56
+2026-04-15 00:40:25.909041 DEBUG::Object: small_random_effects, Size: 56
+2026-04-15 00:40:25.909526 DEBUG::Object: strata, Size: 48
+2026-04-15 00:40:25.910107 DEBUG::Object: subtract_median, Size: 56
+2026-04-15 00:40:25.910665 DEBUG::Object: summary_function, Size: 49424
+2026-04-15 00:40:25.911255 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:40:25.911844 INFO::Fitting model to feature number 1, acetate
+2026-04-15 00:40:25.92048 INFO::Fitting model to feature number 2, propionate
+2026-04-15 00:40:25.928356 INFO::Fitting model to feature number 3, isobutyrate
+2026-04-15 00:40:25.936431 INFO::Fitting model to feature number 4, butyrate
+2026-04-15 00:40:25.941224 INFO::Counting total values for each feature
+2026-04-15 00:40:25.943205 INFO::Re-running abundances for warn_prevalence
+2026-04-15 00:40:25.944157 INFO::Running selected normalization method: TSS
+2026-04-15 00:40:25.945449 INFO::Running selected transform method: LOG
+2026-04-15 00:40:25.950879 DEBUG::Object: augment, Size: 56
+2026-04-15 00:40:25.951519 DEBUG::Object: cluster, Size: 0
+2026-04-15 00:40:25.952044 DEBUG::Object: cores, Size: 56
+2026-04-15 00:40:25.952539 DEBUG::Object: correction, Size: 112
+2026-04-15 00:40:25.953019 DEBUG::Object: extract_out, Size: 3096
+2026-04-15 00:40:25.953616 DEBUG::Object: feature_specific_covariate, Size: 0
+2026-04-15 00:40:25.954106 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2026-04-15 00:40:25.954577 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2026-04-15 00:40:25.955062 DEBUG::Object: features, Size: 8784
+2026-04-15 00:40:25.955539 DEBUG::Object: formula, Size: 2688
+2026-04-15 00:40:25.956026 DEBUG::Object: fun_list, Size: 58768
+2026-04-15 00:40:25.956527 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:40:25.957014 DEBUG::Object: groups, Size: 48
+2026-04-15 00:40:25.957501 DEBUG::Object: median_comparison, Size: 56
+2026-04-15 00:40:25.95797 DEBUG::Object: median_comparison_threshold, Size: 56
+2026-04-15 00:40:25.958458 DEBUG::Object: metadata, Size: 30528
+2026-04-15 00:40:25.958967 DEBUG::Object: model, Size: 112
+2026-04-15 00:40:25.959445 DEBUG::Object: model_function, Size: 8864
+2026-04-15 00:40:25.959912 DEBUG::Object: ordereds, Size: 48
+2026-04-15 00:40:25.960386 DEBUG::Object: random_effects_formula, Size: 0
+2026-04-15 00:40:25.960851 DEBUG::Object: ranef_function, Size: 0
+2026-04-15 00:40:25.961311 DEBUG::Object: save_models, Size: 56
+2026-04-15 00:40:25.961764 DEBUG::Object: small_random_effects, Size: 56
+2026-04-15 00:40:25.962233 DEBUG::Object: strata, Size: 48
+2026-04-15 00:40:25.962693 DEBUG::Object: subtract_median, Size: 56
+2026-04-15 00:40:25.963157 DEBUG::Object: summary_function, Size: 49424
+2026-04-15 00:40:25.963692 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:40:25.964231 INFO::Fitting model to feature number 1, acetate
+2026-04-15 00:40:25.969655 INFO::Fitting model to feature number 2, propionate
+2026-04-15 00:40:25.974837 INFO::Fitting model to feature number 3, isobutyrate
+2026-04-15 00:40:25.97997 INFO::Fitting model to feature number 4, butyrate
+2026-04-15 00:40:25.999051 WARNING::Deleting existing model objects file: ALL_VAR_MAASLIN_SCFA/fits/models_linear.rds
+2026-04-15 00:40:26.000462 INFO::Writing model objects to file ALL_VAR_MAASLIN_SCFA/fits/models_linear.rds
+2026-04-15 00:40:26.016204 WARNING::Deleting existing residuals file: ALL_VAR_MAASLIN_SCFA/fits/residuals_linear.rds
+2026-04-15 00:40:26.017694 INFO::Writing residuals to file ALL_VAR_MAASLIN_SCFA/fits/residuals_linear.rds
+2026-04-15 00:40:26.019026 WARNING::Deleting existing fitted file: ALL_VAR_MAASLIN_SCFA/fits/fitted_linear.rds
+2026-04-15 00:40:26.020252 INFO::Writing fitted values to file ALL_VAR_MAASLIN_SCFA/fits/fitted_linear.rds
+2026-04-15 00:40:26.021507 WARNING::Deleting existing model objects file: ALL_VAR_MAASLIN_SCFA/fits/models_logistic.rds
+2026-04-15 00:40:26.022749 INFO::Writing model objects to file ALL_VAR_MAASLIN_SCFA/fits/models_logistic.rds
+2026-04-15 00:40:26.087277 WARNING::Deleting existing residuals file: ALL_VAR_MAASLIN_SCFA/fits/residuals_logistic.rds
+2026-04-15 00:40:26.088629 INFO::Writing residuals to file ALL_VAR_MAASLIN_SCFA/fits/residuals_logistic.rds
+2026-04-15 00:40:26.090026 WARNING::Deleting existing fitted file: ALL_VAR_MAASLIN_SCFA/fits/fitted_logistic.rds
+2026-04-15 00:40:26.091161 INFO::Writing fitted values to file ALL_VAR_MAASLIN_SCFA/fits/fitted_logistic.rds
+2026-04-15 00:40:26.092977 INFO::Writing all the results to file (ordered 
+            by increasing individual q-values): ALL_VAR_MAASLIN_SCFA/all_results.tsv
+2026-04-15 00:40:26.095599 INFO::Writing the significant results without errors (those which have joint q-values less than or equal to the threshold of 0.100000 ) to file (ordered by increasing individual q-values): ALL_VAR_MAASLIN_SCFA/significant_results.tsv
+2026-04-15 00:40:26.097493 INFO::Writing summary plot of significant
+                        results to file: ALL_VAR_MAASLIN_SCFA/figures/summary_plot.pdf
+2026-04-15 00:40:27.380574 INFO::Writing association plots (one for each significant association) to output folder: ALL_VAR_MAASLIN_SCFA/figures
+2026-04-15 00:40:27.382313 INFO::Plotting associations from most to least significant, grouped by metadata
+2026-04-15 00:40:27.385512 INFO::Creating box plot for categorical data (linear), 
+                        Antibiotics vs propionate

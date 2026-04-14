@@ -1,0 +1,1573 @@
+2026-04-15 00:39:09.75472 INFO::Writing function arguments to log file
+2026-04-15 00:39:09.755788 DEBUG::Function arguments
+2026-04-15 00:39:09.756286 DEBUG::Output folder: MAASLIN_PATHWAY_TERMNESS
+2026-04-15 00:39:09.756736 DEBUG::Formula: ~ Termness +  Read_depth
+2026-04-15 00:39:09.757204 DEBUG::Fixed effects:
+2026-04-15 00:39:09.757724 DEBUG::Reference:
+2026-04-15 00:39:09.758179 DEBUG::Random effects:
+2026-04-15 00:39:09.758612 DEBUG::Group effects:
+2026-04-15 00:39:09.759358 DEBUG::Ordered effects:
+2026-04-15 00:39:09.760082 DEBUG::Strata effects:
+2026-04-15 00:39:09.760554 DEBUG::Min Abundance: 0.000100
+2026-04-15 00:39:09.761001 DEBUG::Min Prevalence: 0.100000
+2026-04-15 00:39:09.76153 DEBUG::Max Prevalence: 1.010000
+2026-04-15 00:39:09.763672 DEBUG::Zero Threshold: 0.000000
+2026-04-15 00:39:09.764178 DEBUG::Min variance: 0.000000
+2026-04-15 00:39:09.764636 DEBUG::Max significance: 0.100000
+2026-04-15 00:39:09.765159 DEBUG::Normalization: NONE
+2026-04-15 00:39:09.765712 DEBUG::Transform: LOG
+2026-04-15 00:39:09.76617 DEBUG::Correction method: BH
+2026-04-15 00:39:09.766603 DEBUG::Standardize: TRUE
+2026-04-15 00:39:09.76702 DEBUG::Abundance median comparison: TRUE
+2026-04-15 00:39:09.767436 DEBUG::Prevalence median comparison: FALSE
+2026-04-15 00:39:09.767841 DEBUG::Abundance median comparison threshold: 0
+2026-04-15 00:39:09.768268 DEBUG::Prevalence median comparison threshold: 0
+2026-04-15 00:39:09.768681 DEBUG::Subtract median: FALSE
+2026-04-15 00:39:09.769277 DEBUG::Warn prevalence: TRUE
+2026-04-15 00:39:09.769985 DEBUG::Small random effects: FALSE
+2026-04-15 00:39:09.770551 DEBUG::Augment: TRUE
+2026-04-15 00:39:09.771091 DEBUG::Evaluate only:
+2026-04-15 00:39:09.772178 DEBUG::Cores: 1
+2026-04-15 00:39:09.772666 DEBUG::Balanced Summary plot: FALSE
+2026-04-15 00:39:09.773128 INFO::Verifying options selected are valid
+2026-04-15 00:39:09.774516 INFO::Determining format of input files
+2026-04-15 00:39:09.775659 INFO::Input format is data samples as rows and metadata samples as rows
+2026-04-15 00:39:09.776741 DEBUG::A total of 80 samples were found in both the data and metadata
+2026-04-15 00:39:09.777322 DEBUG::Reordering data/metadata to use same sample ordering
+2026-04-15 00:39:09.780106 INFO::Running selected normalization method: NONE
+2026-04-15 00:39:09.786844 INFO::Writing normalized data to file MAASLIN_PATHWAY_TERMNESS/features/data_norm.tsv
+2026-04-15 00:39:09.845178 INFO::Filter data based on min abundance, min prevalence, and max prevalence
+2026-04-15 00:39:09.846292 INFO::Total samples in data: 80
+2026-04-15 00:39:09.84742 INFO::Min samples required with min abundance for a feature not to be filtered: 8.000000
+2026-04-15 00:39:09.848352 INFO::Max samples allowed with min abundance for a feature not to be filtered: 80.800000
+2026-04-15 00:39:09.891779 INFO::Total filtered features: 167
+2026-04-15 00:39:09.89305 INFO::Filtered feature names from abundance, min prevalence, and max prevalence filtering: X12DICHLORETHDEG.PWY..1.2.dichloroethane.degradation, X4.HYDROXYMANDELATE.DEGRADATION.PWY..4.hydroxymandelate.degradation, ERGOSTEROL.SYN.PWY..superpathway.of.ergosterol.biosynthesis.I, MANNOSYL.CHITO.DOLICHOL.BIOSYNTHESIS..protein.N.glycosylation.initial.phase..eukaryotic., METH.ACETATE.PWY..methanogenesis.from.acetate, METHANOGENESIS.PWY..methanogenesis.from.H2.and.CO2, NADSYN.PWY..NAD.de.novo.biosynthesis.II..from.tryptophan., P163.PWY..L.lysine.fermentation.to.acetate.and.butanoate, P261.PWY..coenzyme.M.biosynthesis.I, POLYAMINSYN3.PWY..superpathway.of.polyamine.biosynthesis.II, PROPFERM.PWY..superpathway.of.L.alanine.fermentation..Stickland.reaction., PWY.1501..mandelate.degradation.I, PWY.2201..folate.transformations.I, PWY.3502..superpathway.of.NAD.biosynthesis.in.eukaryotes, PWY.3781..aerobic.respiration.I..cytochrome.c., PWY.3941...beta..alanine.biosynthesis.II, PWY.4221..superpathway.of.coenzyme.A.biosynthesis.II..plants., PWY.4361..S.methyl.5.thio..alpha..D.ribose.1.phosphate.degradation.I, PWY.4702..phytate.degradation.I, PWY.5004..superpathway.of.L.citrulline.metabolism, PWY.5022..4.aminobutanoate.degradation.V, PWY.5067..glycogen.biosynthesis.II..from.UDP.D.Glucose., PWY.5079..L.phenylalanine.degradation.III, PWY.5080..very.long.chain.fatty.acid.biosynthesis.I, PWY.5088..L.glutamate.degradation.VIII..to.propanoate., PWY.5104..L.isoleucine.biosynthesis.IV, PWY.5129..sphingolipid.biosynthesis..plants., PWY.5156..superpathway.of.fatty.acid.biosynthesis.II..plant., PWY.5178..toluene.degradation.IV..aerobic...via.catechol., PWY.5198..factor.420.biosynthesis.II..mycobacteria., PWY.5209..methyl.coenzyme.M.oxidation.to.CO2, PWY.5419..catechol.degradation.to.2.hydroxypentadienoate.II, PWY.5420..catechol.degradation.II..meta.cleavage.pathway., PWY.5464..superpathway.of.cytosolic.glycolysis..plants...pyruvate.dehydrogenase.and.TCA.cycle, PWY.5494..pyruvate.fermentation.to.propanoate.II..acrylate.pathway., PWY.5514..UDP.N.acetyl.D.galactosamine.biosynthesis.II, PWY.5647..2.nitrobenzoate.degradation.I, PWY.5651..L.tryptophan.degradation.to.2.amino.3.carboxymuconate.semialdehyde, PWY.5652..2.amino.3.carboxymuconate.semialdehyde.degradation.to.glutaryl.CoA, PWY.5655..L.tryptophan.degradation.IX, PWY.5677..succinate.fermentation.to.butanoate, PWY.5690..TCA.cycle.II..plants.and.fungi., PWY.5742..L.arginine.degradation.IX..arginine.pyruvate.transaminase.pathway., PWY.5870..ubiquinol.8.biosynthesis..late.decarboxylation., PWY.5873..ubiquinol.7.biosynthesis..late.decarboxylation., PWY.6075..ergosterol.biosynthesis.I, PWY.6113..superpathway.of.mycolate.biosynthesis, PWY.6143..CMP.pseudaminate.biosynthesis, PWY.6160..3.dehydroquinate.biosynthesis.II..archaea., PWY.6165..chorismate.biosynthesis.II..archaea., PWY.6167..flavin.biosynthesis.II..archaea., PWY.6269..superpathway.of.adenosylcobalamin.salvage.from.cobinamide.II, PWY.6281..L.selenocysteine.biosynthesis.II..archaea.and.eukaryotes., PWY.6307..L.tryptophan.degradation.X..mammalian..via.tryptamine., PWY.6309..L.tryptophan.degradation.XI..mammalian..via.kynurenine., PWY.6313..serotonin.degradation, PWY.6349..CDP.archaeol.biosynthesis, PWY.6350..archaetidylinositol.biosynthesis, PWY.6351..D.myo.inositol..1.4.5..trisphosphate.biosynthesis, PWY.6352..3.phosphoinositide.biosynthesis, PWY.6470..peptidoglycan.biosynthesis.V...beta..lactam.resistance., PWY.6471..peptidoglycan.biosynthesis.IV..Enterococcus.faecium., PWY.6478..GDP.D.glycero..alpha..D.manno.heptose.biosynthesis, PWY.6518..bile.acids.epimerization, PWY.6562..norspermidine.biosynthesis, PWY.6565..superpathway.of.polyamine.biosynthesis.III, PWY.6572..chondroitin.sulfate.degradation.I..bacterial., PWY.6596..adenosine.nucleotides.degradation.I, PWY.6598..sciadonate.biosynthesis, PWY.6662..superpathway.of.quinolone.and.alkylquinolone.biosynthesis, PWY.6748..nitrate.reduction.VII..denitrification., PWY.6763..salicortin.biosynthesis, PWY.6797..6.hydroxymethyl.dihydropterin.diphosphate.biosynthesis.II..Methanocaldococcus., PWY.6807..xyloglucan.degradation.II..exoglucanase., PWY.6829..tRNA.methylation..yeast., PWY.6837..fatty.acid..beta..oxidation.V..unsaturated..odd.number..di.isomerase.dependent., PWY.6842..glutathione.mediated.detoxification.II, PWY.6876..isopropanol.biosynthesis..engineered., PWY.6891..thiazole.component.of.thiamine.diphosphate.biosynthesis.II, PWY.6906..chitin.derivatives.degradation, PWY.6920..6.gingerol.analog.biosynthesis..engineered., PWY.6953..dTDP.3.acetamido..alpha..D.fucose.biosynthesis, PWY.6957..mandelate.degradation.to.acetyl.CoA, PWY.6981..chitin.biosynthesis, PWY.7009..2.2..dihydroxybiphenyl.degradation, PWY.7031..protein.N.glycosylation..bacterial., PWY.7035...9Z..tricosene.biosynthesis, PWY.7036..very.long.chain.fatty.acid.biosynthesis.II, PWY.7049..icosapentaenoate.biosynthesis.II..6.desaturase..mammals., PWY.7052..cyanophycin.metabolism, PWY.7053..docosahexaenoate.biosynthesis.I..lower.eukaryotes., PWY.7090..UDP.2.3.diacetamido.2.3.dideoxy..alpha..D.mannuronate.biosynthesis, PWY.7156..superpathway.of.ergosterol.biosynthesis.II, PWY.7159..3.8.divinyl.chlorophyllide.a.biosynthesis.III..aerobic..light.independent., PWY.722..nicotinate.degradation.I, PWY.7230..ubiquinol.6.biosynthesis.from.4.aminobenzoate..yeast., PWY.7235..superpathway.of.ubiquinol.6.biosynthesis..late.decarboxylation., PWY.7270..L.methionine.salvage.cycle.II..plants., PWY.7279..aerobic.respiration.II..cytochrome.c...yeast., PWY.7283..wybutosine.biosynthesis, PWY.7286..7..3.amino.3.carboxypropyl..wyosine.biosynthesis, PWY.7290..Escherichia.coli.serotype.O86.O.antigen.biosynthesis, PWY.7312..dTDP..beta..D.fucofuranose.biosynthesis, PWY.7316..dTDP.N.acetylviosamine.biosynthesis, PWY.7317..superpathway.of.dTDP.glucose.derived.O.antigen.building.blocks.biosynthesis, PWY.7337..10.cis.heptadecenoyl.CoA.degradation..yeast., PWY.7338..10.trans.heptadecenoyl.CoA.degradation..reductase.dependent..yeast., PWY.7371..1.4.dihydroxy.6.naphthoate.biosynthesis.II, PWY.7374..1.4.dihydroxy.6.naphthoate.biosynthesis.I, PWY.7376..cob.II.yrinate.a.c.diamide.biosynthesis.II..late.cobalt.incorporation., PWY.7377..cob.II.yrinate.a.c.diamide.biosynthesis.I..early.cobalt.insertion., PWY.7384..anaerobic.energy.metabolism..invertebrates..mitochondrial., PWY.7389..superpathway.of.anaerobic.energy.metabolism..invertebrates., PWY.7399..methylphosphonate.degradation.II, PWY.7411..phosphatidate.biosynthesis..yeast., PWY.7420..monoacylglycerol.metabolism..yeast., PWY.7431..aromatic.biogenic.amine.degradation..bacteria., PWY.7511..protein.ubiquitination, PWY.7527..L.methionine.salvage.cycle.III, PWY.7528..L.methionine.salvage.cycle.I..bacteria.and.plants., PWY.7546..diphthamide.biosynthesis.II..eukaryotes., PWY.7574..propanoyl.CoA.degradation.II, PWY.7592..arachidonate.biosynthesis.III..6.desaturase..mammals., PWY.7606..docosahexaenoate.biosynthesis.III..6.desaturase..mammals., PWY.7619..juniperonate.biosynthesis, PWY.7626..bacilysin.biosynthesis, PWY.7688..dTDP..alpha..D.ravidosamine.and.dTDP.4.acetyl..alpha..D.ravidosamine.biosynthesis, PWY.7717..3.hydroxy.4.methyl.anthranilate.biosynthesis.I, PWY.7724..icosapentaenoate.biosynthesis.III..8.desaturase..mammals., PWY.7725..arachidonate.biosynthesis.V..8.detaturase..mammals., PWY.7726...4Z.7Z.10Z.13Z.16Z..docosapentaenoate.biosynthesis..6.desaturase., PWY.7754..bile.acid.7.alpha..dehydroxylation, PWY.7800..Ac.N.end.rule.pathway, PWY.7815..poly.ribitol.phosphate..wall.teichoic.acid.biosynthesis.I..B..subtilis., PWY.7816..poly.ribitol.phosphate..wall.teichoic.acid.biosynthesis.II..S..aureus., PWY.7819..poly.3.O..beta..D.glucopyranosyl.N.acetylgalactosamine.1.phosphate..wall.teichoic.acid.biosynthesis, PWY.7820..teichuronic.acid.biosynthesis..B..subtilis.168., PWY.7822..chitin.degradation.III..Serratia., PWY.7854..crotonyl.CoA.ethylmalonyl.CoA.hydroxybutyryl.CoA.cycle..engineered., PWY.7919..protein.N.glycosylation.processing.phase..plants.and.animals., PWY.7992..superpathway.of.menaquinol.8.biosynthesis.III, PWY.8041..ultra.long.chain.fatty.acid.biosynthesis, PWY.8055..palmitoyl.ethanolamide.biosynthesis, PWY.8085..picolinate.degradation, PWY.8086...S..lactate.fermentation.to.propanoate..acetate.and.hydrogen, PWY.8112..factor.420.biosynthesis.I..archaea., PWY.8113..3PG.factor.420.biosynthesis, PWY.8134..bile.acid.7.beta..dehydroxylation, PWY.8173..anteiso.branched.chain.fatty.acid.biosynthesis, PWY.8174..odd.iso.branched.chain.fatty.acid.biosynthesis, PWY.8175..even.iso.branched.chain.fatty.acid.biosynthesis, PWY.8188..L.alanine.degradation.VI..reductive.Stickland.reaction., PWY.8189..L.alanine.degradation.V..oxidative.Stickland.reaction., PWY.8190..L.glutamate.degradation.XI..reductive.Stickland.reaction., PWY3DJ.12..ceramide.de.novo.biosynthesis, PWY3O.19..ubiquinol.6.biosynthesis..late.decarboxylation., PWY3O.4108..L.tyrosine.degradation.III, PWY490.3..nitrate.reduction.VI..assimilatory., PWY66.201..nicotine.degradation.IV, PWY66.367..ketogenesis, PWY66.388..ceramide.degradation.by..alpha..oxidation, PWY66.398..TCA.cycle.III..animals., SPHINGOLIPID.SYN.PWY..sphingolipid.biosynthesis..yeast., TEICHOICACID.PWY..poly.glycerol.phosphate..wall.teichoic.acid.biosynthesis, TRIGLSYN.PWY..diacylglycerol.and.triacylglycerol.biosynthesis, TYRFUMCAT.PWY..L.tyrosine.degradation.I, VALDEG.PWY..L.valine.degradation.I
+2026-04-15 00:39:09.898055 INFO::Total features filtered by non-zero variance filtering: 0
+2026-04-15 00:39:09.899215 INFO::Filtered feature names from variance filtering:
+2026-04-15 00:39:09.900191 INFO::Writing filtered data to file MAASLIN_PATHWAY_TERMNESS/features/filtered_data.tsv
+2026-04-15 00:39:09.944705 INFO::Running selected transform method: LOG
+2026-04-15 00:39:09.949053 INFO::Writing normalized, filtered, transformed data to file MAASLIN_PATHWAY_TERMNESS/features/data_transformed.tsv
+2026-04-15 00:39:10.004733 INFO::Factor detected for categorial metadata 'Termness'. Using as-is.
+2026-04-15 00:39:10.005694 INFO::Applying z-score to standardize continuous metadata
+2026-04-15 00:39:10.0105 INFO::Running the linear model component
+2026-04-15 00:39:10.015673 DEBUG::Object: augment, Size: 56
+2026-04-15 00:39:10.016306 DEBUG::Object: cluster, Size: 0
+2026-04-15 00:39:10.016801 DEBUG::Object: cores, Size: 56
+2026-04-15 00:39:10.017462 DEBUG::Object: correction, Size: 112
+2026-04-15 00:39:10.017939 DEBUG::Object: extract_out, Size: 1416
+2026-04-15 00:39:10.018385 DEBUG::Object: feature_specific_covariate, Size: 0
+2026-04-15 00:39:10.018815 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2026-04-15 00:39:10.019238 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2026-04-15 00:39:10.019681 DEBUG::Object: features, Size: 344536
+2026-04-15 00:39:10.020124 DEBUG::Object: formula, Size: 1008
+2026-04-15 00:39:10.020557 DEBUG::Object: fun_list, Size: 58768
+2026-04-15 00:39:10.021032 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:39:10.02147 DEBUG::Object: groups, Size: 48
+2026-04-15 00:39:10.021894 DEBUG::Object: median_comparison, Size: 56
+2026-04-15 00:39:10.022327 DEBUG::Object: median_comparison_threshold, Size: 56
+2026-04-15 00:39:10.022837 DEBUG::Object: metadata, Size: 30528
+2026-04-15 00:39:10.023271 DEBUG::Object: model, Size: 112
+2026-04-15 00:39:10.023693 DEBUG::Object: model_function, Size: 8864
+2026-04-15 00:39:10.024106 DEBUG::Object: ordereds, Size: 48
+2026-04-15 00:39:10.024512 DEBUG::Object: random_effects_formula, Size: 0
+2026-04-15 00:39:10.024942 DEBUG::Object: ranef_function, Size: 0
+2026-04-15 00:39:10.025363 DEBUG::Object: save_models, Size: 56
+2026-04-15 00:39:10.025772 DEBUG::Object: small_random_effects, Size: 56
+2026-04-15 00:39:10.026185 DEBUG::Object: strata, Size: 48
+2026-04-15 00:39:10.026605 DEBUG::Object: subtract_median, Size: 56
+2026-04-15 00:39:10.0271 DEBUG::Object: summary_function, Size: 49424
+2026-04-15 00:39:10.027611 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:39:10.028105 INFO::Fitting model to feature number 1, X1CMET2.PWY..folate.transformations.III..E..coli.
+2026-04-15 00:39:10.031605 INFO::Fitting model to feature number 2, X3.HYDROXYPHENYLACETATE.DEGRADATION.PWY..4.hydroxyphenylacetate.degradation
+2026-04-15 00:39:10.035172 INFO::Fitting model to feature number 3, AEROBACTINSYN.PWY..aerobactin.biosynthesis
+2026-04-15 00:39:10.038633 INFO::Fitting model to feature number 4, ALLANTOINDEG.PWY..superpathway.of.allantoin.degradation.in.yeast
+2026-04-15 00:39:10.042588 INFO::Fitting model to feature number 5, ANAEROFRUCAT.PWY..homolactic.fermentation
+2026-04-15 00:39:10.046068 INFO::Fitting model to feature number 6, ANAGLYCOLYSIS.PWY..glycolysis.III..from.glucose.
+2026-04-15 00:39:10.049571 INFO::Fitting model to feature number 7, ARG.POLYAMINE.SYN..superpathway.of.arginine.and.polyamine.biosynthesis
+2026-04-15 00:39:10.053652 INFO::Fitting model to feature number 8, ARGDEG.PWY..superpathway.of.L.arginine..putrescine..and.4.aminobutanoate.degradation
+2026-04-15 00:39:10.059534 INFO::Fitting model to feature number 9, ARGININE.SYN4.PWY..L.ornithine.biosynthesis.II
+2026-04-15 00:39:10.065169 INFO::Fitting model to feature number 10, ARGSYN.PWY..L.arginine.biosynthesis.I..via.L.ornithine.
+2026-04-15 00:39:10.069036 INFO::Fitting model to feature number 11, ARGSYNBSUB.PWY..L.arginine.biosynthesis.II..acetyl.cycle.
+2026-04-15 00:39:10.073085 INFO::Fitting model to feature number 12, ARO.PWY..chorismate.biosynthesis.I
+2026-04-15 00:39:10.076795 INFO::Fitting model to feature number 13, ASPASN.PWY..superpathway.of.L.aspartate.and.L.asparagine.biosynthesis
+2026-04-15 00:39:10.080466 INFO::Fitting model to feature number 14, AST.PWY..L.arginine.degradation.II..AST.pathway.
+2026-04-15 00:39:10.084089 INFO::Fitting model to feature number 15, BIOTIN.BIOSYNTHESIS.PWY..biotin.biosynthesis.I
+2026-04-15 00:39:10.0878 INFO::Fitting model to feature number 16, BRANCHED.CHAIN.AA.SYN.PWY..superpathway.of.branched.chain.amino.acid.biosynthesis
+2026-04-15 00:39:10.091496 INFO::Fitting model to feature number 17, CALVIN.PWY..Calvin.Benson.Bassham.cycle
+2026-04-15 00:39:10.095306 INFO::Fitting model to feature number 18, CARNMET.PWY..L.carnitine.degradation.I
+2026-04-15 00:39:10.09889 INFO::Fitting model to feature number 19, CATECHOL.ORTHO.CLEAVAGE.PWY..catechol.degradation.to..beta..ketoadipate
+2026-04-15 00:39:10.102441 INFO::Fitting model to feature number 20, CENTFERM.PWY..pyruvate.fermentation.to.butanoate
+2026-04-15 00:39:10.106895 INFO::Fitting model to feature number 21, CITRULBIO.PWY..L.citrulline.biosynthesis
+2026-04-15 00:39:10.110418 INFO::Fitting model to feature number 22, COA.PWY.1..superpathway.of.coenzyme.A.biosynthesis.III..mammals.
+2026-04-15 00:39:10.113891 INFO::Fitting model to feature number 23, COA.PWY..coenzyme.A.biosynthesis.I..prokaryotic.
+2026-04-15 00:39:10.117237 INFO::Fitting model to feature number 24, COBALSYN.PWY..superpathway.of.adenosylcobalamin.salvage.from.cobinamide.I
+2026-04-15 00:39:10.120888 INFO::Fitting model to feature number 25, COLANSYN.PWY..colanic.acid.building.blocks.biosynthesis
+2026-04-15 00:39:10.124685 INFO::Fitting model to feature number 26, COMPLETE.ARO.PWY..superpathway.of.aromatic.amino.acid.biosynthesis
+2026-04-15 00:39:10.128199 INFO::Fitting model to feature number 27, CRNFORCAT.PWY..creatinine.degradation.I
+2026-04-15 00:39:10.131673 INFO::Fitting model to feature number 28, DAPLYSINESYN.PWY..L.lysine.biosynthesis.I
+2026-04-15 00:39:10.135139 INFO::Fitting model to feature number 29, DARABCATK12.PWY..D.arabinose.degradation.I
+2026-04-15 00:39:10.139479 INFO::Fitting model to feature number 30, DENITRIFICATION.PWY..nitrate.reduction.I..denitrification.
+2026-04-15 00:39:10.14297 INFO::Fitting model to feature number 31, DENOVOPURINE2.PWY..superpathway.of.purine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:10.146401 INFO::Fitting model to feature number 32, DHGLUCONATE.PYR.CAT.PWY..glucose.degradation..oxidative.
+2026-04-15 00:39:10.149753 INFO::Fitting model to feature number 33, DTDPRHAMSYN.PWY..dTDP..beta..L.rhamnose.biosynthesis
+2026-04-15 00:39:10.153387 INFO::Fitting model to feature number 34, ECASYN.PWY..enterobacterial.common.antigen.biosynthesis
+2026-04-15 00:39:10.157413 INFO::Fitting model to feature number 35, FAO.PWY..fatty.acid..beta..oxidation.I..generic.
+2026-04-15 00:39:10.160895 INFO::Fitting model to feature number 36, FASYN.ELONG.PWY..fatty.acid.elongation....saturated
+2026-04-15 00:39:10.164262 INFO::Fitting model to feature number 37, FASYN.INITIAL.PWY..superpathway.of.fatty.acid.biosynthesis.initiation..E..coli.
+2026-04-15 00:39:10.16769 INFO::Fitting model to feature number 38, FERMENTATION.PWY..mixed.acid.fermentation
+2026-04-15 00:39:10.172843 INFO::Fitting model to feature number 39, FOLSYN.PWY..superpathway.of.tetrahydrofolate.biosynthesis.and.salvage
+2026-04-15 00:39:10.176432 INFO::Fitting model to feature number 40, FUC.RHAMCAT.PWY..superpathway.of.fucose.and.rhamnose.degradation
+2026-04-15 00:39:10.179888 INFO::Fitting model to feature number 41, FUCCAT.PWY..fucose.degradation
+2026-04-15 00:39:10.183396 INFO::Fitting model to feature number 42, GALACT.GLUCUROCAT.PWY..superpathway.of.hexuronide.and.hexuronate.degradation
+2026-04-15 00:39:10.187215 INFO::Fitting model to feature number 43, GALACTARDEG.PWY..D.galactarate.degradation.I
+2026-04-15 00:39:10.191525 INFO::Fitting model to feature number 44, GALACTITOLCAT.PWY..galactitol.degradation
+2026-04-15 00:39:10.195041 INFO::Fitting model to feature number 45, GALACTUROCAT.PWY..D.galacturonate.degradation.I
+2026-04-15 00:39:10.198569 INFO::Fitting model to feature number 46, GLCMANNANAUT.PWY..superpathway.of.N.acetylglucosamine..N.acetylmannosamine.and.N.acetylneuraminate.degradation
+2026-04-15 00:39:10.202031 INFO::Fitting model to feature number 47, GLUCARDEG.PWY..D.glucarate.degradation.I
+2026-04-15 00:39:10.206153 INFO::Fitting model to feature number 48, GLUCARGALACTSUPER.PWY..superpathway.of.D.glucarate.and.D.galactarate.degradation
+2026-04-15 00:39:10.20977 INFO::Fitting model to feature number 49, GLUCONEO.PWY..gluconeogenesis.I
+2026-04-15 00:39:10.213267 INFO::Fitting model to feature number 50, GLUCOSE1PMETAB.PWY..glucose.and.glucose.1.phosphate.degradation
+2026-04-15 00:39:10.216956 INFO::Fitting model to feature number 51, GLUCUROCAT.PWY..superpathway.of..beta..D.glucuronosides.degradation
+2026-04-15 00:39:10.221054 INFO::Fitting model to feature number 52, GLUDEG.I.PWY..GABA.shunt
+2026-04-15 00:39:10.224794 INFO::Fitting model to feature number 53, GLUTORN.PWY..L.ornithine.biosynthesis.I
+2026-04-15 00:39:10.228317 INFO::Fitting model to feature number 54, GLYCOCAT.PWY..glycogen.degradation.I
+2026-04-15 00:39:10.231901 INFO::Fitting model to feature number 55, GLYCOGENSYNTH.PWY..glycogen.biosynthesis.I..from.ADP.D.Glucose.
+2026-04-15 00:39:10.235504 INFO::Fitting model to feature number 56, GLYCOL.GLYOXDEG.PWY..superpathway.of.glycol.metabolism.and.degradation
+2026-04-15 00:39:10.239245 INFO::Fitting model to feature number 57, GLYCOLYSIS.E.D..superpathway.of.glycolysis.and.the.Entner.Doudoroff.pathway
+2026-04-15 00:39:10.242935 INFO::Fitting model to feature number 58, GLYCOLYSIS.TCA.GLYOX.BYPASS..superpathway.of.glycolysis..pyruvate.dehydrogenase..TCA..and.glyoxylate.bypass
+2026-04-15 00:39:10.24642 INFO::Fitting model to feature number 59, GLYCOLYSIS..glycolysis.I..from.glucose.6.phosphate.
+2026-04-15 00:39:10.249839 INFO::Fitting model to feature number 60, GLYOXYLATE.BYPASS..glyoxylate.cycle
+2026-04-15 00:39:10.253659 INFO::Fitting model to feature number 61, GOLPDLCAT.PWY..superpathway.of.glycerol.degradation.to.1.3.propanediol
+2026-04-15 00:39:10.257585 INFO::Fitting model to feature number 62, HCAMHPDEG.PWY..3.phenylpropanoate.and.3..3.hydroxyphenyl.propanoate.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:10.261313 INFO::Fitting model to feature number 63, HEME.BIOSYNTHESIS.II.1..heme.b.biosynthesis.V..aerobic.
+2026-04-15 00:39:10.264975 INFO::Fitting model to feature number 64, HEME.BIOSYNTHESIS.II..heme.b.biosynthesis.I..aerobic.
+2026-04-15 00:39:10.268386 INFO::Fitting model to feature number 65, HEMESYN2.PWY..heme.b.biosynthesis.II..oxygen.independent.
+2026-04-15 00:39:10.272036 INFO::Fitting model to feature number 66, HEXITOLDEGSUPER.PWY..superpathway.of.hexitol.degradation..bacteria.
+2026-04-15 00:39:10.275607 INFO::Fitting model to feature number 67, HISDEG.PWY..L.histidine.degradation.I
+2026-04-15 00:39:10.279065 INFO::Fitting model to feature number 68, HISTSYN.PWY..L.histidine.biosynthesis
+2026-04-15 00:39:10.282479 INFO::Fitting model to feature number 69, HOMOSER.METSYN.PWY..L.methionine.biosynthesis.I
+2026-04-15 00:39:10.285892 INFO::Fitting model to feature number 70, HSERMETANA.PWY..L.methionine.biosynthesis.III
+2026-04-15 00:39:10.289549 INFO::Fitting model to feature number 71, ILEUSYN.PWY..L.isoleucine.biosynthesis.I..from.threonine.
+2026-04-15 00:39:10.293121 INFO::Fitting model to feature number 72, KDO.NAGLIPASYN.PWY..superpathway.of..Kdo.2.lipid.A.biosynthesis
+2026-04-15 00:39:10.296645 INFO::Fitting model to feature number 73, KETOGLUCONMET.PWY..ketogluconate.metabolism
+2026-04-15 00:39:10.300073 INFO::Fitting model to feature number 74, LACTOSECAT.PWY..lactose.and.galactose.degradation.I
+2026-04-15 00:39:10.303481 INFO::Fitting model to feature number 75, LIPA.CORESYN.PWY..lipid.A.core.biosynthesis..E..coli.K.12.
+2026-04-15 00:39:10.307109 INFO::Fitting model to feature number 76, LIPASYN.PWY..phospholipases
+2026-04-15 00:39:10.310845 INFO::Fitting model to feature number 77, LPSSYN.PWY..superpathway.of.lipopolysaccharide.biosynthesis
+2026-04-15 00:39:10.314307 INFO::Fitting model to feature number 78, MET.SAM.PWY..superpathway.of.S.adenosyl.L.methionine.biosynthesis
+2026-04-15 00:39:10.317754 INFO::Fitting model to feature number 79, METHGLYUT.PWY..superpathway.of.methylglyoxal.degradation
+2026-04-15 00:39:10.321563 INFO::Fitting model to feature number 80, METSYN.PWY..superpathway.of.L.homoserine.and.L.methionine.biosynthesis
+2026-04-15 00:39:10.325302 INFO::Fitting model to feature number 81, NAD.BIOSYNTHESIS.II..NAD.salvage.pathway.III..to.nicotinamide.riboside.
+2026-04-15 00:39:10.328743 INFO::Fitting model to feature number 82, NAGLIPASYN.PWY..lipid.IVA.biosynthesis..E..coli.
+2026-04-15 00:39:10.332164 INFO::Fitting model to feature number 83, NONMEVIPP.PWY..methylerythritol.phosphate.pathway.I
+2026-04-15 00:39:10.335515 INFO::Fitting model to feature number 84, NONOXIPENT.PWY..pentose.phosphate.pathway..non.oxidative.branch..I
+2026-04-15 00:39:10.339089 INFO::Fitting model to feature number 85, OANTIGEN.PWY..O.antigen.building.blocks.biosynthesis..E..coli.
+2026-04-15 00:39:10.342729 INFO::Fitting model to feature number 86, ORNARGDEG.PWY..superpathway.of.L.arginine.and.L.ornithine.degradation
+2026-04-15 00:39:10.346188 INFO::Fitting model to feature number 87, ORNDEG.PWY..superpathway.of.ornithine.degradation
+2026-04-15 00:39:10.349667 INFO::Fitting model to feature number 88, P105.PWY..TCA.cycle.IV..2.oxoglutarate.decarboxylase.
+2026-04-15 00:39:10.353157 INFO::Fitting model to feature number 89, P108.PWY..pyruvate.fermentation.to.propanoate.I
+2026-04-15 00:39:10.356871 INFO::Fitting model to feature number 90, P122.PWY..heterolactic.fermentation
+2026-04-15 00:39:10.360402 INFO::Fitting model to feature number 91, P124.PWY..Bifidobacterium.shunt
+2026-04-15 00:39:10.363888 INFO::Fitting model to feature number 92, P125.PWY..superpathway.of..R.R..butanediol.biosynthesis
+2026-04-15 00:39:10.367372 INFO::Fitting model to feature number 93, P161.PWY..acetylene.degradation..anaerobic.
+2026-04-15 00:39:10.370841 INFO::Fitting model to feature number 94, P164.PWY..purine.nucleobases.degradation.I..anaerobic.
+2026-04-15 00:39:10.374363 INFO::Fitting model to feature number 95, P185.PWY..formaldehyde.assimilation.III..dihydroxyacetone.cycle.
+2026-04-15 00:39:10.377836 INFO::Fitting model to feature number 96, P221.PWY..octane.oxidation
+2026-04-15 00:39:10.381266 INFO::Fitting model to feature number 97, P23.PWY..reductive.TCA.cycle.I
+2026-04-15 00:39:10.38469 INFO::Fitting model to feature number 98, P4.PWY..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.I
+2026-04-15 00:39:10.389015 INFO::Fitting model to feature number 99, P41.PWY..pyruvate.fermentation.to.acetate.and..S..lactate.I
+2026-04-15 00:39:10.392614 INFO::Fitting model to feature number 100, P42.PWY..incomplete.reductive.TCA.cycle
+2026-04-15 00:39:10.396104 INFO::Fitting model to feature number 101, P441.PWY..superpathway.of.N.acetylneuraminate.degradation
+2026-04-15 00:39:10.399559 INFO::Fitting model to feature number 102, P461.PWY..hexitol.fermentation.to.lactate..formate..ethanol.and.acetate
+2026-04-15 00:39:10.403359 INFO::Fitting model to feature number 103, P562.PWY..myo.inositol.degradation.I
+2026-04-15 00:39:10.407134 INFO::Fitting model to feature number 104, P621.PWY..nylon.6.oligomer.degradation
+2026-04-15 00:39:10.410785 INFO::Fitting model to feature number 105, PANTO.PWY..phosphopantothenate.biosynthesis.I
+2026-04-15 00:39:10.414333 INFO::Fitting model to feature number 106, PANTOSYN.PWY..superpathway.of.coenzyme.A.biosynthesis.I..bacteria.
+2026-04-15 00:39:10.418052 INFO::Fitting model to feature number 107, PENTOSE.P.PWY..pentose.phosphate.pathway
+2026-04-15 00:39:10.422233 INFO::Fitting model to feature number 108, PEPTIDOGLYCANSYN.PWY..peptidoglycan.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:10.425725 INFO::Fitting model to feature number 109, PHOSLIPSYN.PWY..superpathway.of.phospholipid.biosynthesis.I..bacteria.
+2026-04-15 00:39:10.429137 INFO::Fitting model to feature number 110, POLYAMSYN.PWY..superpathway.of.polyamine.biosynthesis.I
+2026-04-15 00:39:10.432579 INFO::Fitting model to feature number 111, POLYISOPRENSYN.PWY..polyisoprenoid.biosynthesis..E..coli.
+2026-04-15 00:39:10.436228 INFO::Fitting model to feature number 112, PPGPPMET.PWY..ppGpp.metabolism
+2026-04-15 00:39:10.439846 INFO::Fitting model to feature number 113, PROTOCATECHUATE.ORTHO.CLEAVAGE.PWY..protocatechuate.degradation.II..ortho.cleavage.pathway.
+2026-04-15 00:39:10.443319 INFO::Fitting model to feature number 114, PRPP.PWY..superpathway.of.histidine..purine..and.pyrimidine.biosynthesis
+2026-04-15 00:39:10.446732 INFO::Fitting model to feature number 115, PWY.1042..glycolysis.IV
+2026-04-15 00:39:10.450103 INFO::Fitting model to feature number 116, PWY.1269..CMP.3.deoxy.D.manno.octulosonate.biosynthesis
+2026-04-15 00:39:10.453513 INFO::Fitting model to feature number 117, PWY.1622..formaldehyde.assimilation.I..serine.pathway.
+2026-04-15 00:39:10.456927 INFO::Fitting model to feature number 118, PWY.181..photorespiration
+2026-04-15 00:39:10.460293 INFO::Fitting model to feature number 119, PWY.1861..formaldehyde.assimilation.II..assimilatory.RuMP.Cycle.
+2026-04-15 00:39:10.46364 INFO::Fitting model to feature number 120, PWY.2221..Entner.Doudoroff.pathway.III..semi.phosphorylative.
+2026-04-15 00:39:10.467603 INFO::Fitting model to feature number 121, PWY.241..C4.photosynthetic.carbon.assimilation.cycle..NADP.ME.type
+2026-04-15 00:39:10.471706 INFO::Fitting model to feature number 122, PWY.2941..L.lysine.biosynthesis.II
+2026-04-15 00:39:10.475189 INFO::Fitting model to feature number 123, PWY.2942..L.lysine.biosynthesis.III
+2026-04-15 00:39:10.478576 INFO::Fitting model to feature number 124, PWY.3001..superpathway.of.L.isoleucine.biosynthesis.I
+2026-04-15 00:39:10.482038 INFO::Fitting model to feature number 125, PWY.3801..sucrose.degradation.II..sucrose.synthase.
+2026-04-15 00:39:10.485453 INFO::Fitting model to feature number 126, PWY.3841..folate.transformations.II..plants.
+2026-04-15 00:39:10.48885 INFO::Fitting model to feature number 127, PWY.4041...gamma..glutamyl.cycle
+2026-04-15 00:39:10.492224 INFO::Fitting model to feature number 128, PWY.4984..urea.cycle
+2026-04-15 00:39:10.495592 INFO::Fitting model to feature number 129, PWY.5005..biotin.biosynthesis.II
+2026-04-15 00:39:10.499283 INFO::Fitting model to feature number 130, PWY.5028..L.histidine.degradation.II
+2026-04-15 00:39:10.502804 INFO::Fitting model to feature number 131, PWY.5030..L.histidine.degradation.III
+2026-04-15 00:39:10.506214 INFO::Fitting model to feature number 132, PWY.5097..L.lysine.biosynthesis.VI
+2026-04-15 00:39:10.509557 INFO::Fitting model to feature number 133, PWY.5100..pyruvate.fermentation.to.acetate.and.lactate.II
+2026-04-15 00:39:10.513058 INFO::Fitting model to feature number 134, PWY.5103..L.isoleucine.biosynthesis.III
+2026-04-15 00:39:10.516525 INFO::Fitting model to feature number 135, PWY.5121..superpathway.of.geranylgeranyl.diphosphate.biosynthesis.II..via.MEP.
+2026-04-15 00:39:10.519959 INFO::Fitting model to feature number 136, PWY.5130..2.oxobutanoate.degradation.I
+2026-04-15 00:39:10.523369 INFO::Fitting model to feature number 137, PWY.5136..fatty.acid..beta..oxidation.II..plant.peroxisome.
+2026-04-15 00:39:10.526841 INFO::Fitting model to feature number 138, PWY.5138..fatty.acid..beta..oxidation.IV..unsaturated..even.number.
+2026-04-15 00:39:10.530273 INFO::Fitting model to feature number 139, PWY.5154..L.arginine.biosynthesis.III..via.N.acetyl.L.citrulline.
+2026-04-15 00:39:10.533597 INFO::Fitting model to feature number 140, PWY.5180..toluene.degradation.I..aerobic...via.o.cresol.
+2026-04-15 00:39:10.536948 INFO::Fitting model to feature number 141, PWY.5188..tetrapyrrole.biosynthesis.I..from.glutamate.
+2026-04-15 00:39:10.540252 INFO::Fitting model to feature number 142, PWY.5189..tetrapyrrole.biosynthesis.II..from.glycine.
+2026-04-15 00:39:10.544179 INFO::Fitting model to feature number 143, PWY.5265..peptidoglycan.biosynthesis.II..staphylococci.
+2026-04-15 00:39:10.547805 INFO::Fitting model to feature number 144, PWY.5345..superpathway.of.L.methionine.biosynthesis..by.sulfhydrylation.
+2026-04-15 00:39:10.551232 INFO::Fitting model to feature number 145, PWY.5347..superpathway.of.L.methionine.biosynthesis..transsulfuration.
+2026-04-15 00:39:10.554619 INFO::Fitting model to feature number 146, PWY.5367..petroselinate.biosynthesis
+2026-04-15 00:39:10.558079 INFO::Fitting model to feature number 147, PWY.5384..sucrose.degradation.IV..sucrose.phosphorylase.
+2026-04-15 00:39:10.561524 INFO::Fitting model to feature number 148, PWY.5392..reductive.TCA.cycle.II
+2026-04-15 00:39:10.56499 INFO::Fitting model to feature number 149, PWY.5415..catechol.degradation.I..meta.cleavage.pathway.
+2026-04-15 00:39:10.568383 INFO::Fitting model to feature number 150, PWY.5417..catechol.degradation.III..ortho.cleavage.pathway.
+2026-04-15 00:39:10.571762 INFO::Fitting model to feature number 151, PWY.5431..aromatic.compounds.degradation.via..beta..ketoadipate
+2026-04-15 00:39:10.575144 INFO::Fitting model to feature number 152, PWY.5484..glycolysis.II..from.fructose.6.phosphate.
+2026-04-15 00:39:10.578503 INFO::Fitting model to feature number 153, PWY.5497..purine.nucleobases.degradation.II..anaerobic.
+2026-04-15 00:39:10.581875 INFO::Fitting model to feature number 154, PWY.5505..L.glutamate.and.L.glutamine.biosynthesis
+2026-04-15 00:39:10.585227 INFO::Fitting model to feature number 155, PWY.561..superpathway.of.glyoxylate.cycle.and.fatty.acid.degradation
+2026-04-15 00:39:10.58863 INFO::Fitting model to feature number 156, PWY.5654..2.amino.3.carboxymuconate.semialdehyde.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:10.592136 INFO::Fitting model to feature number 157, PWY.5656..mannosylglycerate.biosynthesis.I
+2026-04-15 00:39:10.595487 INFO::Fitting model to feature number 158, PWY.5659..GDP.mannose.biosynthesis
+2026-04-15 00:39:10.598812 INFO::Fitting model to feature number 159, PWY.5667..CDP.diacylglycerol.biosynthesis.I
+2026-04-15 00:39:10.602109 INFO::Fitting model to feature number 160, PWY.5675..nitrate.reduction.V..assimilatory.
+2026-04-15 00:39:10.605584 INFO::Fitting model to feature number 161, PWY.5676..acetyl.CoA.fermentation.to.butanoate.II
+2026-04-15 00:39:10.609161 INFO::Fitting model to feature number 162, PWY.5686..UMP.biosynthesis.I
+2026-04-15 00:39:10.612661 INFO::Fitting model to feature number 163, PWY.5692..allantoin.degradation.to.glyoxylate.II
+2026-04-15 00:39:10.616125 INFO::Fitting model to feature number 164, PWY.5695..inosine.5..phosphate.degradation
+2026-04-15 00:39:10.619508 INFO::Fitting model to feature number 165, PWY.5705..allantoin.degradation.to.glyoxylate.III
+2026-04-15 00:39:10.623063 INFO::Fitting model to feature number 166, PWY.5723..Rubisco.shunt
+2026-04-15 00:39:10.626692 INFO::Fitting model to feature number 167, PWY.5747..2.methylcitrate.cycle.II
+2026-04-15 00:39:10.630251 INFO::Fitting model to feature number 168, PWY.5837..2.carboxy.1.4.naphthoquinol.biosynthesis
+2026-04-15 00:39:10.633646 INFO::Fitting model to feature number 169, PWY.5838..superpathway.of.menaquinol.8.biosynthesis.I
+2026-04-15 00:39:10.637371 INFO::Fitting model to feature number 170, PWY.5840..superpathway.of.menaquinol.7.biosynthesis
+2026-04-15 00:39:10.64086 INFO::Fitting model to feature number 171, PWY.5845..superpathway.of.menaquinol.9.biosynthesis
+2026-04-15 00:39:10.644331 INFO::Fitting model to feature number 172, PWY.5850..superpathway.of.menaquinol.6.biosynthesis
+2026-04-15 00:39:10.647773 INFO::Fitting model to feature number 173, PWY.5855..ubiquinol.7.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:10.659298 INFO::Fitting model to feature number 174, PWY.5860..superpathway.of.demethylmenaquinol.6.biosynthesis.I
+2026-04-15 00:39:10.662918 INFO::Fitting model to feature number 175, PWY.5861..superpathway.of.demethylmenaquinol.8.biosynthesis.I
+2026-04-15 00:39:10.666365 INFO::Fitting model to feature number 176, PWY.5862..superpathway.of.demethylmenaquinol.9.biosynthesis
+2026-04-15 00:39:10.671342 INFO::Fitting model to feature number 177, PWY.5896..superpathway.of.menaquinol.10.biosynthesis
+2026-04-15 00:39:10.675096 INFO::Fitting model to feature number 178, PWY.5897..superpathway.of.menaquinol.11.biosynthesis
+2026-04-15 00:39:10.679651 INFO::Fitting model to feature number 179, PWY.5898..superpathway.of.menaquinol.12.biosynthesis
+2026-04-15 00:39:10.684104 INFO::Fitting model to feature number 180, PWY.5899..superpathway.of.menaquinol.13.biosynthesis
+2026-04-15 00:39:10.688363 INFO::Fitting model to feature number 181, PWY.5910..superpathway.of.geranylgeranyldiphosphate.biosynthesis.I..via.mevalonate.
+2026-04-15 00:39:10.692021 INFO::Fitting model to feature number 182, PWY.5913..partial.TCA.cycle..obligate.autotrophs.
+2026-04-15 00:39:10.695572 INFO::Fitting model to feature number 183, PWY.5918..superpathway.of.heme.b.biosynthesis.from.glutamate
+2026-04-15 00:39:10.699143 INFO::Fitting model to feature number 184, PWY.5920..superpathway.of.heme.b.biosynthesis.from.glycine
+2026-04-15 00:39:10.702613 INFO::Fitting model to feature number 185, PWY.5941..glycogen.degradation.II
+2026-04-15 00:39:10.706873 INFO::Fitting model to feature number 186, PWY.5971..palmitate.biosynthesis..type.II.fatty.acid.synthase.
+2026-04-15 00:39:10.710384 INFO::Fitting model to feature number 187, PWY.5972..stearate.biosynthesis.I..animals.
+2026-04-15 00:39:10.714009 INFO::Fitting model to feature number 188, PWY.5973..cis.vaccenate.biosynthesis
+2026-04-15 00:39:10.717614 INFO::Fitting model to feature number 189, PWY.5981..CDP.diacylglycerol.biosynthesis.III
+2026-04-15 00:39:10.721665 INFO::Fitting model to feature number 190, PWY.5989..stearate.biosynthesis.II..bacteria.and.plants.
+2026-04-15 00:39:10.725196 INFO::Fitting model to feature number 191, PWY.5994..palmitate.biosynthesis..type.I.fatty.acid.synthase.
+2026-04-15 00:39:10.728694 INFO::Fitting model to feature number 192, PWY.6121..5.aminoimidazole.ribonucleotide.biosynthesis.I
+2026-04-15 00:39:10.732167 INFO::Fitting model to feature number 193, PWY.6122..5.aminoimidazole.ribonucleotide.biosynthesis.II
+2026-04-15 00:39:10.735585 INFO::Fitting model to feature number 194, PWY.6123..inosine.5..phosphate.biosynthesis.I
+2026-04-15 00:39:10.739139 INFO::Fitting model to feature number 195, PWY.6124..inosine.5..phosphate.biosynthesis.II
+2026-04-15 00:39:10.742614 INFO::Fitting model to feature number 196, PWY.6125..superpathway.of.guanosine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:10.746268 INFO::Fitting model to feature number 197, PWY.6126..superpathway.of.adenosine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:10.749802 INFO::Fitting model to feature number 198, PWY.6147..6.hydroxymethyl.dihydropterin.diphosphate.biosynthesis.I
+2026-04-15 00:39:10.753413 INFO::Fitting model to feature number 199, PWY.6151..S.adenosyl.L.methionine.salvage.I
+2026-04-15 00:39:10.757016 INFO::Fitting model to feature number 200, PWY.6163..chorismate.biosynthesis.from.3.dehydroquinate
+2026-04-15 00:39:10.760672 INFO::Fitting model to feature number 201, PWY.6168..flavin.biosynthesis.III..fungi.
+2026-04-15 00:39:10.764239 INFO::Fitting model to feature number 202, PWY.6182..superpathway.of.salicylate.degradation
+2026-04-15 00:39:10.767838 INFO::Fitting model to feature number 203, PWY.6185..4.methylcatechol.degradation..ortho.cleavage.
+2026-04-15 00:39:10.771567 INFO::Fitting model to feature number 204, PWY.6210..2.aminophenol.degradation
+2026-04-15 00:39:10.775164 INFO::Fitting model to feature number 205, PWY.6215..4.chlorobenzoate.degradation
+2026-04-15 00:39:10.778687 INFO::Fitting model to feature number 206, PWY.621..sucrose.degradation.III..sucrose.invertase.
+2026-04-15 00:39:10.782232 INFO::Fitting model to feature number 207, PWY.622..starch.biosynthesis
+2026-04-15 00:39:10.785656 INFO::Fitting model to feature number 208, PWY.6270..isoprene.biosynthesis.I
+2026-04-15 00:39:10.789515 INFO::Fitting model to feature number 209, PWY.6277..superpathway.of.5.aminoimidazole.ribonucleotide.biosynthesis
+2026-04-15 00:39:10.79311 INFO::Fitting model to feature number 210, PWY.6282..palmitoleate.biosynthesis.I..from..5Z..dodec.5.enoate.
+2026-04-15 00:39:10.796629 INFO::Fitting model to feature number 211, PWY.6284..superpathway.of.unsaturated.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:10.800097 INFO::Fitting model to feature number 212, PWY.6285..superpathway.of.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:10.803555 INFO::Fitting model to feature number 213, PWY.6292..superpathway.of.L.cysteine.biosynthesis..mammalian.
+2026-04-15 00:39:10.807115 INFO::Fitting model to feature number 214, PWY.6293..superpathway.of.L.cysteine.biosynthesis..fungi.
+2026-04-15 00:39:10.810611 INFO::Fitting model to feature number 215, PWY.6305..superpathway.of.putrescine.biosynthesis
+2026-04-15 00:39:10.814024 INFO::Fitting model to feature number 216, PWY.6317..D.galactose.degradation.I..Leloir.pathway.
+2026-04-15 00:39:10.817371 INFO::Fitting model to feature number 217, PWY.6318..L.phenylalanine.degradation.IV..mammalian..via.side.chain.
+2026-04-15 00:39:10.820986 INFO::Fitting model to feature number 218, PWY.6328..L.lysine.degradation.X
+2026-04-15 00:39:10.824605 INFO::Fitting model to feature number 219, PWY.6353..purine.nucleotides.degradation.II..aerobic.
+2026-04-15 00:39:10.828093 INFO::Fitting model to feature number 220, PWY.6385..peptidoglycan.biosynthesis.III..mycobacteria.
+2026-04-15 00:39:10.831473 INFO::Fitting model to feature number 221, PWY.6386..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.II..lysine.containing.
+2026-04-15 00:39:10.834824 INFO::Fitting model to feature number 222, PWY.6387..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:10.83933 INFO::Fitting model to feature number 223, PWY.6396..superpathway.of.2.3.butanediol.biosynthesis
+2026-04-15 00:39:10.842934 INFO::Fitting model to feature number 224, PWY.6435..4.hydroxybenzoate.biosynthesis.III..plants.
+2026-04-15 00:39:10.846364 INFO::Fitting model to feature number 225, PWY.6507..4.deoxy.L.threo.hex.4.enopyranuronate.degradation
+2026-04-15 00:39:10.849745 INFO::Fitting model to feature number 226, PWY.6519..8.amino.7.oxononanoate.biosynthesis.I
+2026-04-15 00:39:10.853317 INFO::Fitting model to feature number 227, PWY.6527..stachyose.degradation
+2026-04-15 00:39:10.857127 INFO::Fitting model to feature number 228, PWY.6531..mannitol.cycle
+2026-04-15 00:39:10.860635 INFO::Fitting model to feature number 229, PWY.6545..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.III
+2026-04-15 00:39:10.864098 INFO::Fitting model to feature number 230, PWY.6549..L.glutamine.biosynthesis.III
+2026-04-15 00:39:10.867614 INFO::Fitting model to feature number 231, PWY.6588..pyruvate.fermentation.to.acetone
+2026-04-15 00:39:10.87119 INFO::Fitting model to feature number 232, PWY.6590..superpathway.of.Clostridium.acetobutylicum.acidogenic.fermentation
+2026-04-15 00:39:10.874677 INFO::Fitting model to feature number 233, PWY.6595..superpathway.of.guanosine.nucleotides.degradation..plants.
+2026-04-15 00:39:10.878079 INFO::Fitting model to feature number 234, PWY.6606..guanosine.nucleotides.degradation.II
+2026-04-15 00:39:10.881431 INFO::Fitting model to feature number 235, PWY.6607..guanosine.nucleotides.degradation.I
+2026-04-15 00:39:10.884965 INFO::Fitting model to feature number 236, PWY.6608..guanosine.nucleotides.degradation.III
+2026-04-15 00:39:10.888746 INFO::Fitting model to feature number 237, PWY.6609..adenine.and.adenosine.salvage.III
+2026-04-15 00:39:10.892187 INFO::Fitting model to feature number 238, PWY.6612..superpathway.of.tetrahydrofolate.biosynthesis
+2026-04-15 00:39:10.895619 INFO::Fitting model to feature number 239, PWY.6628..superpathway.of.L.phenylalanine.biosynthesis
+2026-04-15 00:39:10.899346 INFO::Fitting model to feature number 240, PWY.6629..superpathway.of.L.tryptophan.biosynthesis
+2026-04-15 00:39:10.902725 INFO::Fitting model to feature number 241, PWY.6630..superpathway.of.L.tyrosine.biosynthesis
+2026-04-15 00:39:10.906214 INFO::Fitting model to feature number 242, PWY.6690..cinnamate.and.3.hydroxycinnamate.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:10.909639 INFO::Fitting model to feature number 243, PWY.6700..queuosine.biosynthesis.I..de.novo.
+2026-04-15 00:39:10.912958 INFO::Fitting model to feature number 244, PWY.6703..preQ0.biosynthesis
+2026-04-15 00:39:10.91672 INFO::Fitting model to feature number 245, PWY.6708..ubiquinol.8.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:10.920535 INFO::Fitting model to feature number 246, PWY.6731..starch.degradation.III
+2026-04-15 00:39:10.92427 INFO::Fitting model to feature number 247, PWY.6749..CMP.legionaminate.biosynthesis.I
+2026-04-15 00:39:10.9278 INFO::Fitting model to feature number 248, PWY.6803..phosphatidylcholine.acyl.editing
+2026-04-15 00:39:10.931333 INFO::Fitting model to feature number 249, PWY.6823..molybdopterin.biosynthesis
+2026-04-15 00:39:10.93473 INFO::Fitting model to feature number 250, PWY.6859..all.trans.farnesol.biosynthesis
+2026-04-15 00:39:10.938172 INFO::Fitting model to feature number 251, PWY.6892..thiazole.component.of.thiamine.diphosphate.biosynthesis.I
+2026-04-15 00:39:10.941621 INFO::Fitting model to feature number 252, PWY.6895..superpathway.of.thiamine.diphosphate.biosynthesis.II
+2026-04-15 00:39:10.944987 INFO::Fitting model to feature number 253, PWY.6897..thiamine.diphosphate.salvage.II
+2026-04-15 00:39:10.948398 INFO::Fitting model to feature number 254, PWY.6901..superpathway.of.glucose.and.xylose.degradation
+2026-04-15 00:39:10.951782 INFO::Fitting model to feature number 255, PWY.6902..chitin.degradation.II..Vibrio.
+2026-04-15 00:39:10.955403 INFO::Fitting model to feature number 256, PWY.6922..L.N.delta..acetylornithine.biosynthesis
+2026-04-15 00:39:10.958938 INFO::Fitting model to feature number 257, PWY.6936..seleno.amino.acid.biosynthesis..plants.
+2026-04-15 00:39:10.962393 INFO::Fitting model to feature number 258, PWY.6961..L.ascorbate.degradation.II..bacterial..aerobic.
+2026-04-15 00:39:10.965806 INFO::Fitting model to feature number 259, PWY.6969..TCA.cycle.V..2.oxoglutarate.synthase.
+2026-04-15 00:39:10.969164 INFO::Fitting model to feature number 260, PWY.6992..1.5.anhydrofructose.degradation
+2026-04-15 00:39:10.972671 INFO::Fitting model to feature number 261, PWY.7013...S..propane.1.2.diol.degradation
+2026-04-15 00:39:10.976115 INFO::Fitting model to feature number 262, PWY.702..L.methionine.biosynthesis.II
+2026-04-15 00:39:10.979507 INFO::Fitting model to feature number 263, PWY.7039..phosphatidate.metabolism..as.a.signaling.molecule
+2026-04-15 00:39:10.982911 INFO::Fitting model to feature number 264, PWY.7094..fatty.acid.salvage
+2026-04-15 00:39:10.986352 INFO::Fitting model to feature number 265, PWY.7111..pyruvate.fermentation.to.isobutanol..engineered.
+2026-04-15 00:39:10.989711 INFO::Fitting model to feature number 266, PWY.7115..C4.photosynthetic.carbon.assimilation.cycle..NAD.ME.type
+2026-04-15 00:39:10.993068 INFO::Fitting model to feature number 267, PWY.7117..C4.photosynthetic.carbon.assimilation.cycle..PEPCK.type
+2026-04-15 00:39:10.996479 INFO::Fitting model to feature number 268, PWY.7118..chitin.deacetylation
+2026-04-15 00:39:10.999902 INFO::Fitting model to feature number 269, PWY.7165..L.ascorbate.biosynthesis.VIII..engineered.pathway.
+2026-04-15 00:39:11.003599 INFO::Fitting model to feature number 270, PWY.7184..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:11.007124 INFO::Fitting model to feature number 271, PWY.7185..UTP.and.CTP.dephosphorylation.I
+2026-04-15 00:39:11.010752 INFO::Fitting model to feature number 272, PWY.7187..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:11.01427 INFO::Fitting model to feature number 273, PWY.7196..superpathway.of.pyrimidine.ribonucleosides.salvage
+2026-04-15 00:39:11.017729 INFO::Fitting model to feature number 274, PWY.7197..pyrimidine.deoxyribonucleotide.phosphorylation
+2026-04-15 00:39:11.02129 INFO::Fitting model to feature number 275, PWY.7198..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.IV
+2026-04-15 00:39:11.02494 INFO::Fitting model to feature number 276, PWY.7199..pyrimidine.deoxyribonucleosides.salvage
+2026-04-15 00:39:11.028389 INFO::Fitting model to feature number 277, PWY.7200..superpathway.of.pyrimidine.deoxyribonucleoside.salvage
+2026-04-15 00:39:11.031829 INFO::Fitting model to feature number 278, PWY.7204..pyridoxal.5..phosphate.salvage.II..plants.
+2026-04-15 00:39:11.035238 INFO::Fitting model to feature number 279, PWY.7208..superpathway.of.pyrimidine.nucleobases.salvage
+2026-04-15 00:39:11.038694 INFO::Fitting model to feature number 280, PWY.7209..superpathway.of.pyrimidine.ribonucleosides.degradation
+2026-04-15 00:39:11.042359 INFO::Fitting model to feature number 281, PWY.7210..pyrimidine.deoxyribonucleotides.biosynthesis.from.CTP
+2026-04-15 00:39:11.045791 INFO::Fitting model to feature number 282, PWY.7211..superpathway.of.pyrimidine.deoxyribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:11.0492 INFO::Fitting model to feature number 283, PWY.7220..adenosine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:11.05254 INFO::Fitting model to feature number 284, PWY.7221..guanosine.ribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:11.056453 INFO::Fitting model to feature number 285, PWY.7222..guanosine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:11.060637 INFO::Fitting model to feature number 286, PWY.7228..superpathway.of.guanosine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:11.064115 INFO::Fitting model to feature number 287, PWY.7229..superpathway.of.adenosine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:11.067544 INFO::Fitting model to feature number 288, PWY.7234..inosine.5..phosphate.biosynthesis.III
+2026-04-15 00:39:11.071276 INFO::Fitting model to feature number 289, PWY.7237..myo...chiro..and.scyllo.inositol.degradation
+2026-04-15 00:39:11.074782 INFO::Fitting model to feature number 290, PWY.7238..sucrose.biosynthesis.II
+2026-04-15 00:39:11.078177 INFO::Fitting model to feature number 291, PWY.7242..D.fructuronate.degradation
+2026-04-15 00:39:11.081574 INFO::Fitting model to feature number 292, PWY.7245..superpathway.of.NAD.NADP...NADH.NADPH.interconversion..yeast.
+2026-04-15 00:39:11.085108 INFO::Fitting model to feature number 293, PWY.724..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.II
+2026-04-15 00:39:11.088482 INFO::Fitting model to feature number 294, PWY.7254..TCA.cycle.VII..acetate.producers.
+2026-04-15 00:39:11.09188 INFO::Fitting model to feature number 295, PWY.7268..cytosolic.NADPH.production..yeast.
+2026-04-15 00:39:11.095254 INFO::Fitting model to feature number 296, PWY.7269..mitochondrial.NADPH.production..yeast.
+2026-04-15 00:39:11.098618 INFO::Fitting model to feature number 297, PWY.7282..4.amino.2.methyl.5.diphosphomethylpyrimidine.biosynthesis.II
+2026-04-15 00:39:11.102 INFO::Fitting model to feature number 298, PWY.7294..D.xylose.degradation.IV
+2026-04-15 00:39:11.105368 INFO::Fitting model to feature number 299, PWY.7315..dTDP.N.acetylthomosamine.biosynthesis
+2026-04-15 00:39:11.1087 INFO::Fitting model to feature number 300, PWY.7323..superpathway.of.GDP.mannose.derived.O.antigen.building.blocks.biosynthesis
+2026-04-15 00:39:11.112026 INFO::Fitting model to feature number 301, PWY.7328..superpathway.of.UDP.glucose.derived.O.antigen.building.blocks.biosynthesis
+2026-04-15 00:39:11.115457 INFO::Fitting model to feature number 302, PWY.7340..9.cis..11.trans.octadecadienoyl.CoA.degradation..isomerase.dependent..yeast.
+2026-04-15 00:39:11.118872 INFO::Fitting model to feature number 303, PWY.7345..superpathway.of.anaerobic.sucrose.degradation
+2026-04-15 00:39:11.122205 INFO::Fitting model to feature number 304, PWY.7356..thiamine.diphosphate.salvage.IV..yeast.
+2026-04-15 00:39:11.125521 INFO::Fitting model to feature number 305, PWY.7357..thiamine.phosphate.formation.from.pyrithiamine.and.oxythiamine..yeast.
+2026-04-15 00:39:11.128855 INFO::Fitting model to feature number 306, PWY.7383..anaerobic.energy.metabolism..invertebrates..cytosol.
+2026-04-15 00:39:11.132309 INFO::Fitting model to feature number 307, PWY.7385..1.3.propanediol.biosynthesis..engineered.
+2026-04-15 00:39:11.135785 INFO::Fitting model to feature number 308, PWY.7388..octanoyl..acyl.carrier.protein..biosynthesis..mitochondria..yeast.
+2026-04-15 00:39:11.139204 INFO::Fitting model to feature number 309, PWY.7391..isoprene.biosynthesis.II..engineered.
+2026-04-15 00:39:11.142594 INFO::Fitting model to feature number 310, PWY.7392..taxadiene.biosynthesis..engineered.
+2026-04-15 00:39:11.14593 INFO::Fitting model to feature number 311, PWY.7396..butanol.and.isobutanol.biosynthesis..engineered.
+2026-04-15 00:39:11.149277 INFO::Fitting model to feature number 312, PWY.7400..L.arginine.biosynthesis.IV..archaebacteria.
+2026-04-15 00:39:11.152595 INFO::Fitting model to feature number 313, PWY.7409..phospholipid.remodeling..phosphatidylethanolamine..yeast.
+2026-04-15 00:39:11.155949 INFO::Fitting model to feature number 314, PWY.7434..terminal.O.glycans.residues.modification..via.type.2.precursor.disaccharide.
+2026-04-15 00:39:11.159314 INFO::Fitting model to feature number 315, PWY.7446..sulfoquinovose.degradation.I
+2026-04-15 00:39:11.162677 INFO::Fitting model to feature number 316, PWY.7456...beta...1.4..mannan.degradation
+2026-04-15 00:39:11.166319 INFO::Fitting model to feature number 317, PWY.7560..methylerythritol.phosphate.pathway.II
+2026-04-15 00:39:11.169844 INFO::Fitting model to feature number 318, PWY.7616..methanol.oxidation.to.carbon.dioxide
+2026-04-15 00:39:11.173322 INFO::Fitting model to feature number 319, PWY.7663..gondoate.biosynthesis..anaerobic.
+2026-04-15 00:39:11.176663 INFO::Fitting model to feature number 320, PWY.7664..oleate.biosynthesis.IV..anaerobic.
+2026-04-15 00:39:11.180134 INFO::Fitting model to feature number 321, PWY.7723..bacterial.bioluminescence
+2026-04-15 00:39:11.183522 INFO::Fitting model to feature number 322, PWY.7761..NAD.salvage.pathway.II..PNC.IV.cycle.
+2026-04-15 00:39:11.186915 INFO::Fitting model to feature number 323, PWY.7783..plasmalogen.degradation
+2026-04-15 00:39:11.190283 INFO::Fitting model to feature number 324, PWY.7790..UMP.biosynthesis.II
+2026-04-15 00:39:11.19365 INFO::Fitting model to feature number 325, PWY.7791..UMP.biosynthesis.III
+2026-04-15 00:39:11.197048 INFO::Fitting model to feature number 326, PWY.7805...aminomethyl.phosphonate.degradation
+2026-04-15 00:39:11.200383 INFO::Fitting model to feature number 327, PWY.7807..glyphosate.degradation.III
+2026-04-15 00:39:11.203736 INFO::Fitting model to feature number 328, PWY.7851..coenzyme.A.biosynthesis.II..eukaryotic.
+2026-04-15 00:39:11.207131 INFO::Fitting model to feature number 329, PWY.7858...5Z..dodecenoate.biosynthesis.II
+2026-04-15 00:39:11.210562 INFO::Fitting model to feature number 330, PWY.7873..D.erythronate.degradation.II
+2026-04-15 00:39:11.213995 INFO::Fitting model to feature number 331, PWY.7874..L.threonate.degradation
+2026-04-15 00:39:11.217393 INFO::Fitting model to feature number 332, PWY.7883..anhydromuropeptides.recycling.II
+2026-04-15 00:39:11.220793 INFO::Fitting model to feature number 333, PWY.7942..5.oxo.L.proline.metabolism
+2026-04-15 00:39:11.224183 INFO::Fitting model to feature number 334, PWY.7953..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.III..meso.diaminopimelate.containing.
+2026-04-15 00:39:11.227722 INFO::Fitting model to feature number 335, PWY.7977..L.methionine.biosynthesis.IV
+2026-04-15 00:39:11.231104 INFO::Fitting model to feature number 336, PWY.8004..Entner.Doudoroff.pathway.I
+2026-04-15 00:39:11.234473 INFO::Fitting model to feature number 337, PWY.8011..L.serine.biosynthesis.II
+2026-04-15 00:39:11.237852 INFO::Fitting model to feature number 338, PWY.801..homocysteine.and.cysteine.interconversion
+2026-04-15 00:39:11.241376 INFO::Fitting model to feature number 339, PWY.8073..lipid.IVA.biosynthesis..P..putida.
+2026-04-15 00:39:11.244771 INFO::Fitting model to feature number 340, PWY.8131..5..deoxyadenosine.degradation.II
+2026-04-15 00:39:11.248184 INFO::Fitting model to feature number 341, PWY.8178..pentose.phosphate.pathway..non.oxidative.branch..II
+2026-04-15 00:39:11.251521 INFO::Fitting model to feature number 342, PWY.8187..L.arginine.degradation.XIII..reductive.Stickland.reaction.
+2026-04-15 00:39:11.254954 INFO::Fitting model to feature number 343, PWY.821..superpathway.of.sulfur.amino.acid.biosynthesis..Saccharomyces.cerevisiae.
+2026-04-15 00:39:11.258461 INFO::Fitting model to feature number 344, PWY.822..fructan.biosynthesis
+2026-04-15 00:39:11.261831 INFO::Fitting model to feature number 345, PWY.841..superpathway.of.purine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:11.265202 INFO::Fitting model to feature number 346, PWY.922..mevalonate.pathway.I..eukaryotes.and.bacteria.
+2026-04-15 00:39:11.268584 INFO::Fitting model to feature number 347, PWY.I9..L.cysteine.biosynthesis.VI..from.L.methionine.
+2026-04-15 00:39:11.272142 INFO::Fitting model to feature number 348, PWY0.1061..superpathway.of.L.alanine.biosynthesis
+2026-04-15 00:39:11.275531 INFO::Fitting model to feature number 349, PWY0.1221..putrescine.degradation.II
+2026-04-15 00:39:11.279056 INFO::Fitting model to feature number 350, PWY0.1241..ADP.L.glycero..beta..D.manno.heptose.biosynthesis
+2026-04-15 00:39:11.282486 INFO::Fitting model to feature number 351, PWY0.1261..anhydromuropeptides.recycling.I
+2026-04-15 00:39:11.28589 INFO::Fitting model to feature number 352, PWY0.1277..3.phenylpropanoate.and.3..3.hydroxyphenyl.propanoate.degradation
+2026-04-15 00:39:11.28978 INFO::Fitting model to feature number 353, PWY0.1296..purine.ribonucleosides.degradation
+2026-04-15 00:39:11.29333 INFO::Fitting model to feature number 354, PWY0.1297..superpathway.of.purine.deoxyribonucleosides.degradation
+2026-04-15 00:39:11.296828 INFO::Fitting model to feature number 355, PWY0.1298..superpathway.of.pyrimidine.deoxyribonucleosides.degradation
+2026-04-15 00:39:11.300232 INFO::Fitting model to feature number 356, PWY0.1319..CDP.diacylglycerol.biosynthesis.II
+2026-04-15 00:39:11.303801 INFO::Fitting model to feature number 357, PWY0.1337..oleate..beta..oxidation
+2026-04-15 00:39:11.314183 INFO::Fitting model to feature number 358, PWY0.1338..polymyxin.resistance
+2026-04-15 00:39:11.317831 INFO::Fitting model to feature number 359, PWY0.1415..superpathway.of.heme.b.biosynthesis.from.uroporphyrinogen.III
+2026-04-15 00:39:11.321389 INFO::Fitting model to feature number 360, PWY0.1477..ethanolamine.utilization
+2026-04-15 00:39:11.324859 INFO::Fitting model to feature number 361, PWY0.1479..tRNA.processing
+2026-04-15 00:39:11.328274 INFO::Fitting model to feature number 362, PWY0.1533..methylphosphonate.degradation.I
+2026-04-15 00:39:11.331678 INFO::Fitting model to feature number 363, PWY0.1586..peptidoglycan.maturation..meso.diaminopimelate.containing.
+2026-04-15 00:39:11.335026 INFO::Fitting model to feature number 364, PWY0.162..superpathway.of.pyrimidine.ribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:11.338399 INFO::Fitting model to feature number 365, PWY0.166..superpathway.of.pyrimidine.deoxyribonucleotides.de.novo.biosynthesis..E..coli.
+2026-04-15 00:39:11.341757 INFO::Fitting model to feature number 366, PWY0.301..L.ascorbate.degradation.I..bacterial..anaerobic.
+2026-04-15 00:39:11.345094 INFO::Fitting model to feature number 367, PWY0.41..allantoin.degradation.IV..anaerobic.
+2026-04-15 00:39:11.348424 INFO::Fitting model to feature number 368, PWY0.42..2.methylcitrate.cycle.I
+2026-04-15 00:39:11.351789 INFO::Fitting model to feature number 369, PWY0.461..L.lysine.degradation.I
+2026-04-15 00:39:11.355149 INFO::Fitting model to feature number 370, PWY0.781..aspartate.superpathway
+2026-04-15 00:39:11.358478 INFO::Fitting model to feature number 371, PWY0.845..superpathway.of.pyridoxal.5..phosphate.biosynthesis.and.salvage
+2026-04-15 00:39:11.361812 INFO::Fitting model to feature number 372, PWY0.862...5Z..dodecenoate.biosynthesis.I
+2026-04-15 00:39:11.36509 INFO::Fitting model to feature number 373, PWY0.881..superpathway.of.fatty.acid.biosynthesis.I..E..coli.
+2026-04-15 00:39:11.369236 INFO::Fitting model to feature number 374, PWY1G.0..mycothiol.biosynthesis
+2026-04-15 00:39:11.372913 INFO::Fitting model to feature number 375, PWY1ZNC.1..assimilatory.sulfate.reduction.IV
+2026-04-15 00:39:11.376378 INFO::Fitting model to feature number 376, PWY3O.4107..NAD.salvage.pathway.V..PNC.V.cycle.
+2026-04-15 00:39:11.379824 INFO::Fitting model to feature number 377, PWY4FS.7..phosphatidylglycerol.biosynthesis.I..plastidic.
+2026-04-15 00:39:11.383384 INFO::Fitting model to feature number 378, PWY4FS.8..phosphatidylglycerol.biosynthesis.II..non.plastidic.
+2026-04-15 00:39:11.386845 INFO::Fitting model to feature number 379, PWY4LZ.257..superpathway.of.fermentation..Chlamydomonas.reinhardtii.
+2026-04-15 00:39:11.390241 INFO::Fitting model to feature number 380, PWY5F9.12..biphenyl.degradation
+2026-04-15 00:39:11.393605 INFO::Fitting model to feature number 381, PWY66.389..phytol.degradation
+2026-04-15 00:39:11.396972 INFO::Fitting model to feature number 382, PWY66.391..fatty.acid..beta..oxidation.VI..mammalian.peroxisome.
+2026-04-15 00:39:11.40047 INFO::Fitting model to feature number 383, PWY66.399..gluconeogenesis.III
+2026-04-15 00:39:11.403903 INFO::Fitting model to feature number 384, PWY66.409..superpathway.of.purine.nucleotide.salvage
+2026-04-15 00:39:11.40735 INFO::Fitting model to feature number 385, PWY66.429..fatty.acid.biosynthesis.initiation..mitochondria.
+2026-04-15 00:39:11.410722 INFO::Fitting model to feature number 386, PWY66.430..myristate.biosynthesis..mitochondria.
+2026-04-15 00:39:11.414155 INFO::Fitting model to feature number 387, PYRIDNUCSAL.PWY..NAD.salvage.pathway.I..PNC.VI.cycle.
+2026-04-15 00:39:11.417717 INFO::Fitting model to feature number 388, PYRIDNUCSYN.PWY..NAD.de.novo.biosynthesis.I..from.aspartate.
+2026-04-15 00:39:11.421184 INFO::Fitting model to feature number 389, PYRIDOXSYN.PWY..pyridoxal.5..phosphate.biosynthesis.I
+2026-04-15 00:39:11.424627 INFO::Fitting model to feature number 390, REDCITCYC..TCA.cycle.VI..Helicobacter.
+2026-04-15 00:39:11.428073 INFO::Fitting model to feature number 391, RHAMCAT.PWY..L.rhamnose.degradation.I
+2026-04-15 00:39:11.431451 INFO::Fitting model to feature number 392, RIBOSYN2.PWY..flavin.biosynthesis.I..bacteria.and.plants.
+2026-04-15 00:39:11.434798 INFO::Fitting model to feature number 393, RUMP.PWY..formaldehyde.oxidation.I
+2026-04-15 00:39:11.438214 INFO::Fitting model to feature number 394, SALVADEHYPOX.PWY..adenosine.nucleotides.degradation.II
+2026-04-15 00:39:11.441636 INFO::Fitting model to feature number 395, SER.GLYSYN.PWY..superpathway.of.L.serine.and.glycine.biosynthesis.I
+2026-04-15 00:39:11.445332 INFO::Fitting model to feature number 396, SO4ASSIM.PWY..assimilatory.sulfate.reduction.I
+2026-04-15 00:39:11.448981 INFO::Fitting model to feature number 397, SULFATE.CYS.PWY..superpathway.of.sulfate.assimilation.and.cysteine.biosynthesis
+2026-04-15 00:39:11.452437 INFO::Fitting model to feature number 398, TCA.GLYOX.BYPASS..superpathway.of.glyoxylate.bypass.and.TCA
+2026-04-15 00:39:11.456126 INFO::Fitting model to feature number 399, TCA..TCA.cycle.I..prokaryotic.
+2026-04-15 00:39:11.459647 INFO::Fitting model to feature number 400, THISYN.PWY..superpathway.of.thiamine.diphosphate.biosynthesis.I
+2026-04-15 00:39:11.463184 INFO::Fitting model to feature number 401, THISYNARA.PWY..superpathway.of.thiamine.diphosphate.biosynthesis.III..eukaryotes.
+2026-04-15 00:39:11.466666 INFO::Fitting model to feature number 402, THREOCAT.PWY..superpathway.of.L.threonine.metabolism
+2026-04-15 00:39:11.470245 INFO::Fitting model to feature number 403, THRESYN.PWY..superpathway.of.L.threonine.biosynthesis
+2026-04-15 00:39:11.473753 INFO::Fitting model to feature number 404, TRNA.CHARGING.PWY..tRNA.charging
+2026-04-15 00:39:11.477216 INFO::Fitting model to feature number 405, TRPSYN.PWY..L.tryptophan.biosynthesis
+2026-04-15 00:39:11.480625 INFO::Fitting model to feature number 406, UBISYN.PWY..superpathway.of.ubiquinol.8.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:11.484045 INFO::Fitting model to feature number 407, UDPNACETYLGALSYN.PWY..UDP.N.acetyl.D.glucosamine.biosynthesis.II
+2026-04-15 00:39:11.486403 INFO::Fitting model to feature number 408, UDPNAGSYN.PWY..UDP.N.acetyl.D.glucosamine.biosynthesis.I
+2026-04-15 00:39:11.489881 INFO::Fitting model to feature number 409, URDEGR.PWY..superpathway.of.allantoin.degradation.in.plants
+2026-04-15 00:39:11.493335 INFO::Fitting model to feature number 410, URSIN.PWY..ureide.biosynthesis
+2026-04-15 00:39:11.496736 INFO::Fitting model to feature number 411, VALSYN.PWY..L.valine.biosynthesis
+2026-04-15 00:39:11.513453 INFO::Performing tests against medians
+2026-04-15 00:39:14.052356 INFO::Counting total values for each feature
+2026-04-15 00:39:14.065234 INFO::Running the logistic model component
+2026-04-15 00:39:14.070679 DEBUG::Object: augment, Size: 56
+2026-04-15 00:39:14.071207 DEBUG::Object: cluster, Size: 0
+2026-04-15 00:39:14.071665 DEBUG::Object: cores, Size: 56
+2026-04-15 00:39:14.072099 DEBUG::Object: correction, Size: 112
+2026-04-15 00:39:14.072531 DEBUG::Object: extract_out, Size: 1416
+2026-04-15 00:39:14.072952 DEBUG::Object: feature_specific_covariate, Size: 0
+2026-04-15 00:39:14.073374 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2026-04-15 00:39:14.073896 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2026-04-15 00:39:14.074412 DEBUG::Object: features, Size: 321408
+2026-04-15 00:39:14.074877 DEBUG::Object: formula, Size: 1008
+2026-04-15 00:39:14.075348 DEBUG::Object: fun_list, Size: 70920
+2026-04-15 00:39:14.075831 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:39:14.076262 DEBUG::Object: groups, Size: 48
+2026-04-15 00:39:14.076697 DEBUG::Object: median_comparison, Size: 56
+2026-04-15 00:39:14.077357 DEBUG::Object: median_comparison_threshold, Size: 56
+2026-04-15 00:39:14.077946 DEBUG::Object: metadata, Size: 30528
+2026-04-15 00:39:14.078438 DEBUG::Object: model, Size: 120
+2026-04-15 00:39:14.078886 DEBUG::Object: model_function, Size: 21016
+2026-04-15 00:39:14.079414 DEBUG::Object: ordereds, Size: 48
+2026-04-15 00:39:14.079886 DEBUG::Object: random_effects_formula, Size: 0
+2026-04-15 00:39:14.08033 DEBUG::Object: ranef_function, Size: 0
+2026-04-15 00:39:14.08076 DEBUG::Object: save_models, Size: 56
+2026-04-15 00:39:14.081183 DEBUG::Object: small_random_effects, Size: 56
+2026-04-15 00:39:14.081612 DEBUG::Object: strata, Size: 48
+2026-04-15 00:39:14.082032 DEBUG::Object: subtract_median, Size: 56
+2026-04-15 00:39:14.082451 DEBUG::Object: summary_function, Size: 49424
+2026-04-15 00:39:14.082932 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:39:14.083392 INFO::Fitting model to feature number 1, X1CMET2.PWY..folate.transformations.III..E..coli.
+2026-04-15 00:39:14.085135 INFO::Fitting model to feature number 2, X3.HYDROXYPHENYLACETATE.DEGRADATION.PWY..4.hydroxyphenylacetate.degradation
+2026-04-15 00:39:14.091022 INFO::Fitting model to feature number 3, AEROBACTINSYN.PWY..aerobactin.biosynthesis
+2026-04-15 00:39:14.096569 INFO::Fitting model to feature number 4, ALLANTOINDEG.PWY..superpathway.of.allantoin.degradation.in.yeast
+2026-04-15 00:39:14.101999 INFO::Fitting model to feature number 5, ANAEROFRUCAT.PWY..homolactic.fermentation
+2026-04-15 00:39:14.103565 INFO::Fitting model to feature number 6, ANAGLYCOLYSIS.PWY..glycolysis.III..from.glucose.
+2026-04-15 00:39:14.105106 INFO::Fitting model to feature number 7, ARG.POLYAMINE.SYN..superpathway.of.arginine.and.polyamine.biosynthesis
+2026-04-15 00:39:14.112081 INFO::Fitting model to feature number 8, ARGDEG.PWY..superpathway.of.L.arginine..putrescine..and.4.aminobutanoate.degradation
+2026-04-15 00:39:14.117294 INFO::Fitting model to feature number 9, ARGININE.SYN4.PWY..L.ornithine.biosynthesis.II
+2026-04-15 00:39:14.118879 INFO::Fitting model to feature number 10, ARGSYN.PWY..L.arginine.biosynthesis.I..via.L.ornithine.
+2026-04-15 00:39:14.120394 INFO::Fitting model to feature number 11, ARGSYNBSUB.PWY..L.arginine.biosynthesis.II..acetyl.cycle.
+2026-04-15 00:39:14.121925 INFO::Fitting model to feature number 12, ARO.PWY..chorismate.biosynthesis.I
+2026-04-15 00:39:14.123448 INFO::Fitting model to feature number 13, ASPASN.PWY..superpathway.of.L.aspartate.and.L.asparagine.biosynthesis
+2026-04-15 00:39:14.12512 INFO::Fitting model to feature number 14, AST.PWY..L.arginine.degradation.II..AST.pathway.
+2026-04-15 00:39:14.130617 INFO::Fitting model to feature number 15, BIOTIN.BIOSYNTHESIS.PWY..biotin.biosynthesis.I
+2026-04-15 00:39:14.136151 INFO::Fitting model to feature number 16, BRANCHED.CHAIN.AA.SYN.PWY..superpathway.of.branched.chain.amino.acid.biosynthesis
+2026-04-15 00:39:14.137833 INFO::Fitting model to feature number 17, CALVIN.PWY..Calvin.Benson.Bassham.cycle
+2026-04-15 00:39:14.13944 INFO::Fitting model to feature number 18, CARNMET.PWY..L.carnitine.degradation.I
+2026-04-15 00:39:14.145644 INFO::Fitting model to feature number 19, CATECHOL.ORTHO.CLEAVAGE.PWY..catechol.degradation.to..beta..ketoadipate
+2026-04-15 00:39:14.151482 INFO::Fitting model to feature number 20, CENTFERM.PWY..pyruvate.fermentation.to.butanoate
+2026-04-15 00:39:14.157279 INFO::Fitting model to feature number 21, CITRULBIO.PWY..L.citrulline.biosynthesis
+2026-04-15 00:39:14.158932 INFO::Fitting model to feature number 22, COA.PWY.1..superpathway.of.coenzyme.A.biosynthesis.III..mammals.
+2026-04-15 00:39:14.1605 INFO::Fitting model to feature number 23, COA.PWY..coenzyme.A.biosynthesis.I..prokaryotic.
+2026-04-15 00:39:14.16204 INFO::Fitting model to feature number 24, COBALSYN.PWY..superpathway.of.adenosylcobalamin.salvage.from.cobinamide.I
+2026-04-15 00:39:14.167386 INFO::Fitting model to feature number 25, COLANSYN.PWY..colanic.acid.building.blocks.biosynthesis
+2026-04-15 00:39:14.173229 INFO::Fitting model to feature number 26, COMPLETE.ARO.PWY..superpathway.of.aromatic.amino.acid.biosynthesis
+2026-04-15 00:39:14.174924 INFO::Fitting model to feature number 27, CRNFORCAT.PWY..creatinine.degradation.I
+2026-04-15 00:39:14.180285 INFO::Fitting model to feature number 28, DAPLYSINESYN.PWY..L.lysine.biosynthesis.I
+2026-04-15 00:39:14.1819 INFO::Fitting model to feature number 29, DARABCATK12.PWY..D.arabinose.degradation.I
+2026-04-15 00:39:14.187271 INFO::Fitting model to feature number 30, DENITRIFICATION.PWY..nitrate.reduction.I..denitrification.
+2026-04-15 00:39:14.192499 INFO::Fitting model to feature number 31, DENOVOPURINE2.PWY..superpathway.of.purine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:14.197931 INFO::Fitting model to feature number 32, DHGLUCONATE.PYR.CAT.PWY..glucose.degradation..oxidative.
+2026-04-15 00:39:14.203198 INFO::Fitting model to feature number 33, DTDPRHAMSYN.PWY..dTDP..beta..L.rhamnose.biosynthesis
+2026-04-15 00:39:14.208729 INFO::Fitting model to feature number 34, ECASYN.PWY..enterobacterial.common.antigen.biosynthesis
+2026-04-15 00:39:14.214091 INFO::Fitting model to feature number 35, FAO.PWY..fatty.acid..beta..oxidation.I..generic.
+2026-04-15 00:39:14.220083 INFO::Fitting model to feature number 36, FASYN.ELONG.PWY..fatty.acid.elongation....saturated
+2026-04-15 00:39:14.221768 INFO::Fitting model to feature number 37, FASYN.INITIAL.PWY..superpathway.of.fatty.acid.biosynthesis.initiation..E..coli.
+2026-04-15 00:39:14.227288 INFO::Fitting model to feature number 38, FERMENTATION.PWY..mixed.acid.fermentation
+2026-04-15 00:39:14.22887 INFO::Fitting model to feature number 39, FOLSYN.PWY..superpathway.of.tetrahydrofolate.biosynthesis.and.salvage
+2026-04-15 00:39:14.234505 INFO::Fitting model to feature number 40, FUC.RHAMCAT.PWY..superpathway.of.fucose.and.rhamnose.degradation
+2026-04-15 00:39:14.240099 INFO::Fitting model to feature number 41, FUCCAT.PWY..fucose.degradation
+2026-04-15 00:39:14.245631 INFO::Fitting model to feature number 42, GALACT.GLUCUROCAT.PWY..superpathway.of.hexuronide.and.hexuronate.degradation
+2026-04-15 00:39:14.251333 INFO::Fitting model to feature number 43, GALACTARDEG.PWY..D.galactarate.degradation.I
+2026-04-15 00:39:14.257471 INFO::Fitting model to feature number 44, GALACTITOLCAT.PWY..galactitol.degradation
+2026-04-15 00:39:14.263068 INFO::Fitting model to feature number 45, GALACTUROCAT.PWY..D.galacturonate.degradation.I
+2026-04-15 00:39:14.268707 INFO::Fitting model to feature number 46, GLCMANNANAUT.PWY..superpathway.of.N.acetylglucosamine..N.acetylmannosamine.and.N.acetylneuraminate.degradation
+2026-04-15 00:39:14.270356 INFO::Fitting model to feature number 47, GLUCARDEG.PWY..D.glucarate.degradation.I
+2026-04-15 00:39:14.276154 INFO::Fitting model to feature number 48, GLUCARGALACTSUPER.PWY..superpathway.of.D.glucarate.and.D.galactarate.degradation
+2026-04-15 00:39:14.282448 INFO::Fitting model to feature number 49, GLUCONEO.PWY..gluconeogenesis.I
+2026-04-15 00:39:14.284169 INFO::Fitting model to feature number 50, GLUCOSE1PMETAB.PWY..glucose.and.glucose.1.phosphate.degradation
+2026-04-15 00:39:14.290127 INFO::Fitting model to feature number 51, GLUCUROCAT.PWY..superpathway.of..beta..D.glucuronosides.degradation
+2026-04-15 00:39:14.295735 INFO::Fitting model to feature number 52, GLUDEG.I.PWY..GABA.shunt
+2026-04-15 00:39:14.301969 INFO::Fitting model to feature number 53, GLUTORN.PWY..L.ornithine.biosynthesis.I
+2026-04-15 00:39:14.30369 INFO::Fitting model to feature number 54, GLYCOCAT.PWY..glycogen.degradation.I
+2026-04-15 00:39:14.310041 INFO::Fitting model to feature number 55, GLYCOGENSYNTH.PWY..glycogen.biosynthesis.I..from.ADP.D.Glucose.
+2026-04-15 00:39:14.31171 INFO::Fitting model to feature number 56, GLYCOL.GLYOXDEG.PWY..superpathway.of.glycol.metabolism.and.degradation
+2026-04-15 00:39:14.317777 INFO::Fitting model to feature number 57, GLYCOLYSIS.E.D..superpathway.of.glycolysis.and.the.Entner.Doudoroff.pathway
+2026-04-15 00:39:14.32406 INFO::Fitting model to feature number 58, GLYCOLYSIS.TCA.GLYOX.BYPASS..superpathway.of.glycolysis..pyruvate.dehydrogenase..TCA..and.glyoxylate.bypass
+2026-04-15 00:39:14.329957 INFO::Fitting model to feature number 59, GLYCOLYSIS..glycolysis.I..from.glucose.6.phosphate.
+2026-04-15 00:39:14.331627 INFO::Fitting model to feature number 60, GLYOXYLATE.BYPASS..glyoxylate.cycle
+2026-04-15 00:39:14.337527 INFO::Fitting model to feature number 61, GOLPDLCAT.PWY..superpathway.of.glycerol.degradation.to.1.3.propanediol
+2026-04-15 00:39:14.34338 INFO::Fitting model to feature number 62, HCAMHPDEG.PWY..3.phenylpropanoate.and.3..3.hydroxyphenyl.propanoate.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:14.349178 INFO::Fitting model to feature number 63, HEME.BIOSYNTHESIS.II.1..heme.b.biosynthesis.V..aerobic.
+2026-04-15 00:39:14.355214 INFO::Fitting model to feature number 64, HEME.BIOSYNTHESIS.II..heme.b.biosynthesis.I..aerobic.
+2026-04-15 00:39:14.356892 INFO::Fitting model to feature number 65, HEMESYN2.PWY..heme.b.biosynthesis.II..oxygen.independent.
+2026-04-15 00:39:14.35849 INFO::Fitting model to feature number 66, HEXITOLDEGSUPER.PWY..superpathway.of.hexitol.degradation..bacteria.
+2026-04-15 00:39:14.364955 INFO::Fitting model to feature number 67, HISDEG.PWY..L.histidine.degradation.I
+2026-04-15 00:39:14.371962 INFO::Fitting model to feature number 68, HISTSYN.PWY..L.histidine.biosynthesis
+2026-04-15 00:39:14.373679 INFO::Fitting model to feature number 69, HOMOSER.METSYN.PWY..L.methionine.biosynthesis.I
+2026-04-15 00:39:14.379658 INFO::Fitting model to feature number 70, HSERMETANA.PWY..L.methionine.biosynthesis.III
+2026-04-15 00:39:14.385552 INFO::Fitting model to feature number 71, ILEUSYN.PWY..L.isoleucine.biosynthesis.I..from.threonine.
+2026-04-15 00:39:14.387176 INFO::Fitting model to feature number 72, KDO.NAGLIPASYN.PWY..superpathway.of..Kdo.2.lipid.A.biosynthesis
+2026-04-15 00:39:14.39339 INFO::Fitting model to feature number 73, KETOGLUCONMET.PWY..ketogluconate.metabolism
+2026-04-15 00:39:14.399037 INFO::Fitting model to feature number 74, LACTOSECAT.PWY..lactose.and.galactose.degradation.I
+2026-04-15 00:39:14.405104 INFO::Fitting model to feature number 75, LIPA.CORESYN.PWY..lipid.A.core.biosynthesis..E..coli.K.12.
+2026-04-15 00:39:14.411316 INFO::Fitting model to feature number 76, LIPASYN.PWY..phospholipases
+2026-04-15 00:39:14.417134 INFO::Fitting model to feature number 77, LPSSYN.PWY..superpathway.of.lipopolysaccharide.biosynthesis
+2026-04-15 00:39:14.423083 INFO::Fitting model to feature number 78, MET.SAM.PWY..superpathway.of.S.adenosyl.L.methionine.biosynthesis
+2026-04-15 00:39:14.429316 INFO::Fitting model to feature number 79, METHGLYUT.PWY..superpathway.of.methylglyoxal.degradation
+2026-04-15 00:39:14.435353 INFO::Fitting model to feature number 80, METSYN.PWY..superpathway.of.L.homoserine.and.L.methionine.biosynthesis
+2026-04-15 00:39:14.442608 INFO::Fitting model to feature number 81, NAD.BIOSYNTHESIS.II..NAD.salvage.pathway.III..to.nicotinamide.riboside.
+2026-04-15 00:39:14.448873 INFO::Fitting model to feature number 82, NAGLIPASYN.PWY..lipid.IVA.biosynthesis..E..coli.
+2026-04-15 00:39:14.455077 INFO::Fitting model to feature number 83, NONMEVIPP.PWY..methylerythritol.phosphate.pathway.I
+2026-04-15 00:39:14.456794 INFO::Fitting model to feature number 84, NONOXIPENT.PWY..pentose.phosphate.pathway..non.oxidative.branch..I
+2026-04-15 00:39:14.458459 INFO::Fitting model to feature number 85, OANTIGEN.PWY..O.antigen.building.blocks.biosynthesis..E..coli.
+2026-04-15 00:39:14.464302 INFO::Fitting model to feature number 86, ORNARGDEG.PWY..superpathway.of.L.arginine.and.L.ornithine.degradation
+2026-04-15 00:39:14.470116 INFO::Fitting model to feature number 87, ORNDEG.PWY..superpathway.of.ornithine.degradation
+2026-04-15 00:39:14.47609 INFO::Fitting model to feature number 88, P105.PWY..TCA.cycle.IV..2.oxoglutarate.decarboxylase.
+2026-04-15 00:39:14.481811 INFO::Fitting model to feature number 89, P108.PWY..pyruvate.fermentation.to.propanoate.I
+2026-04-15 00:39:14.489032 INFO::Fitting model to feature number 90, P122.PWY..heterolactic.fermentation
+2026-04-15 00:39:14.495238 INFO::Fitting model to feature number 91, P124.PWY..Bifidobacterium.shunt
+2026-04-15 00:39:14.501148 INFO::Fitting model to feature number 92, P125.PWY..superpathway.of..R.R..butanediol.biosynthesis
+2026-04-15 00:39:14.50698 INFO::Fitting model to feature number 93, P161.PWY..acetylene.degradation..anaerobic.
+2026-04-15 00:39:14.508637 INFO::Fitting model to feature number 94, P164.PWY..purine.nucleobases.degradation.I..anaerobic.
+2026-04-15 00:39:14.514285 INFO::Fitting model to feature number 95, P185.PWY..formaldehyde.assimilation.III..dihydroxyacetone.cycle.
+2026-04-15 00:39:14.520325 INFO::Fitting model to feature number 96, P221.PWY..octane.oxidation
+2026-04-15 00:39:14.52633 INFO::Fitting model to feature number 97, P23.PWY..reductive.TCA.cycle.I
+2026-04-15 00:39:14.532194 INFO::Fitting model to feature number 98, P4.PWY..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.I
+2026-04-15 00:39:14.548631 INFO::Fitting model to feature number 99, P41.PWY..pyruvate.fermentation.to.acetate.and..S..lactate.I
+2026-04-15 00:39:14.550378 INFO::Fitting model to feature number 100, P42.PWY..incomplete.reductive.TCA.cycle
+2026-04-15 00:39:14.556115 INFO::Fitting model to feature number 101, P441.PWY..superpathway.of.N.acetylneuraminate.degradation
+2026-04-15 00:39:14.557797 INFO::Fitting model to feature number 102, P461.PWY..hexitol.fermentation.to.lactate..formate..ethanol.and.acetate
+2026-04-15 00:39:14.563244 INFO::Fitting model to feature number 103, P562.PWY..myo.inositol.degradation.I
+2026-04-15 00:39:14.568519 INFO::Fitting model to feature number 104, P621.PWY..nylon.6.oligomer.degradation
+2026-04-15 00:39:14.573833 INFO::Fitting model to feature number 105, PANTO.PWY..phosphopantothenate.biosynthesis.I
+2026-04-15 00:39:14.575423 INFO::Fitting model to feature number 106, PANTOSYN.PWY..superpathway.of.coenzyme.A.biosynthesis.I..bacteria.
+2026-04-15 00:39:14.577004 INFO::Fitting model to feature number 107, PENTOSE.P.PWY..pentose.phosphate.pathway
+2026-04-15 00:39:14.578546 INFO::Fitting model to feature number 108, PEPTIDOGLYCANSYN.PWY..peptidoglycan.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:14.58008 INFO::Fitting model to feature number 109, PHOSLIPSYN.PWY..superpathway.of.phospholipid.biosynthesis.I..bacteria.
+2026-04-15 00:39:14.585408 INFO::Fitting model to feature number 110, POLYAMSYN.PWY..superpathway.of.polyamine.biosynthesis.I
+2026-04-15 00:39:14.590686 INFO::Fitting model to feature number 111, POLYISOPRENSYN.PWY..polyisoprenoid.biosynthesis..E..coli.
+2026-04-15 00:39:14.592315 INFO::Fitting model to feature number 112, PPGPPMET.PWY..ppGpp.metabolism
+2026-04-15 00:39:14.59792 INFO::Fitting model to feature number 113, PROTOCATECHUATE.ORTHO.CLEAVAGE.PWY..protocatechuate.degradation.II..ortho.cleavage.pathway.
+2026-04-15 00:39:14.60312 INFO::Fitting model to feature number 114, PRPP.PWY..superpathway.of.histidine..purine..and.pyrimidine.biosynthesis
+2026-04-15 00:39:14.608468 INFO::Fitting model to feature number 115, PWY.1042..glycolysis.IV
+2026-04-15 00:39:14.610121 INFO::Fitting model to feature number 116, PWY.1269..CMP.3.deoxy.D.manno.octulosonate.biosynthesis
+2026-04-15 00:39:14.615489 INFO::Fitting model to feature number 117, PWY.1622..formaldehyde.assimilation.I..serine.pathway.
+2026-04-15 00:39:14.620643 INFO::Fitting model to feature number 118, PWY.181..photorespiration
+2026-04-15 00:39:14.626174 INFO::Fitting model to feature number 119, PWY.1861..formaldehyde.assimilation.II..assimilatory.RuMP.Cycle.
+2026-04-15 00:39:14.631545 INFO::Fitting model to feature number 120, PWY.2221..Entner.Doudoroff.pathway.III..semi.phosphorylative.
+2026-04-15 00:39:14.636877 INFO::Fitting model to feature number 121, PWY.241..C4.photosynthetic.carbon.assimilation.cycle..NADP.ME.type
+2026-04-15 00:39:14.642466 INFO::Fitting model to feature number 122, PWY.2941..L.lysine.biosynthesis.II
+2026-04-15 00:39:14.644115 INFO::Fitting model to feature number 123, PWY.2942..L.lysine.biosynthesis.III
+2026-04-15 00:39:14.649312 INFO::Fitting model to feature number 124, PWY.3001..superpathway.of.L.isoleucine.biosynthesis.I
+2026-04-15 00:39:14.650874 INFO::Fitting model to feature number 125, PWY.3801..sucrose.degradation.II..sucrose.synthase.
+2026-04-15 00:39:14.656348 INFO::Fitting model to feature number 126, PWY.3841..folate.transformations.II..plants.
+2026-04-15 00:39:14.658021 INFO::Fitting model to feature number 127, PWY.4041...gamma..glutamyl.cycle
+2026-04-15 00:39:14.663391 INFO::Fitting model to feature number 128, PWY.4984..urea.cycle
+2026-04-15 00:39:14.668556 INFO::Fitting model to feature number 129, PWY.5005..biotin.biosynthesis.II
+2026-04-15 00:39:14.67374 INFO::Fitting model to feature number 130, PWY.5028..L.histidine.degradation.II
+2026-04-15 00:39:14.678909 INFO::Fitting model to feature number 131, PWY.5030..L.histidine.degradation.III
+2026-04-15 00:39:14.683969 INFO::Fitting model to feature number 132, PWY.5097..L.lysine.biosynthesis.VI
+2026-04-15 00:39:14.68574 INFO::Fitting model to feature number 133, PWY.5100..pyruvate.fermentation.to.acetate.and.lactate.II
+2026-04-15 00:39:14.688103 INFO::Fitting model to feature number 134, PWY.5103..L.isoleucine.biosynthesis.III
+2026-04-15 00:39:14.689891 INFO::Fitting model to feature number 135, PWY.5121..superpathway.of.geranylgeranyl.diphosphate.biosynthesis.II..via.MEP.
+2026-04-15 00:39:14.691478 INFO::Fitting model to feature number 136, PWY.5130..2.oxobutanoate.degradation.I
+2026-04-15 00:39:14.696678 INFO::Fitting model to feature number 137, PWY.5136..fatty.acid..beta..oxidation.II..plant.peroxisome.
+2026-04-15 00:39:14.702081 INFO::Fitting model to feature number 138, PWY.5138..fatty.acid..beta..oxidation.IV..unsaturated..even.number.
+2026-04-15 00:39:14.707465 INFO::Fitting model to feature number 139, PWY.5154..L.arginine.biosynthesis.III..via.N.acetyl.L.citrulline.
+2026-04-15 00:39:14.709078 INFO::Fitting model to feature number 140, PWY.5180..toluene.degradation.I..aerobic...via.o.cresol.
+2026-04-15 00:39:14.714238 INFO::Fitting model to feature number 141, PWY.5188..tetrapyrrole.biosynthesis.I..from.glutamate.
+2026-04-15 00:39:14.71581 INFO::Fitting model to feature number 142, PWY.5189..tetrapyrrole.biosynthesis.II..from.glycine.
+2026-04-15 00:39:14.717436 INFO::Fitting model to feature number 143, PWY.5265..peptidoglycan.biosynthesis.II..staphylococci.
+2026-04-15 00:39:14.722958 INFO::Fitting model to feature number 144, PWY.5345..superpathway.of.L.methionine.biosynthesis..by.sulfhydrylation.
+2026-04-15 00:39:14.728553 INFO::Fitting model to feature number 145, PWY.5347..superpathway.of.L.methionine.biosynthesis..transsulfuration.
+2026-04-15 00:39:14.734106 INFO::Fitting model to feature number 146, PWY.5367..petroselinate.biosynthesis
+2026-04-15 00:39:14.739727 INFO::Fitting model to feature number 147, PWY.5384..sucrose.degradation.IV..sucrose.phosphorylase.
+2026-04-15 00:39:14.741375 INFO::Fitting model to feature number 148, PWY.5392..reductive.TCA.cycle.II
+2026-04-15 00:39:14.746621 INFO::Fitting model to feature number 149, PWY.5415..catechol.degradation.I..meta.cleavage.pathway.
+2026-04-15 00:39:14.752044 INFO::Fitting model to feature number 150, PWY.5417..catechol.degradation.III..ortho.cleavage.pathway.
+2026-04-15 00:39:14.75745 INFO::Fitting model to feature number 151, PWY.5431..aromatic.compounds.degradation.via..beta..ketoadipate
+2026-04-15 00:39:14.762658 INFO::Fitting model to feature number 152, PWY.5484..glycolysis.II..from.fructose.6.phosphate.
+2026-04-15 00:39:14.764252 INFO::Fitting model to feature number 153, PWY.5497..purine.nucleobases.degradation.II..anaerobic.
+2026-04-15 00:39:14.769971 INFO::Fitting model to feature number 154, PWY.5505..L.glutamate.and.L.glutamine.biosynthesis
+2026-04-15 00:39:14.775204 INFO::Fitting model to feature number 155, PWY.561..superpathway.of.glyoxylate.cycle.and.fatty.acid.degradation
+2026-04-15 00:39:14.780635 INFO::Fitting model to feature number 156, PWY.5654..2.amino.3.carboxymuconate.semialdehyde.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:14.786543 INFO::Fitting model to feature number 157, PWY.5656..mannosylglycerate.biosynthesis.I
+2026-04-15 00:39:14.792396 INFO::Fitting model to feature number 158, PWY.5659..GDP.mannose.biosynthesis
+2026-04-15 00:39:14.794253 INFO::Fitting model to feature number 159, PWY.5667..CDP.diacylglycerol.biosynthesis.I
+2026-04-15 00:39:14.796287 INFO::Fitting model to feature number 160, PWY.5675..nitrate.reduction.V..assimilatory.
+2026-04-15 00:39:14.802405 INFO::Fitting model to feature number 161, PWY.5676..acetyl.CoA.fermentation.to.butanoate.II
+2026-04-15 00:39:14.807795 INFO::Fitting model to feature number 162, PWY.5686..UMP.biosynthesis.I
+2026-04-15 00:39:14.809417 INFO::Fitting model to feature number 163, PWY.5692..allantoin.degradation.to.glyoxylate.II
+2026-04-15 00:39:14.814778 INFO::Fitting model to feature number 164, PWY.5695..inosine.5..phosphate.degradation
+2026-04-15 00:39:14.816446 INFO::Fitting model to feature number 165, PWY.5705..allantoin.degradation.to.glyoxylate.III
+2026-04-15 00:39:14.821933 INFO::Fitting model to feature number 166, PWY.5723..Rubisco.shunt
+2026-04-15 00:39:14.827373 INFO::Fitting model to feature number 167, PWY.5747..2.methylcitrate.cycle.II
+2026-04-15 00:39:14.832736 INFO::Fitting model to feature number 168, PWY.5837..2.carboxy.1.4.naphthoquinol.biosynthesis
+2026-04-15 00:39:14.834328 INFO::Fitting model to feature number 169, PWY.5838..superpathway.of.menaquinol.8.biosynthesis.I
+2026-04-15 00:39:14.839746 INFO::Fitting model to feature number 170, PWY.5840..superpathway.of.menaquinol.7.biosynthesis
+2026-04-15 00:39:14.841369 INFO::Fitting model to feature number 171, PWY.5845..superpathway.of.menaquinol.9.biosynthesis
+2026-04-15 00:39:14.846869 INFO::Fitting model to feature number 172, PWY.5850..superpathway.of.menaquinol.6.biosynthesis
+2026-04-15 00:39:14.852251 INFO::Fitting model to feature number 173, PWY.5855..ubiquinol.7.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:14.85767 INFO::Fitting model to feature number 174, PWY.5860..superpathway.of.demethylmenaquinol.6.biosynthesis.I
+2026-04-15 00:39:14.863404 INFO::Fitting model to feature number 175, PWY.5861..superpathway.of.demethylmenaquinol.8.biosynthesis.I
+2026-04-15 00:39:14.868867 INFO::Fitting model to feature number 176, PWY.5862..superpathway.of.demethylmenaquinol.9.biosynthesis
+2026-04-15 00:39:14.874317 INFO::Fitting model to feature number 177, PWY.5896..superpathway.of.menaquinol.10.biosynthesis
+2026-04-15 00:39:14.879792 INFO::Fitting model to feature number 178, PWY.5897..superpathway.of.menaquinol.11.biosynthesis
+2026-04-15 00:39:14.881434 INFO::Fitting model to feature number 179, PWY.5898..superpathway.of.menaquinol.12.biosynthesis
+2026-04-15 00:39:14.882998 INFO::Fitting model to feature number 180, PWY.5899..superpathway.of.menaquinol.13.biosynthesis
+2026-04-15 00:39:14.884534 INFO::Fitting model to feature number 181, PWY.5910..superpathway.of.geranylgeranyldiphosphate.biosynthesis.I..via.mevalonate.
+2026-04-15 00:39:14.890387 INFO::Fitting model to feature number 182, PWY.5913..partial.TCA.cycle..obligate.autotrophs.
+2026-04-15 00:39:14.892347 INFO::Fitting model to feature number 183, PWY.5918..superpathway.of.heme.b.biosynthesis.from.glutamate
+2026-04-15 00:39:14.89396 INFO::Fitting model to feature number 184, PWY.5920..superpathway.of.heme.b.biosynthesis.from.glycine
+2026-04-15 00:39:14.899328 INFO::Fitting model to feature number 185, PWY.5941..glycogen.degradation.II
+2026-04-15 00:39:14.900947 INFO::Fitting model to feature number 186, PWY.5971..palmitate.biosynthesis..type.II.fatty.acid.synthase.
+2026-04-15 00:39:14.906814 INFO::Fitting model to feature number 187, PWY.5972..stearate.biosynthesis.I..animals.
+2026-04-15 00:39:14.912088 INFO::Fitting model to feature number 188, PWY.5973..cis.vaccenate.biosynthesis
+2026-04-15 00:39:14.913683 INFO::Fitting model to feature number 189, PWY.5981..CDP.diacylglycerol.biosynthesis.III
+2026-04-15 00:39:14.915258 INFO::Fitting model to feature number 190, PWY.5989..stearate.biosynthesis.II..bacteria.and.plants.
+2026-04-15 00:39:14.916836 INFO::Fitting model to feature number 191, PWY.5994..palmitate.biosynthesis..type.I.fatty.acid.synthase.
+2026-04-15 00:39:14.922452 INFO::Fitting model to feature number 192, PWY.6121..5.aminoimidazole.ribonucleotide.biosynthesis.I
+2026-04-15 00:39:14.924073 INFO::Fitting model to feature number 193, PWY.6122..5.aminoimidazole.ribonucleotide.biosynthesis.II
+2026-04-15 00:39:14.925632 INFO::Fitting model to feature number 194, PWY.6123..inosine.5..phosphate.biosynthesis.I
+2026-04-15 00:39:14.927166 INFO::Fitting model to feature number 195, PWY.6124..inosine.5..phosphate.biosynthesis.II
+2026-04-15 00:39:14.92871 INFO::Fitting model to feature number 196, PWY.6125..superpathway.of.guanosine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:14.93025 INFO::Fitting model to feature number 197, PWY.6126..superpathway.of.adenosine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:14.931771 INFO::Fitting model to feature number 198, PWY.6147..6.hydroxymethyl.dihydropterin.diphosphate.biosynthesis.I
+2026-04-15 00:39:14.933284 INFO::Fitting model to feature number 199, PWY.6151..S.adenosyl.L.methionine.salvage.I
+2026-04-15 00:39:14.934827 INFO::Fitting model to feature number 200, PWY.6163..chorismate.biosynthesis.from.3.dehydroquinate
+2026-04-15 00:39:14.936354 INFO::Fitting model to feature number 201, PWY.6168..flavin.biosynthesis.III..fungi.
+2026-04-15 00:39:14.94176 INFO::Fitting model to feature number 202, PWY.6182..superpathway.of.salicylate.degradation
+2026-04-15 00:39:14.947015 INFO::Fitting model to feature number 203, PWY.6185..4.methylcatechol.degradation..ortho.cleavage.
+2026-04-15 00:39:14.952195 INFO::Fitting model to feature number 204, PWY.6210..2.aminophenol.degradation
+2026-04-15 00:39:14.957696 INFO::Fitting model to feature number 205, PWY.6215..4.chlorobenzoate.degradation
+2026-04-15 00:39:14.963007 INFO::Fitting model to feature number 206, PWY.621..sucrose.degradation.III..sucrose.invertase.
+2026-04-15 00:39:14.964614 INFO::Fitting model to feature number 207, PWY.622..starch.biosynthesis
+2026-04-15 00:39:14.970406 INFO::Fitting model to feature number 208, PWY.6270..isoprene.biosynthesis.I
+2026-04-15 00:39:14.972078 INFO::Fitting model to feature number 209, PWY.6277..superpathway.of.5.aminoimidazole.ribonucleotide.biosynthesis
+2026-04-15 00:39:14.973664 INFO::Fitting model to feature number 210, PWY.6282..palmitoleate.biosynthesis.I..from..5Z..dodec.5.enoate.
+2026-04-15 00:39:14.975214 INFO::Fitting model to feature number 211, PWY.6284..superpathway.of.unsaturated.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:14.98067 INFO::Fitting model to feature number 212, PWY.6285..superpathway.of.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:14.986122 INFO::Fitting model to feature number 213, PWY.6292..superpathway.of.L.cysteine.biosynthesis..mammalian.
+2026-04-15 00:39:14.991813 INFO::Fitting model to feature number 214, PWY.6293..superpathway.of.L.cysteine.biosynthesis..fungi.
+2026-04-15 00:39:14.997304 INFO::Fitting model to feature number 215, PWY.6305..superpathway.of.putrescine.biosynthesis
+2026-04-15 00:39:15.003149 INFO::Fitting model to feature number 216, PWY.6317..D.galactose.degradation.I..Leloir.pathway.
+2026-04-15 00:39:15.004775 INFO::Fitting model to feature number 217, PWY.6318..L.phenylalanine.degradation.IV..mammalian..via.side.chain.
+2026-04-15 00:39:15.010211 INFO::Fitting model to feature number 218, PWY.6328..L.lysine.degradation.X
+2026-04-15 00:39:15.015626 INFO::Fitting model to feature number 219, PWY.6353..purine.nucleotides.degradation.II..aerobic.
+2026-04-15 00:39:15.021121 INFO::Fitting model to feature number 220, PWY.6385..peptidoglycan.biosynthesis.III..mycobacteria.
+2026-04-15 00:39:15.02277 INFO::Fitting model to feature number 221, PWY.6386..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.II..lysine.containing.
+2026-04-15 00:39:15.02433 INFO::Fitting model to feature number 222, PWY.6387..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:15.025894 INFO::Fitting model to feature number 223, PWY.6396..superpathway.of.2.3.butanediol.biosynthesis
+2026-04-15 00:39:15.031789 INFO::Fitting model to feature number 224, PWY.6435..4.hydroxybenzoate.biosynthesis.III..plants.
+2026-04-15 00:39:15.03738 INFO::Fitting model to feature number 225, PWY.6507..4.deoxy.L.threo.hex.4.enopyranuronate.degradation
+2026-04-15 00:39:15.043106 INFO::Fitting model to feature number 226, PWY.6519..8.amino.7.oxononanoate.biosynthesis.I
+2026-04-15 00:39:15.04996 INFO::Fitting model to feature number 227, PWY.6527..stachyose.degradation
+2026-04-15 00:39:15.051798 INFO::Fitting model to feature number 228, PWY.6531..mannitol.cycle
+2026-04-15 00:39:15.058138 INFO::Fitting model to feature number 229, PWY.6545..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.III
+2026-04-15 00:39:15.063915 INFO::Fitting model to feature number 230, PWY.6549..L.glutamine.biosynthesis.III
+2026-04-15 00:39:15.069437 INFO::Fitting model to feature number 231, PWY.6588..pyruvate.fermentation.to.acetone
+2026-04-15 00:39:15.074957 INFO::Fitting model to feature number 232, PWY.6590..superpathway.of.Clostridium.acetobutylicum.acidogenic.fermentation
+2026-04-15 00:39:15.080481 INFO::Fitting model to feature number 233, PWY.6595..superpathway.of.guanosine.nucleotides.degradation..plants.
+2026-04-15 00:39:15.085971 INFO::Fitting model to feature number 234, PWY.6606..guanosine.nucleotides.degradation.II
+2026-04-15 00:39:15.091782 INFO::Fitting model to feature number 235, PWY.6607..guanosine.nucleotides.degradation.I
+2026-04-15 00:39:15.097461 INFO::Fitting model to feature number 236, PWY.6608..guanosine.nucleotides.degradation.III
+2026-04-15 00:39:15.103245 INFO::Fitting model to feature number 237, PWY.6609..adenine.and.adenosine.salvage.III
+2026-04-15 00:39:15.104877 INFO::Fitting model to feature number 238, PWY.6612..superpathway.of.tetrahydrofolate.biosynthesis
+2026-04-15 00:39:15.11184 INFO::Fitting model to feature number 239, PWY.6628..superpathway.of.L.phenylalanine.biosynthesis
+2026-04-15 00:39:15.113561 INFO::Fitting model to feature number 240, PWY.6629..superpathway.of.L.tryptophan.biosynthesis
+2026-04-15 00:39:15.115157 INFO::Fitting model to feature number 241, PWY.6630..superpathway.of.L.tyrosine.biosynthesis
+2026-04-15 00:39:15.116731 INFO::Fitting model to feature number 242, PWY.6690..cinnamate.and.3.hydroxycinnamate.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:15.122232 INFO::Fitting model to feature number 243, PWY.6700..queuosine.biosynthesis.I..de.novo.
+2026-04-15 00:39:15.123846 INFO::Fitting model to feature number 244, PWY.6703..preQ0.biosynthesis
+2026-04-15 00:39:15.125556 INFO::Fitting model to feature number 245, PWY.6708..ubiquinol.8.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:15.131072 INFO::Fitting model to feature number 246, PWY.6731..starch.degradation.III
+2026-04-15 00:39:15.136508 INFO::Fitting model to feature number 247, PWY.6749..CMP.legionaminate.biosynthesis.I
+2026-04-15 00:39:15.142258 INFO::Fitting model to feature number 248, PWY.6803..phosphatidylcholine.acyl.editing
+2026-04-15 00:39:15.147922 INFO::Fitting model to feature number 249, PWY.6823..molybdopterin.biosynthesis
+2026-04-15 00:39:15.149535 INFO::Fitting model to feature number 250, PWY.6859..all.trans.farnesol.biosynthesis
+2026-04-15 00:39:15.151106 INFO::Fitting model to feature number 251, PWY.6892..thiazole.component.of.thiamine.diphosphate.biosynthesis.I
+2026-04-15 00:39:15.156908 INFO::Fitting model to feature number 252, PWY.6895..superpathway.of.thiamine.diphosphate.biosynthesis.II
+2026-04-15 00:39:15.162605 INFO::Fitting model to feature number 253, PWY.6897..thiamine.diphosphate.salvage.II
+2026-04-15 00:39:15.164222 INFO::Fitting model to feature number 254, PWY.6901..superpathway.of.glucose.and.xylose.degradation
+2026-04-15 00:39:15.165778 INFO::Fitting model to feature number 255, PWY.6902..chitin.degradation.II..Vibrio.
+2026-04-15 00:39:15.171534 INFO::Fitting model to feature number 256, PWY.6922..L.N.delta..acetylornithine.biosynthesis
+2026-04-15 00:39:15.177075 INFO::Fitting model to feature number 257, PWY.6936..seleno.amino.acid.biosynthesis..plants.
+2026-04-15 00:39:15.178674 INFO::Fitting model to feature number 258, PWY.6961..L.ascorbate.degradation.II..bacterial..aerobic.
+2026-04-15 00:39:15.184108 INFO::Fitting model to feature number 259, PWY.6969..TCA.cycle.V..2.oxoglutarate.synthase.
+2026-04-15 00:39:15.185711 INFO::Fitting model to feature number 260, PWY.6992..1.5.anhydrofructose.degradation
+2026-04-15 00:39:15.192003 INFO::Fitting model to feature number 261, PWY.7013...S..propane.1.2.diol.degradation
+2026-04-15 00:39:15.197846 INFO::Fitting model to feature number 262, PWY.702..L.methionine.biosynthesis.II
+2026-04-15 00:39:15.199606 INFO::Fitting model to feature number 263, PWY.7039..phosphatidate.metabolism..as.a.signaling.molecule
+2026-04-15 00:39:15.206222 INFO::Fitting model to feature number 264, PWY.7094..fatty.acid.salvage
+2026-04-15 00:39:15.224466 INFO::Fitting model to feature number 265, PWY.7111..pyruvate.fermentation.to.isobutanol..engineered.
+2026-04-15 00:39:15.226162 INFO::Fitting model to feature number 266, PWY.7115..C4.photosynthetic.carbon.assimilation.cycle..NAD.ME.type
+2026-04-15 00:39:15.227739 INFO::Fitting model to feature number 267, PWY.7117..C4.photosynthetic.carbon.assimilation.cycle..PEPCK.type
+2026-04-15 00:39:15.229278 INFO::Fitting model to feature number 268, PWY.7118..chitin.deacetylation
+2026-04-15 00:39:15.234608 INFO::Fitting model to feature number 269, PWY.7165..L.ascorbate.biosynthesis.VIII..engineered.pathway.
+2026-04-15 00:39:15.239881 INFO::Fitting model to feature number 270, PWY.7184..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:15.245249 INFO::Fitting model to feature number 271, PWY.7185..UTP.and.CTP.dephosphorylation.I
+2026-04-15 00:39:15.250372 INFO::Fitting model to feature number 272, PWY.7187..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:15.255831 INFO::Fitting model to feature number 273, PWY.7196..superpathway.of.pyrimidine.ribonucleosides.salvage
+2026-04-15 00:39:15.261047 INFO::Fitting model to feature number 274, PWY.7197..pyrimidine.deoxyribonucleotide.phosphorylation
+2026-04-15 00:39:15.26264 INFO::Fitting model to feature number 275, PWY.7198..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.IV
+2026-04-15 00:39:15.268363 INFO::Fitting model to feature number 276, PWY.7199..pyrimidine.deoxyribonucleosides.salvage
+2026-04-15 00:39:15.270046 INFO::Fitting model to feature number 277, PWY.7200..superpathway.of.pyrimidine.deoxyribonucleoside.salvage
+2026-04-15 00:39:15.275298 INFO::Fitting model to feature number 278, PWY.7204..pyridoxal.5..phosphate.salvage.II..plants.
+2026-04-15 00:39:15.280463 INFO::Fitting model to feature number 279, PWY.7208..superpathway.of.pyrimidine.nucleobases.salvage
+2026-04-15 00:39:15.282451 INFO::Fitting model to feature number 280, PWY.7209..superpathway.of.pyrimidine.ribonucleosides.degradation
+2026-04-15 00:39:15.291218 INFO::Fitting model to feature number 281, PWY.7210..pyrimidine.deoxyribonucleotides.biosynthesis.from.CTP
+2026-04-15 00:39:15.296974 INFO::Fitting model to feature number 282, PWY.7211..superpathway.of.pyrimidine.deoxyribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:15.302528 INFO::Fitting model to feature number 283, PWY.7220..adenosine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:15.304233 INFO::Fitting model to feature number 284, PWY.7221..guanosine.ribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:15.306358 INFO::Fitting model to feature number 285, PWY.7222..guanosine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:15.308218 INFO::Fitting model to feature number 286, PWY.7228..superpathway.of.guanosine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:15.309835 INFO::Fitting model to feature number 287, PWY.7229..superpathway.of.adenosine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:15.311534 INFO::Fitting model to feature number 288, PWY.7234..inosine.5..phosphate.biosynthesis.III
+2026-04-15 00:39:15.313133 INFO::Fitting model to feature number 289, PWY.7237..myo...chiro..and.scyllo.inositol.degradation
+2026-04-15 00:39:15.318495 INFO::Fitting model to feature number 290, PWY.7238..sucrose.biosynthesis.II
+2026-04-15 00:39:15.320126 INFO::Fitting model to feature number 291, PWY.7242..D.fructuronate.degradation
+2026-04-15 00:39:15.325493 INFO::Fitting model to feature number 292, PWY.7245..superpathway.of.NAD.NADP...NADH.NADPH.interconversion..yeast.
+2026-04-15 00:39:15.331011 INFO::Fitting model to feature number 293, PWY.724..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.II
+2026-04-15 00:39:15.332735 INFO::Fitting model to feature number 294, PWY.7254..TCA.cycle.VII..acetate.producers.
+2026-04-15 00:39:15.338176 INFO::Fitting model to feature number 295, PWY.7268..cytosolic.NADPH.production..yeast.
+2026-04-15 00:39:15.343494 INFO::Fitting model to feature number 296, PWY.7269..mitochondrial.NADPH.production..yeast.
+2026-04-15 00:39:15.348829 INFO::Fitting model to feature number 297, PWY.7282..4.amino.2.methyl.5.diphosphomethylpyrimidine.biosynthesis.II
+2026-04-15 00:39:15.354213 INFO::Fitting model to feature number 298, PWY.7294..D.xylose.degradation.IV
+2026-04-15 00:39:15.359795 INFO::Fitting model to feature number 299, PWY.7315..dTDP.N.acetylthomosamine.biosynthesis
+2026-04-15 00:39:15.365594 INFO::Fitting model to feature number 300, PWY.7323..superpathway.of.GDP.mannose.derived.O.antigen.building.blocks.biosynthesis
+2026-04-15 00:39:15.370918 INFO::Fitting model to feature number 301, PWY.7328..superpathway.of.UDP.glucose.derived.O.antigen.building.blocks.biosynthesis
+2026-04-15 00:39:15.376557 INFO::Fitting model to feature number 302, PWY.7340..9.cis..11.trans.octadecadienoyl.CoA.degradation..isomerase.dependent..yeast.
+2026-04-15 00:39:15.381834 INFO::Fitting model to feature number 303, PWY.7345..superpathway.of.anaerobic.sucrose.degradation
+2026-04-15 00:39:15.383456 INFO::Fitting model to feature number 304, PWY.7356..thiamine.diphosphate.salvage.IV..yeast.
+2026-04-15 00:39:15.385018 INFO::Fitting model to feature number 305, PWY.7357..thiamine.phosphate.formation.from.pyrithiamine.and.oxythiamine..yeast.
+2026-04-15 00:39:15.386629 INFO::Fitting model to feature number 306, PWY.7383..anaerobic.energy.metabolism..invertebrates..cytosol.
+2026-04-15 00:39:15.392073 INFO::Fitting model to feature number 307, PWY.7385..1.3.propanediol.biosynthesis..engineered.
+2026-04-15 00:39:15.397336 INFO::Fitting model to feature number 308, PWY.7388..octanoyl..acyl.carrier.protein..biosynthesis..mitochondria..yeast.
+2026-04-15 00:39:15.402577 INFO::Fitting model to feature number 309, PWY.7391..isoprene.biosynthesis.II..engineered.
+2026-04-15 00:39:15.408138 INFO::Fitting model to feature number 310, PWY.7392..taxadiene.biosynthesis..engineered.
+2026-04-15 00:39:15.413593 INFO::Fitting model to feature number 311, PWY.7396..butanol.and.isobutanol.biosynthesis..engineered.
+2026-04-15 00:39:15.418814 INFO::Fitting model to feature number 312, PWY.7400..L.arginine.biosynthesis.IV..archaebacteria.
+2026-04-15 00:39:15.420464 INFO::Fitting model to feature number 313, PWY.7409..phospholipid.remodeling..phosphatidylethanolamine..yeast.
+2026-04-15 00:39:15.425726 INFO::Fitting model to feature number 314, PWY.7434..terminal.O.glycans.residues.modification..via.type.2.precursor.disaccharide.
+2026-04-15 00:39:15.430951 INFO::Fitting model to feature number 315, PWY.7446..sulfoquinovose.degradation.I
+2026-04-15 00:39:15.436099 INFO::Fitting model to feature number 316, PWY.7456...beta...1.4..mannan.degradation
+2026-04-15 00:39:15.441713 INFO::Fitting model to feature number 317, PWY.7560..methylerythritol.phosphate.pathway.II
+2026-04-15 00:39:15.443359 INFO::Fitting model to feature number 318, PWY.7616..methanol.oxidation.to.carbon.dioxide
+2026-04-15 00:39:15.448474 INFO::Fitting model to feature number 319, PWY.7663..gondoate.biosynthesis..anaerobic.
+2026-04-15 00:39:15.450052 INFO::Fitting model to feature number 320, PWY.7664..oleate.biosynthesis.IV..anaerobic.
+2026-04-15 00:39:15.451599 INFO::Fitting model to feature number 321, PWY.7723..bacterial.bioluminescence
+2026-04-15 00:39:15.456926 INFO::Fitting model to feature number 322, PWY.7761..NAD.salvage.pathway.II..PNC.IV.cycle.
+2026-04-15 00:39:15.462312 INFO::Fitting model to feature number 323, PWY.7783..plasmalogen.degradation
+2026-04-15 00:39:15.467447 INFO::Fitting model to feature number 324, PWY.7790..UMP.biosynthesis.II
+2026-04-15 00:39:15.469071 INFO::Fitting model to feature number 325, PWY.7791..UMP.biosynthesis.III
+2026-04-15 00:39:15.470746 INFO::Fitting model to feature number 326, PWY.7805...aminomethyl.phosphonate.degradation
+2026-04-15 00:39:15.476411 INFO::Fitting model to feature number 327, PWY.7807..glyphosate.degradation.III
+2026-04-15 00:39:15.482023 INFO::Fitting model to feature number 328, PWY.7851..coenzyme.A.biosynthesis.II..eukaryotic.
+2026-04-15 00:39:15.483736 INFO::Fitting model to feature number 329, PWY.7858...5Z..dodecenoate.biosynthesis.II
+2026-04-15 00:39:15.48534 INFO::Fitting model to feature number 330, PWY.7873..D.erythronate.degradation.II
+2026-04-15 00:39:15.49148 INFO::Fitting model to feature number 331, PWY.7874..L.threonate.degradation
+2026-04-15 00:39:15.496903 INFO::Fitting model to feature number 332, PWY.7883..anhydromuropeptides.recycling.II
+2026-04-15 00:39:15.502532 INFO::Fitting model to feature number 333, PWY.7942..5.oxo.L.proline.metabolism
+2026-04-15 00:39:15.508631 INFO::Fitting model to feature number 334, PWY.7953..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.III..meso.diaminopimelate.containing.
+2026-04-15 00:39:15.510313 INFO::Fitting model to feature number 335, PWY.7977..L.methionine.biosynthesis.IV
+2026-04-15 00:39:15.511908 INFO::Fitting model to feature number 336, PWY.8004..Entner.Doudoroff.pathway.I
+2026-04-15 00:39:15.517686 INFO::Fitting model to feature number 337, PWY.8011..L.serine.biosynthesis.II
+2026-04-15 00:39:15.524761 INFO::Fitting model to feature number 338, PWY.801..homocysteine.and.cysteine.interconversion
+2026-04-15 00:39:15.530267 INFO::Fitting model to feature number 339, PWY.8073..lipid.IVA.biosynthesis..P..putida.
+2026-04-15 00:39:15.536291 INFO::Fitting model to feature number 340, PWY.8131..5..deoxyadenosine.degradation.II
+2026-04-15 00:39:15.541889 INFO::Fitting model to feature number 341, PWY.8178..pentose.phosphate.pathway..non.oxidative.branch..II
+2026-04-15 00:39:15.54361 INFO::Fitting model to feature number 342, PWY.8187..L.arginine.degradation.XIII..reductive.Stickland.reaction.
+2026-04-15 00:39:15.545309 INFO::Fitting model to feature number 343, PWY.821..superpathway.of.sulfur.amino.acid.biosynthesis..Saccharomyces.cerevisiae.
+2026-04-15 00:39:15.55154 INFO::Fitting model to feature number 344, PWY.822..fructan.biosynthesis
+2026-04-15 00:39:15.556898 INFO::Fitting model to feature number 345, PWY.841..superpathway.of.purine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:15.558527 INFO::Fitting model to feature number 346, PWY.922..mevalonate.pathway.I..eukaryotes.and.bacteria.
+2026-04-15 00:39:15.563832 INFO::Fitting model to feature number 347, PWY.I9..L.cysteine.biosynthesis.VI..from.L.methionine.
+2026-04-15 00:39:15.565797 INFO::Fitting model to feature number 348, PWY0.1061..superpathway.of.L.alanine.biosynthesis
+2026-04-15 00:39:15.567488 INFO::Fitting model to feature number 349, PWY0.1221..putrescine.degradation.II
+2026-04-15 00:39:15.572892 INFO::Fitting model to feature number 350, PWY0.1241..ADP.L.glycero..beta..D.manno.heptose.biosynthesis
+2026-04-15 00:39:15.578405 INFO::Fitting model to feature number 351, PWY0.1261..anhydromuropeptides.recycling.I
+2026-04-15 00:39:15.583992 INFO::Fitting model to feature number 352, PWY0.1277..3.phenylpropanoate.and.3..3.hydroxyphenyl.propanoate.degradation
+2026-04-15 00:39:15.58941 INFO::Fitting model to feature number 353, PWY0.1296..purine.ribonucleosides.degradation
+2026-04-15 00:39:15.591057 INFO::Fitting model to feature number 354, PWY0.1297..superpathway.of.purine.deoxyribonucleosides.degradation
+2026-04-15 00:39:15.592643 INFO::Fitting model to feature number 355, PWY0.1298..superpathway.of.pyrimidine.deoxyribonucleosides.degradation
+2026-04-15 00:39:15.594227 INFO::Fitting model to feature number 356, PWY0.1319..CDP.diacylglycerol.biosynthesis.II
+2026-04-15 00:39:15.595889 INFO::Fitting model to feature number 357, PWY0.1337..oleate..beta..oxidation
+2026-04-15 00:39:15.601371 INFO::Fitting model to feature number 358, PWY0.1338..polymyxin.resistance
+2026-04-15 00:39:15.606791 INFO::Fitting model to feature number 359, PWY0.1415..superpathway.of.heme.b.biosynthesis.from.uroporphyrinogen.III
+2026-04-15 00:39:15.61262 INFO::Fitting model to feature number 360, PWY0.1477..ethanolamine.utilization
+2026-04-15 00:39:15.614291 INFO::Fitting model to feature number 361, PWY0.1479..tRNA.processing
+2026-04-15 00:39:15.61991 INFO::Fitting model to feature number 362, PWY0.1533..methylphosphonate.degradation.I
+2026-04-15 00:39:15.625287 INFO::Fitting model to feature number 363, PWY0.1586..peptidoglycan.maturation..meso.diaminopimelate.containing.
+2026-04-15 00:39:15.626884 INFO::Fitting model to feature number 364, PWY0.162..superpathway.of.pyrimidine.ribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:15.628566 INFO::Fitting model to feature number 365, PWY0.166..superpathway.of.pyrimidine.deoxyribonucleotides.de.novo.biosynthesis..E..coli.
+2026-04-15 00:39:15.633932 INFO::Fitting model to feature number 366, PWY0.301..L.ascorbate.degradation.I..bacterial..anaerobic.
+2026-04-15 00:39:15.639411 INFO::Fitting model to feature number 367, PWY0.41..allantoin.degradation.IV..anaerobic.
+2026-04-15 00:39:15.645042 INFO::Fitting model to feature number 368, PWY0.42..2.methylcitrate.cycle.I
+2026-04-15 00:39:15.650406 INFO::Fitting model to feature number 369, PWY0.461..L.lysine.degradation.I
+2026-04-15 00:39:15.655719 INFO::Fitting model to feature number 370, PWY0.781..aspartate.superpathway
+2026-04-15 00:39:15.661244 INFO::Fitting model to feature number 371, PWY0.845..superpathway.of.pyridoxal.5..phosphate.biosynthesis.and.salvage
+2026-04-15 00:39:15.666647 INFO::Fitting model to feature number 372, PWY0.862...5Z..dodecenoate.biosynthesis.I
+2026-04-15 00:39:15.668249 INFO::Fitting model to feature number 373, PWY0.881..superpathway.of.fatty.acid.biosynthesis.I..E..coli.
+2026-04-15 00:39:15.673623 INFO::Fitting model to feature number 374, PWY1G.0..mycothiol.biosynthesis
+2026-04-15 00:39:15.679417 INFO::Fitting model to feature number 375, PWY1ZNC.1..assimilatory.sulfate.reduction.IV
+2026-04-15 00:39:15.684964 INFO::Fitting model to feature number 376, PWY3O.4107..NAD.salvage.pathway.V..PNC.V.cycle.
+2026-04-15 00:39:15.690464 INFO::Fitting model to feature number 377, PWY4FS.7..phosphatidylglycerol.biosynthesis.I..plastidic.
+2026-04-15 00:39:15.696247 INFO::Fitting model to feature number 378, PWY4FS.8..phosphatidylglycerol.biosynthesis.II..non.plastidic.
+2026-04-15 00:39:15.701851 INFO::Fitting model to feature number 379, PWY4LZ.257..superpathway.of.fermentation..Chlamydomonas.reinhardtii.
+2026-04-15 00:39:15.707574 INFO::Fitting model to feature number 380, PWY5F9.12..biphenyl.degradation
+2026-04-15 00:39:15.713047 INFO::Fitting model to feature number 381, PWY66.389..phytol.degradation
+2026-04-15 00:39:15.714675 INFO::Fitting model to feature number 382, PWY66.391..fatty.acid..beta..oxidation.VI..mammalian.peroxisome.
+2026-04-15 00:39:15.719968 INFO::Fitting model to feature number 383, PWY66.399..gluconeogenesis.III
+2026-04-15 00:39:15.725471 INFO::Fitting model to feature number 384, PWY66.409..superpathway.of.purine.nucleotide.salvage
+2026-04-15 00:39:15.727119 INFO::Fitting model to feature number 385, PWY66.429..fatty.acid.biosynthesis.initiation..mitochondria.
+2026-04-15 00:39:15.728695 INFO::Fitting model to feature number 386, PWY66.430..myristate.biosynthesis..mitochondria.
+2026-04-15 00:39:15.733915 INFO::Fitting model to feature number 387, PYRIDNUCSAL.PWY..NAD.salvage.pathway.I..PNC.VI.cycle.
+2026-04-15 00:39:15.739557 INFO::Fitting model to feature number 388, PYRIDNUCSYN.PWY..NAD.de.novo.biosynthesis.I..from.aspartate.
+2026-04-15 00:39:15.74508 INFO::Fitting model to feature number 389, PYRIDOXSYN.PWY..pyridoxal.5..phosphate.biosynthesis.I
+2026-04-15 00:39:15.750503 INFO::Fitting model to feature number 390, REDCITCYC..TCA.cycle.VI..Helicobacter.
+2026-04-15 00:39:15.755892 INFO::Fitting model to feature number 391, RHAMCAT.PWY..L.rhamnose.degradation.I
+2026-04-15 00:39:15.757529 INFO::Fitting model to feature number 392, RIBOSYN2.PWY..flavin.biosynthesis.I..bacteria.and.plants.
+2026-04-15 00:39:15.759105 INFO::Fitting model to feature number 393, RUMP.PWY..formaldehyde.oxidation.I
+2026-04-15 00:39:15.764311 INFO::Fitting model to feature number 394, SALVADEHYPOX.PWY..adenosine.nucleotides.degradation.II
+2026-04-15 00:39:15.76971 INFO::Fitting model to feature number 395, SER.GLYSYN.PWY..superpathway.of.L.serine.and.glycine.biosynthesis.I
+2026-04-15 00:39:15.771315 INFO::Fitting model to feature number 396, SO4ASSIM.PWY..assimilatory.sulfate.reduction.I
+2026-04-15 00:39:15.772888 INFO::Fitting model to feature number 397, SULFATE.CYS.PWY..superpathway.of.sulfate.assimilation.and.cysteine.biosynthesis
+2026-04-15 00:39:15.774446 INFO::Fitting model to feature number 398, TCA.GLYOX.BYPASS..superpathway.of.glyoxylate.bypass.and.TCA
+2026-04-15 00:39:15.780061 INFO::Fitting model to feature number 399, TCA..TCA.cycle.I..prokaryotic.
+2026-04-15 00:39:15.785664 INFO::Fitting model to feature number 400, THISYN.PWY..superpathway.of.thiamine.diphosphate.biosynthesis.I
+2026-04-15 00:39:15.791335 INFO::Fitting model to feature number 401, THISYNARA.PWY..superpathway.of.thiamine.diphosphate.biosynthesis.III..eukaryotes.
+2026-04-15 00:39:15.796999 INFO::Fitting model to feature number 402, THREOCAT.PWY..superpathway.of.L.threonine.metabolism
+2026-04-15 00:39:15.802518 INFO::Fitting model to feature number 403, THRESYN.PWY..superpathway.of.L.threonine.biosynthesis
+2026-04-15 00:39:15.804149 INFO::Fitting model to feature number 404, TRNA.CHARGING.PWY..tRNA.charging
+2026-04-15 00:39:15.805775 INFO::Fitting model to feature number 405, TRPSYN.PWY..L.tryptophan.biosynthesis
+2026-04-15 00:39:15.807329 INFO::Fitting model to feature number 406, UBISYN.PWY..superpathway.of.ubiquinol.8.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:15.812783 INFO::Fitting model to feature number 407, UDPNACETYLGALSYN.PWY..UDP.N.acetyl.D.glucosamine.biosynthesis.II
+2026-04-15 00:39:15.818666 INFO::Fitting model to feature number 408, UDPNAGSYN.PWY..UDP.N.acetyl.D.glucosamine.biosynthesis.I
+2026-04-15 00:39:15.820346 INFO::Fitting model to feature number 409, URDEGR.PWY..superpathway.of.allantoin.degradation.in.plants
+2026-04-15 00:39:15.82613 INFO::Fitting model to feature number 410, URSIN.PWY..ureide.biosynthesis
+2026-04-15 00:39:15.831858 INFO::Fitting model to feature number 411, VALSYN.PWY..L.valine.biosynthesis
+2026-04-15 00:39:15.883199 INFO::Counting total values for each feature
+2026-04-15 00:39:15.897213 INFO::Re-running abundances for warn_prevalence
+2026-04-15 00:39:15.901389 INFO::Running selected normalization method: TSS
+2026-04-15 00:39:15.91499 INFO::Running selected transform method: LOG
+2026-04-15 00:39:15.923454 DEBUG::Object: augment, Size: 56
+2026-04-15 00:39:15.924074 DEBUG::Object: cluster, Size: 0
+2026-04-15 00:39:15.924591 DEBUG::Object: cores, Size: 56
+2026-04-15 00:39:15.925059 DEBUG::Object: correction, Size: 112
+2026-04-15 00:39:15.925513 DEBUG::Object: extract_out, Size: 1416
+2026-04-15 00:39:15.92598 DEBUG::Object: feature_specific_covariate, Size: 0
+2026-04-15 00:39:15.927076 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2026-04-15 00:39:15.927703 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2026-04-15 00:39:15.928275 DEBUG::Object: features, Size: 344536
+2026-04-15 00:39:15.928816 DEBUG::Object: formula, Size: 1008
+2026-04-15 00:39:15.92934 DEBUG::Object: fun_list, Size: 58768
+2026-04-15 00:39:15.929907 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:39:15.930447 DEBUG::Object: groups, Size: 48
+2026-04-15 00:39:15.930962 DEBUG::Object: median_comparison, Size: 56
+2026-04-15 00:39:15.931459 DEBUG::Object: median_comparison_threshold, Size: 56
+2026-04-15 00:39:15.93198 DEBUG::Object: metadata, Size: 30528
+2026-04-15 00:39:15.932482 DEBUG::Object: model, Size: 112
+2026-04-15 00:39:15.932992 DEBUG::Object: model_function, Size: 8864
+2026-04-15 00:39:15.933478 DEBUG::Object: ordereds, Size: 48
+2026-04-15 00:39:15.933936 DEBUG::Object: random_effects_formula, Size: 0
+2026-04-15 00:39:15.9344 DEBUG::Object: ranef_function, Size: 0
+2026-04-15 00:39:15.934868 DEBUG::Object: save_models, Size: 56
+2026-04-15 00:39:15.935322 DEBUG::Object: small_random_effects, Size: 56
+2026-04-15 00:39:15.935784 DEBUG::Object: strata, Size: 48
+2026-04-15 00:39:15.936257 DEBUG::Object: subtract_median, Size: 56
+2026-04-15 00:39:15.936739 DEBUG::Object: summary_function, Size: 49424
+2026-04-15 00:39:15.937288 DEBUG::Object: func_to_run, Size: 435336
+2026-04-15 00:39:15.937833 INFO::Fitting model to feature number 1, X1CMET2.PWY..folate.transformations.III..E..coli.
+2026-04-15 00:39:15.942167 INFO::Fitting model to feature number 2, X3.HYDROXYPHENYLACETATE.DEGRADATION.PWY..4.hydroxyphenylacetate.degradation
+2026-04-15 00:39:15.946172 INFO::Fitting model to feature number 3, AEROBACTINSYN.PWY..aerobactin.biosynthesis
+2026-04-15 00:39:15.949939 INFO::Fitting model to feature number 4, ALLANTOINDEG.PWY..superpathway.of.allantoin.degradation.in.yeast
+2026-04-15 00:39:15.95366 INFO::Fitting model to feature number 5, ANAEROFRUCAT.PWY..homolactic.fermentation
+2026-04-15 00:39:15.957567 INFO::Fitting model to feature number 6, ANAGLYCOLYSIS.PWY..glycolysis.III..from.glucose.
+2026-04-15 00:39:15.961477 INFO::Fitting model to feature number 7, ARG.POLYAMINE.SYN..superpathway.of.arginine.and.polyamine.biosynthesis
+2026-04-15 00:39:15.965213 INFO::Fitting model to feature number 8, ARGDEG.PWY..superpathway.of.L.arginine..putrescine..and.4.aminobutanoate.degradation
+2026-04-15 00:39:15.968898 INFO::Fitting model to feature number 9, ARGININE.SYN4.PWY..L.ornithine.biosynthesis.II
+2026-04-15 00:39:15.972628 INFO::Fitting model to feature number 10, ARGSYN.PWY..L.arginine.biosynthesis.I..via.L.ornithine.
+2026-04-15 00:39:15.976599 INFO::Fitting model to feature number 11, ARGSYNBSUB.PWY..L.arginine.biosynthesis.II..acetyl.cycle.
+2026-04-15 00:39:15.9803 INFO::Fitting model to feature number 12, ARO.PWY..chorismate.biosynthesis.I
+2026-04-15 00:39:15.984014 INFO::Fitting model to feature number 13, ASPASN.PWY..superpathway.of.L.aspartate.and.L.asparagine.biosynthesis
+2026-04-15 00:39:15.987695 INFO::Fitting model to feature number 14, AST.PWY..L.arginine.degradation.II..AST.pathway.
+2026-04-15 00:39:15.991669 INFO::Fitting model to feature number 15, BIOTIN.BIOSYNTHESIS.PWY..biotin.biosynthesis.I
+2026-04-15 00:39:15.995482 INFO::Fitting model to feature number 16, BRANCHED.CHAIN.AA.SYN.PWY..superpathway.of.branched.chain.amino.acid.biosynthesis
+2026-04-15 00:39:15.999123 INFO::Fitting model to feature number 17, CALVIN.PWY..Calvin.Benson.Bassham.cycle
+2026-04-15 00:39:16.00273 INFO::Fitting model to feature number 18, CARNMET.PWY..L.carnitine.degradation.I
+2026-04-15 00:39:16.006472 INFO::Fitting model to feature number 19, CATECHOL.ORTHO.CLEAVAGE.PWY..catechol.degradation.to..beta..ketoadipate
+2026-04-15 00:39:16.010432 INFO::Fitting model to feature number 20, CENTFERM.PWY..pyruvate.fermentation.to.butanoate
+2026-04-15 00:39:16.014159 INFO::Fitting model to feature number 21, CITRULBIO.PWY..L.citrulline.biosynthesis
+2026-04-15 00:39:16.017838 INFO::Fitting model to feature number 22, COA.PWY.1..superpathway.of.coenzyme.A.biosynthesis.III..mammals.
+2026-04-15 00:39:16.021672 INFO::Fitting model to feature number 23, COA.PWY..coenzyme.A.biosynthesis.I..prokaryotic.
+2026-04-15 00:39:16.025697 INFO::Fitting model to feature number 24, COBALSYN.PWY..superpathway.of.adenosylcobalamin.salvage.from.cobinamide.I
+2026-04-15 00:39:16.029505 INFO::Fitting model to feature number 25, COLANSYN.PWY..colanic.acid.building.blocks.biosynthesis
+2026-04-15 00:39:16.033207 INFO::Fitting model to feature number 26, COMPLETE.ARO.PWY..superpathway.of.aromatic.amino.acid.biosynthesis
+2026-04-15 00:39:16.036716 INFO::Fitting model to feature number 27, CRNFORCAT.PWY..creatinine.degradation.I
+2026-04-15 00:39:16.040595 INFO::Fitting model to feature number 28, DAPLYSINESYN.PWY..L.lysine.biosynthesis.I
+2026-04-15 00:39:16.044168 INFO::Fitting model to feature number 29, DARABCATK12.PWY..D.arabinose.degradation.I
+2026-04-15 00:39:16.047638 INFO::Fitting model to feature number 30, DENITRIFICATION.PWY..nitrate.reduction.I..denitrification.
+2026-04-15 00:39:16.051245 INFO::Fitting model to feature number 31, DENOVOPURINE2.PWY..superpathway.of.purine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:16.054647 INFO::Fitting model to feature number 32, DHGLUCONATE.PYR.CAT.PWY..glucose.degradation..oxidative.
+2026-04-15 00:39:16.058212 INFO::Fitting model to feature number 33, DTDPRHAMSYN.PWY..dTDP..beta..L.rhamnose.biosynthesis
+2026-04-15 00:39:16.061914 INFO::Fitting model to feature number 34, ECASYN.PWY..enterobacterial.common.antigen.biosynthesis
+2026-04-15 00:39:16.065397 INFO::Fitting model to feature number 35, FAO.PWY..fatty.acid..beta..oxidation.I..generic.
+2026-04-15 00:39:16.068891 INFO::Fitting model to feature number 36, FASYN.ELONG.PWY..fatty.acid.elongation....saturated
+2026-04-15 00:39:16.07236 INFO::Fitting model to feature number 37, FASYN.INITIAL.PWY..superpathway.of.fatty.acid.biosynthesis.initiation..E..coli.
+2026-04-15 00:39:16.076077 INFO::Fitting model to feature number 38, FERMENTATION.PWY..mixed.acid.fermentation
+2026-04-15 00:39:16.079572 INFO::Fitting model to feature number 39, FOLSYN.PWY..superpathway.of.tetrahydrofolate.biosynthesis.and.salvage
+2026-04-15 00:39:16.083325 INFO::Fitting model to feature number 40, FUC.RHAMCAT.PWY..superpathway.of.fucose.and.rhamnose.degradation
+2026-04-15 00:39:16.086795 INFO::Fitting model to feature number 41, FUCCAT.PWY..fucose.degradation
+2026-04-15 00:39:16.090317 INFO::Fitting model to feature number 42, GALACT.GLUCUROCAT.PWY..superpathway.of.hexuronide.and.hexuronate.degradation
+2026-04-15 00:39:16.093867 INFO::Fitting model to feature number 43, GALACTARDEG.PWY..D.galactarate.degradation.I
+2026-04-15 00:39:16.097977 INFO::Fitting model to feature number 44, GALACTITOLCAT.PWY..galactitol.degradation
+2026-04-15 00:39:16.101649 INFO::Fitting model to feature number 45, GALACTUROCAT.PWY..D.galacturonate.degradation.I
+2026-04-15 00:39:16.105132 INFO::Fitting model to feature number 46, GLCMANNANAUT.PWY..superpathway.of.N.acetylglucosamine..N.acetylmannosamine.and.N.acetylneuraminate.degradation
+2026-04-15 00:39:16.108799 INFO::Fitting model to feature number 47, GLUCARDEG.PWY..D.glucarate.degradation.I
+2026-04-15 00:39:16.112327 INFO::Fitting model to feature number 48, GLUCARGALACTSUPER.PWY..superpathway.of.D.glucarate.and.D.galactarate.degradation
+2026-04-15 00:39:16.115934 INFO::Fitting model to feature number 49, GLUCONEO.PWY..gluconeogenesis.I
+2026-04-15 00:39:16.119325 INFO::Fitting model to feature number 50, GLUCOSE1PMETAB.PWY..glucose.and.glucose.1.phosphate.degradation
+2026-04-15 00:39:16.122782 INFO::Fitting model to feature number 51, GLUCUROCAT.PWY..superpathway.of..beta..D.glucuronosides.degradation
+2026-04-15 00:39:16.126394 INFO::Fitting model to feature number 52, GLUDEG.I.PWY..GABA.shunt
+2026-04-15 00:39:16.129966 INFO::Fitting model to feature number 53, GLUTORN.PWY..L.ornithine.biosynthesis.I
+2026-04-15 00:39:16.133384 INFO::Fitting model to feature number 54, GLYCOCAT.PWY..glycogen.degradation.I
+2026-04-15 00:39:16.136852 INFO::Fitting model to feature number 55, GLYCOGENSYNTH.PWY..glycogen.biosynthesis.I..from.ADP.D.Glucose.
+2026-04-15 00:39:16.140452 INFO::Fitting model to feature number 56, GLYCOL.GLYOXDEG.PWY..superpathway.of.glycol.metabolism.and.degradation
+2026-04-15 00:39:16.144166 INFO::Fitting model to feature number 57, GLYCOLYSIS.E.D..superpathway.of.glycolysis.and.the.Entner.Doudoroff.pathway
+2026-04-15 00:39:16.147648 INFO::Fitting model to feature number 58, GLYCOLYSIS.TCA.GLYOX.BYPASS..superpathway.of.glycolysis..pyruvate.dehydrogenase..TCA..and.glyoxylate.bypass
+2026-04-15 00:39:16.151081 INFO::Fitting model to feature number 59, GLYCOLYSIS..glycolysis.I..from.glucose.6.phosphate.
+2026-04-15 00:39:16.154394 INFO::Fitting model to feature number 60, GLYOXYLATE.BYPASS..glyoxylate.cycle
+2026-04-15 00:39:16.15804 INFO::Fitting model to feature number 61, GOLPDLCAT.PWY..superpathway.of.glycerol.degradation.to.1.3.propanediol
+2026-04-15 00:39:16.161989 INFO::Fitting model to feature number 62, HCAMHPDEG.PWY..3.phenylpropanoate.and.3..3.hydroxyphenyl.propanoate.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:16.16551 INFO::Fitting model to feature number 63, HEME.BIOSYNTHESIS.II.1..heme.b.biosynthesis.V..aerobic.
+2026-04-15 00:39:16.168932 INFO::Fitting model to feature number 64, HEME.BIOSYNTHESIS.II..heme.b.biosynthesis.I..aerobic.
+2026-04-15 00:39:16.172546 INFO::Fitting model to feature number 65, HEMESYN2.PWY..heme.b.biosynthesis.II..oxygen.independent.
+2026-04-15 00:39:16.176544 INFO::Fitting model to feature number 66, HEXITOLDEGSUPER.PWY..superpathway.of.hexitol.degradation..bacteria.
+2026-04-15 00:39:16.180228 INFO::Fitting model to feature number 67, HISDEG.PWY..L.histidine.degradation.I
+2026-04-15 00:39:16.183738 INFO::Fitting model to feature number 68, HISTSYN.PWY..L.histidine.biosynthesis
+2026-04-15 00:39:16.18709 INFO::Fitting model to feature number 69, HOMOSER.METSYN.PWY..L.methionine.biosynthesis.I
+2026-04-15 00:39:16.19059 INFO::Fitting model to feature number 70, HSERMETANA.PWY..L.methionine.biosynthesis.III
+2026-04-15 00:39:16.194429 INFO::Fitting model to feature number 71, ILEUSYN.PWY..L.isoleucine.biosynthesis.I..from.threonine.
+2026-04-15 00:39:16.197893 INFO::Fitting model to feature number 72, KDO.NAGLIPASYN.PWY..superpathway.of..Kdo.2.lipid.A.biosynthesis
+2026-04-15 00:39:16.201295 INFO::Fitting model to feature number 73, KETOGLUCONMET.PWY..ketogluconate.metabolism
+2026-04-15 00:39:16.204651 INFO::Fitting model to feature number 74, LACTOSECAT.PWY..lactose.and.galactose.degradation.I
+2026-04-15 00:39:16.208318 INFO::Fitting model to feature number 75, LIPA.CORESYN.PWY..lipid.A.core.biosynthesis..E..coli.K.12.
+2026-04-15 00:39:16.211783 INFO::Fitting model to feature number 76, LIPASYN.PWY..phospholipases
+2026-04-15 00:39:16.215147 INFO::Fitting model to feature number 77, LPSSYN.PWY..superpathway.of.lipopolysaccharide.biosynthesis
+2026-04-15 00:39:16.218497 INFO::Fitting model to feature number 78, MET.SAM.PWY..superpathway.of.S.adenosyl.L.methionine.biosynthesis
+2026-04-15 00:39:16.221912 INFO::Fitting model to feature number 79, METHGLYUT.PWY..superpathway.of.methylglyoxal.degradation
+2026-04-15 00:39:16.225594 INFO::Fitting model to feature number 80, METSYN.PWY..superpathway.of.L.homoserine.and.L.methionine.biosynthesis
+2026-04-15 00:39:16.229092 INFO::Fitting model to feature number 81, NAD.BIOSYNTHESIS.II..NAD.salvage.pathway.III..to.nicotinamide.riboside.
+2026-04-15 00:39:16.232476 INFO::Fitting model to feature number 82, NAGLIPASYN.PWY..lipid.IVA.biosynthesis..E..coli.
+2026-04-15 00:39:16.23586 INFO::Fitting model to feature number 83, NONMEVIPP.PWY..methylerythritol.phosphate.pathway.I
+2026-04-15 00:39:16.24007 INFO::Fitting model to feature number 84, NONOXIPENT.PWY..pentose.phosphate.pathway..non.oxidative.branch..I
+2026-04-15 00:39:16.243678 INFO::Fitting model to feature number 85, OANTIGEN.PWY..O.antigen.building.blocks.biosynthesis..E..coli.
+2026-04-15 00:39:16.247177 INFO::Fitting model to feature number 86, ORNARGDEG.PWY..superpathway.of.L.arginine.and.L.ornithine.degradation
+2026-04-15 00:39:16.250606 INFO::Fitting model to feature number 87, ORNDEG.PWY..superpathway.of.ornithine.degradation
+2026-04-15 00:39:16.254105 INFO::Fitting model to feature number 88, P105.PWY..TCA.cycle.IV..2.oxoglutarate.decarboxylase.
+2026-04-15 00:39:16.258131 INFO::Fitting model to feature number 89, P108.PWY..pyruvate.fermentation.to.propanoate.I
+2026-04-15 00:39:16.26163 INFO::Fitting model to feature number 90, P122.PWY..heterolactic.fermentation
+2026-04-15 00:39:16.265022 INFO::Fitting model to feature number 91, P124.PWY..Bifidobacterium.shunt
+2026-04-15 00:39:16.268546 INFO::Fitting model to feature number 92, P125.PWY..superpathway.of..R.R..butanediol.biosynthesis
+2026-04-15 00:39:16.272114 INFO::Fitting model to feature number 93, P161.PWY..acetylene.degradation..anaerobic.
+2026-04-15 00:39:16.275682 INFO::Fitting model to feature number 94, P164.PWY..purine.nucleobases.degradation.I..anaerobic.
+2026-04-15 00:39:16.279083 INFO::Fitting model to feature number 95, P185.PWY..formaldehyde.assimilation.III..dihydroxyacetone.cycle.
+2026-04-15 00:39:16.282443 INFO::Fitting model to feature number 96, P221.PWY..octane.oxidation
+2026-04-15 00:39:16.285955 INFO::Fitting model to feature number 97, P23.PWY..reductive.TCA.cycle.I
+2026-04-15 00:39:16.289647 INFO::Fitting model to feature number 98, P4.PWY..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.I
+2026-04-15 00:39:16.293231 INFO::Fitting model to feature number 99, P41.PWY..pyruvate.fermentation.to.acetate.and..S..lactate.I
+2026-04-15 00:39:16.296621 INFO::Fitting model to feature number 100, P42.PWY..incomplete.reductive.TCA.cycle
+2026-04-15 00:39:16.30012 INFO::Fitting model to feature number 101, P441.PWY..superpathway.of.N.acetylneuraminate.degradation
+2026-04-15 00:39:16.303499 INFO::Fitting model to feature number 102, P461.PWY..hexitol.fermentation.to.lactate..formate..ethanol.and.acetate
+2026-04-15 00:39:16.307026 INFO::Fitting model to feature number 103, P562.PWY..myo.inositol.degradation.I
+2026-04-15 00:39:16.310523 INFO::Fitting model to feature number 104, P621.PWY..nylon.6.oligomer.degradation
+2026-04-15 00:39:16.313907 INFO::Fitting model to feature number 105, PANTO.PWY..phosphopantothenate.biosynthesis.I
+2026-04-15 00:39:16.317517 INFO::Fitting model to feature number 106, PANTOSYN.PWY..superpathway.of.coenzyme.A.biosynthesis.I..bacteria.
+2026-04-15 00:39:16.320933 INFO::Fitting model to feature number 107, PENTOSE.P.PWY..pentose.phosphate.pathway
+2026-04-15 00:39:16.324564 INFO::Fitting model to feature number 108, PEPTIDOGLYCANSYN.PWY..peptidoglycan.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:16.328007 INFO::Fitting model to feature number 109, PHOSLIPSYN.PWY..superpathway.of.phospholipid.biosynthesis.I..bacteria.
+2026-04-15 00:39:16.331516 INFO::Fitting model to feature number 110, POLYAMSYN.PWY..superpathway.of.polyamine.biosynthesis.I
+2026-04-15 00:39:16.334897 INFO::Fitting model to feature number 111, POLYISOPRENSYN.PWY..polyisoprenoid.biosynthesis..E..coli.
+2026-04-15 00:39:16.338207 INFO::Fitting model to feature number 112, PPGPPMET.PWY..ppGpp.metabolism
+2026-04-15 00:39:16.342046 INFO::Fitting model to feature number 113, PROTOCATECHUATE.ORTHO.CLEAVAGE.PWY..protocatechuate.degradation.II..ortho.cleavage.pathway.
+2026-04-15 00:39:16.345523 INFO::Fitting model to feature number 114, PRPP.PWY..superpathway.of.histidine..purine..and.pyrimidine.biosynthesis
+2026-04-15 00:39:16.348978 INFO::Fitting model to feature number 115, PWY.1042..glycolysis.IV
+2026-04-15 00:39:16.352305 INFO::Fitting model to feature number 116, PWY.1269..CMP.3.deoxy.D.manno.octulosonate.biosynthesis
+2026-04-15 00:39:16.355882 INFO::Fitting model to feature number 117, PWY.1622..formaldehyde.assimilation.I..serine.pathway.
+2026-04-15 00:39:16.359492 INFO::Fitting model to feature number 118, PWY.181..photorespiration
+2026-04-15 00:39:16.363039 INFO::Fitting model to feature number 119, PWY.1861..formaldehyde.assimilation.II..assimilatory.RuMP.Cycle.
+2026-04-15 00:39:16.366436 INFO::Fitting model to feature number 120, PWY.2221..Entner.Doudoroff.pathway.III..semi.phosphorylative.
+2026-04-15 00:39:16.36979 INFO::Fitting model to feature number 121, PWY.241..C4.photosynthetic.carbon.assimilation.cycle..NADP.ME.type
+2026-04-15 00:39:16.373225 INFO::Fitting model to feature number 122, PWY.2941..L.lysine.biosynthesis.II
+2026-04-15 00:39:16.376659 INFO::Fitting model to feature number 123, PWY.2942..L.lysine.biosynthesis.III
+2026-04-15 00:39:16.380126 INFO::Fitting model to feature number 124, PWY.3001..superpathway.of.L.isoleucine.biosynthesis.I
+2026-04-15 00:39:16.383457 INFO::Fitting model to feature number 125, PWY.3801..sucrose.degradation.II..sucrose.synthase.
+2026-04-15 00:39:16.386807 INFO::Fitting model to feature number 126, PWY.3841..folate.transformations.II..plants.
+2026-04-15 00:39:16.390168 INFO::Fitting model to feature number 127, PWY.4041...gamma..glutamyl.cycle
+2026-04-15 00:39:16.39396 INFO::Fitting model to feature number 128, PWY.4984..urea.cycle
+2026-04-15 00:39:16.397494 INFO::Fitting model to feature number 129, PWY.5005..biotin.biosynthesis.II
+2026-04-15 00:39:16.400926 INFO::Fitting model to feature number 130, PWY.5028..L.histidine.degradation.II
+2026-04-15 00:39:16.404267 INFO::Fitting model to feature number 131, PWY.5030..L.histidine.degradation.III
+2026-04-15 00:39:16.407819 INFO::Fitting model to feature number 132, PWY.5097..L.lysine.biosynthesis.VI
+2026-04-15 00:39:16.411302 INFO::Fitting model to feature number 133, PWY.5100..pyruvate.fermentation.to.acetate.and.lactate.II
+2026-04-15 00:39:16.414635 INFO::Fitting model to feature number 134, PWY.5103..L.isoleucine.biosynthesis.III
+2026-04-15 00:39:16.417937 INFO::Fitting model to feature number 135, PWY.5121..superpathway.of.geranylgeranyl.diphosphate.biosynthesis.II..via.MEP.
+2026-04-15 00:39:16.421218 INFO::Fitting model to feature number 136, PWY.5130..2.oxobutanoate.degradation.I
+2026-04-15 00:39:16.424931 INFO::Fitting model to feature number 137, PWY.5136..fatty.acid..beta..oxidation.II..plant.peroxisome.
+2026-04-15 00:39:16.428395 INFO::Fitting model to feature number 138, PWY.5138..fatty.acid..beta..oxidation.IV..unsaturated..even.number.
+2026-04-15 00:39:16.431784 INFO::Fitting model to feature number 139, PWY.5154..L.arginine.biosynthesis.III..via.N.acetyl.L.citrulline.
+2026-04-15 00:39:16.435106 INFO::Fitting model to feature number 140, PWY.5180..toluene.degradation.I..aerobic...via.o.cresol.
+2026-04-15 00:39:16.438605 INFO::Fitting model to feature number 141, PWY.5188..tetrapyrrole.biosynthesis.I..from.glutamate.
+2026-04-15 00:39:16.442372 INFO::Fitting model to feature number 142, PWY.5189..tetrapyrrole.biosynthesis.II..from.glycine.
+2026-04-15 00:39:16.445771 INFO::Fitting model to feature number 143, PWY.5265..peptidoglycan.biosynthesis.II..staphylococci.
+2026-04-15 00:39:16.44928 INFO::Fitting model to feature number 144, PWY.5345..superpathway.of.L.methionine.biosynthesis..by.sulfhydrylation.
+2026-04-15 00:39:16.452664 INFO::Fitting model to feature number 145, PWY.5347..superpathway.of.L.methionine.biosynthesis..transsulfuration.
+2026-04-15 00:39:16.45664 INFO::Fitting model to feature number 146, PWY.5367..petroselinate.biosynthesis
+2026-04-15 00:39:16.460511 INFO::Fitting model to feature number 147, PWY.5384..sucrose.degradation.IV..sucrose.phosphorylase.
+2026-04-15 00:39:16.464005 INFO::Fitting model to feature number 148, PWY.5392..reductive.TCA.cycle.II
+2026-04-15 00:39:16.467422 INFO::Fitting model to feature number 149, PWY.5415..catechol.degradation.I..meta.cleavage.pathway.
+2026-04-15 00:39:16.470998 INFO::Fitting model to feature number 150, PWY.5417..catechol.degradation.III..ortho.cleavage.pathway.
+2026-04-15 00:39:16.474988 INFO::Fitting model to feature number 151, PWY.5431..aromatic.compounds.degradation.via..beta..ketoadipate
+2026-04-15 00:39:16.478521 INFO::Fitting model to feature number 152, PWY.5484..glycolysis.II..from.fructose.6.phosphate.
+2026-04-15 00:39:16.48192 INFO::Fitting model to feature number 153, PWY.5497..purine.nucleobases.degradation.II..anaerobic.
+2026-04-15 00:39:16.485308 INFO::Fitting model to feature number 154, PWY.5505..L.glutamate.and.L.glutamine.biosynthesis
+2026-04-15 00:39:16.489055 INFO::Fitting model to feature number 155, PWY.561..superpathway.of.glyoxylate.cycle.and.fatty.acid.degradation
+2026-04-15 00:39:16.492757 INFO::Fitting model to feature number 156, PWY.5654..2.amino.3.carboxymuconate.semialdehyde.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:16.496259 INFO::Fitting model to feature number 157, PWY.5656..mannosylglycerate.biosynthesis.I
+2026-04-15 00:39:16.499697 INFO::Fitting model to feature number 158, PWY.5659..GDP.mannose.biosynthesis
+2026-04-15 00:39:16.510436 INFO::Fitting model to feature number 159, PWY.5667..CDP.diacylglycerol.biosynthesis.I
+2026-04-15 00:39:16.51395 INFO::Fitting model to feature number 160, PWY.5675..nitrate.reduction.V..assimilatory.
+2026-04-15 00:39:16.51735 INFO::Fitting model to feature number 161, PWY.5676..acetyl.CoA.fermentation.to.butanoate.II
+2026-04-15 00:39:16.521061 INFO::Fitting model to feature number 162, PWY.5686..UMP.biosynthesis.I
+2026-04-15 00:39:16.525079 INFO::Fitting model to feature number 163, PWY.5692..allantoin.degradation.to.glyoxylate.II
+2026-04-15 00:39:16.528631 INFO::Fitting model to feature number 164, PWY.5695..inosine.5..phosphate.degradation
+2026-04-15 00:39:16.532043 INFO::Fitting model to feature number 165, PWY.5705..allantoin.degradation.to.glyoxylate.III
+2026-04-15 00:39:16.536065 INFO::Fitting model to feature number 166, PWY.5723..Rubisco.shunt
+2026-04-15 00:39:16.539846 INFO::Fitting model to feature number 167, PWY.5747..2.methylcitrate.cycle.II
+2026-04-15 00:39:16.543504 INFO::Fitting model to feature number 168, PWY.5837..2.carboxy.1.4.naphthoquinol.biosynthesis
+2026-04-15 00:39:16.546945 INFO::Fitting model to feature number 169, PWY.5838..superpathway.of.menaquinol.8.biosynthesis.I
+2026-04-15 00:39:16.550395 INFO::Fitting model to feature number 170, PWY.5840..superpathway.of.menaquinol.7.biosynthesis
+2026-04-15 00:39:16.553949 INFO::Fitting model to feature number 171, PWY.5845..superpathway.of.menaquinol.9.biosynthesis
+2026-04-15 00:39:16.557817 INFO::Fitting model to feature number 172, PWY.5850..superpathway.of.menaquinol.6.biosynthesis
+2026-04-15 00:39:16.561333 INFO::Fitting model to feature number 173, PWY.5855..ubiquinol.7.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:16.564749 INFO::Fitting model to feature number 174, PWY.5860..superpathway.of.demethylmenaquinol.6.biosynthesis.I
+2026-04-15 00:39:16.568126 INFO::Fitting model to feature number 175, PWY.5861..superpathway.of.demethylmenaquinol.8.biosynthesis.I
+2026-04-15 00:39:16.571535 INFO::Fitting model to feature number 176, PWY.5862..superpathway.of.demethylmenaquinol.9.biosynthesis
+2026-04-15 00:39:16.575109 INFO::Fitting model to feature number 177, PWY.5896..superpathway.of.menaquinol.10.biosynthesis
+2026-04-15 00:39:16.578559 INFO::Fitting model to feature number 178, PWY.5897..superpathway.of.menaquinol.11.biosynthesis
+2026-04-15 00:39:16.582126 INFO::Fitting model to feature number 179, PWY.5898..superpathway.of.menaquinol.12.biosynthesis
+2026-04-15 00:39:16.585603 INFO::Fitting model to feature number 180, PWY.5899..superpathway.of.menaquinol.13.biosynthesis
+2026-04-15 00:39:16.589053 INFO::Fitting model to feature number 181, PWY.5910..superpathway.of.geranylgeranyldiphosphate.biosynthesis.I..via.mevalonate.
+2026-04-15 00:39:16.592621 INFO::Fitting model to feature number 182, PWY.5913..partial.TCA.cycle..obligate.autotrophs.
+2026-04-15 00:39:16.595999 INFO::Fitting model to feature number 183, PWY.5918..superpathway.of.heme.b.biosynthesis.from.glutamate
+2026-04-15 00:39:16.599483 INFO::Fitting model to feature number 184, PWY.5920..superpathway.of.heme.b.biosynthesis.from.glycine
+2026-04-15 00:39:16.602881 INFO::Fitting model to feature number 185, PWY.5941..glycogen.degradation.II
+2026-04-15 00:39:16.606314 INFO::Fitting model to feature number 186, PWY.5971..palmitate.biosynthesis..type.II.fatty.acid.synthase.
+2026-04-15 00:39:16.609824 INFO::Fitting model to feature number 187, PWY.5972..stearate.biosynthesis.I..animals.
+2026-04-15 00:39:16.613385 INFO::Fitting model to feature number 188, PWY.5973..cis.vaccenate.biosynthesis
+2026-04-15 00:39:16.61682 INFO::Fitting model to feature number 189, PWY.5981..CDP.diacylglycerol.biosynthesis.III
+2026-04-15 00:39:16.620158 INFO::Fitting model to feature number 190, PWY.5989..stearate.biosynthesis.II..bacteria.and.plants.
+2026-04-15 00:39:16.623554 INFO::Fitting model to feature number 191, PWY.5994..palmitate.biosynthesis..type.I.fatty.acid.synthase.
+2026-04-15 00:39:16.627007 INFO::Fitting model to feature number 192, PWY.6121..5.aminoimidazole.ribonucleotide.biosynthesis.I
+2026-04-15 00:39:16.630376 INFO::Fitting model to feature number 193, PWY.6122..5.aminoimidazole.ribonucleotide.biosynthesis.II
+2026-04-15 00:39:16.633685 INFO::Fitting model to feature number 194, PWY.6123..inosine.5..phosphate.biosynthesis.I
+2026-04-15 00:39:16.636968 INFO::Fitting model to feature number 195, PWY.6124..inosine.5..phosphate.biosynthesis.II
+2026-04-15 00:39:16.640356 INFO::Fitting model to feature number 196, PWY.6125..superpathway.of.guanosine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:16.643902 INFO::Fitting model to feature number 197, PWY.6126..superpathway.of.adenosine.nucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:16.647321 INFO::Fitting model to feature number 198, PWY.6147..6.hydroxymethyl.dihydropterin.diphosphate.biosynthesis.I
+2026-04-15 00:39:16.65067 INFO::Fitting model to feature number 199, PWY.6151..S.adenosyl.L.methionine.salvage.I
+2026-04-15 00:39:16.653966 INFO::Fitting model to feature number 200, PWY.6163..chorismate.biosynthesis.from.3.dehydroquinate
+2026-04-15 00:39:16.657781 INFO::Fitting model to feature number 201, PWY.6168..flavin.biosynthesis.III..fungi.
+2026-04-15 00:39:16.661357 INFO::Fitting model to feature number 202, PWY.6182..superpathway.of.salicylate.degradation
+2026-04-15 00:39:16.66476 INFO::Fitting model to feature number 203, PWY.6185..4.methylcatechol.degradation..ortho.cleavage.
+2026-04-15 00:39:16.668267 INFO::Fitting model to feature number 204, PWY.6210..2.aminophenol.degradation
+2026-04-15 00:39:16.671634 INFO::Fitting model to feature number 205, PWY.6215..4.chlorobenzoate.degradation
+2026-04-15 00:39:16.675369 INFO::Fitting model to feature number 206, PWY.621..sucrose.degradation.III..sucrose.invertase.
+2026-04-15 00:39:16.678859 INFO::Fitting model to feature number 207, PWY.622..starch.biosynthesis
+2026-04-15 00:39:16.682261 INFO::Fitting model to feature number 208, PWY.6270..isoprene.biosynthesis.I
+2026-04-15 00:39:16.685624 INFO::Fitting model to feature number 209, PWY.6277..superpathway.of.5.aminoimidazole.ribonucleotide.biosynthesis
+2026-04-15 00:39:16.688983 INFO::Fitting model to feature number 210, PWY.6282..palmitoleate.biosynthesis.I..from..5Z..dodec.5.enoate.
+2026-04-15 00:39:16.692776 INFO::Fitting model to feature number 211, PWY.6284..superpathway.of.unsaturated.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:16.696263 INFO::Fitting model to feature number 212, PWY.6285..superpathway.of.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:16.699656 INFO::Fitting model to feature number 213, PWY.6292..superpathway.of.L.cysteine.biosynthesis..mammalian.
+2026-04-15 00:39:16.703027 INFO::Fitting model to feature number 214, PWY.6293..superpathway.of.L.cysteine.biosynthesis..fungi.
+2026-04-15 00:39:16.706768 INFO::Fitting model to feature number 215, PWY.6305..superpathway.of.putrescine.biosynthesis
+2026-04-15 00:39:16.710289 INFO::Fitting model to feature number 216, PWY.6317..D.galactose.degradation.I..Leloir.pathway.
+2026-04-15 00:39:16.713684 INFO::Fitting model to feature number 217, PWY.6318..L.phenylalanine.degradation.IV..mammalian..via.side.chain.
+2026-04-15 00:39:16.717061 INFO::Fitting model to feature number 218, PWY.6328..L.lysine.degradation.X
+2026-04-15 00:39:16.720406 INFO::Fitting model to feature number 219, PWY.6353..purine.nucleotides.degradation.II..aerobic.
+2026-04-15 00:39:16.723985 INFO::Fitting model to feature number 220, PWY.6385..peptidoglycan.biosynthesis.III..mycobacteria.
+2026-04-15 00:39:16.727414 INFO::Fitting model to feature number 221, PWY.6386..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.II..lysine.containing.
+2026-04-15 00:39:16.730822 INFO::Fitting model to feature number 222, PWY.6387..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:16.734276 INFO::Fitting model to feature number 223, PWY.6396..superpathway.of.2.3.butanediol.biosynthesis
+2026-04-15 00:39:16.738708 INFO::Fitting model to feature number 224, PWY.6435..4.hydroxybenzoate.biosynthesis.III..plants.
+2026-04-15 00:39:16.743329 INFO::Fitting model to feature number 225, PWY.6507..4.deoxy.L.threo.hex.4.enopyranuronate.degradation
+2026-04-15 00:39:16.747152 INFO::Fitting model to feature number 226, PWY.6519..8.amino.7.oxononanoate.biosynthesis.I
+2026-04-15 00:39:16.750905 INFO::Fitting model to feature number 227, PWY.6527..stachyose.degradation
+2026-04-15 00:39:16.754452 INFO::Fitting model to feature number 228, PWY.6531..mannitol.cycle
+2026-04-15 00:39:16.75881 INFO::Fitting model to feature number 229, PWY.6545..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.III
+2026-04-15 00:39:16.763179 INFO::Fitting model to feature number 230, PWY.6549..L.glutamine.biosynthesis.III
+2026-04-15 00:39:16.767234 INFO::Fitting model to feature number 231, PWY.6588..pyruvate.fermentation.to.acetone
+2026-04-15 00:39:16.771367 INFO::Fitting model to feature number 232, PWY.6590..superpathway.of.Clostridium.acetobutylicum.acidogenic.fermentation
+2026-04-15 00:39:16.775731 INFO::Fitting model to feature number 233, PWY.6595..superpathway.of.guanosine.nucleotides.degradation..plants.
+2026-04-15 00:39:16.779782 INFO::Fitting model to feature number 234, PWY.6606..guanosine.nucleotides.degradation.II
+2026-04-15 00:39:16.783669 INFO::Fitting model to feature number 235, PWY.6607..guanosine.nucleotides.degradation.I
+2026-04-15 00:39:16.787702 INFO::Fitting model to feature number 236, PWY.6608..guanosine.nucleotides.degradation.III
+2026-04-15 00:39:16.792264 INFO::Fitting model to feature number 237, PWY.6609..adenine.and.adenosine.salvage.III
+2026-04-15 00:39:16.796456 INFO::Fitting model to feature number 238, PWY.6612..superpathway.of.tetrahydrofolate.biosynthesis
+2026-04-15 00:39:16.800609 INFO::Fitting model to feature number 239, PWY.6628..superpathway.of.L.phenylalanine.biosynthesis
+2026-04-15 00:39:16.804481 INFO::Fitting model to feature number 240, PWY.6629..superpathway.of.L.tryptophan.biosynthesis
+2026-04-15 00:39:16.808781 INFO::Fitting model to feature number 241, PWY.6630..superpathway.of.L.tyrosine.biosynthesis
+2026-04-15 00:39:16.812674 INFO::Fitting model to feature number 242, PWY.6690..cinnamate.and.3.hydroxycinnamate.degradation.to.2.hydroxypentadienoate
+2026-04-15 00:39:16.816571 INFO::Fitting model to feature number 243, PWY.6700..queuosine.biosynthesis.I..de.novo.
+2026-04-15 00:39:16.82044 INFO::Fitting model to feature number 244, PWY.6703..preQ0.biosynthesis
+2026-04-15 00:39:16.824848 INFO::Fitting model to feature number 245, PWY.6708..ubiquinol.8.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:16.8294 INFO::Fitting model to feature number 246, PWY.6731..starch.degradation.III
+2026-04-15 00:39:16.833335 INFO::Fitting model to feature number 247, PWY.6749..CMP.legionaminate.biosynthesis.I
+2026-04-15 00:39:16.837202 INFO::Fitting model to feature number 248, PWY.6803..phosphatidylcholine.acyl.editing
+2026-04-15 00:39:16.841569 INFO::Fitting model to feature number 249, PWY.6823..molybdopterin.biosynthesis
+2026-04-15 00:39:16.845763 INFO::Fitting model to feature number 250, PWY.6859..all.trans.farnesol.biosynthesis
+2026-04-15 00:39:16.849626 INFO::Fitting model to feature number 251, PWY.6892..thiazole.component.of.thiamine.diphosphate.biosynthesis.I
+2026-04-15 00:39:16.853429 INFO::Fitting model to feature number 252, PWY.6895..superpathway.of.thiamine.diphosphate.biosynthesis.II
+2026-04-15 00:39:16.857674 INFO::Fitting model to feature number 253, PWY.6897..thiamine.diphosphate.salvage.II
+2026-04-15 00:39:16.861886 INFO::Fitting model to feature number 254, PWY.6901..superpathway.of.glucose.and.xylose.degradation
+2026-04-15 00:39:16.865653 INFO::Fitting model to feature number 255, PWY.6902..chitin.degradation.II..Vibrio.
+2026-04-15 00:39:16.869429 INFO::Fitting model to feature number 256, PWY.6922..L.N.delta..acetylornithine.biosynthesis
+2026-04-15 00:39:16.873467 INFO::Fitting model to feature number 257, PWY.6936..seleno.amino.acid.biosynthesis..plants.
+2026-04-15 00:39:16.87728 INFO::Fitting model to feature number 258, PWY.6961..L.ascorbate.degradation.II..bacterial..aerobic.
+2026-04-15 00:39:16.881057 INFO::Fitting model to feature number 259, PWY.6969..TCA.cycle.V..2.oxoglutarate.synthase.
+2026-04-15 00:39:16.884723 INFO::Fitting model to feature number 260, PWY.6992..1.5.anhydrofructose.degradation
+2026-04-15 00:39:16.888497 INFO::Fitting model to feature number 261, PWY.7013...S..propane.1.2.diol.degradation
+2026-04-15 00:39:16.892335 INFO::Fitting model to feature number 262, PWY.702..L.methionine.biosynthesis.II
+2026-04-15 00:39:16.89599 INFO::Fitting model to feature number 263, PWY.7039..phosphatidate.metabolism..as.a.signaling.molecule
+2026-04-15 00:39:16.899709 INFO::Fitting model to feature number 264, PWY.7094..fatty.acid.salvage
+2026-04-15 00:39:16.903417 INFO::Fitting model to feature number 265, PWY.7111..pyruvate.fermentation.to.isobutanol..engineered.
+2026-04-15 00:39:16.907624 INFO::Fitting model to feature number 266, PWY.7115..C4.photosynthetic.carbon.assimilation.cycle..NAD.ME.type
+2026-04-15 00:39:16.911479 INFO::Fitting model to feature number 267, PWY.7117..C4.photosynthetic.carbon.assimilation.cycle..PEPCK.type
+2026-04-15 00:39:16.915211 INFO::Fitting model to feature number 268, PWY.7118..chitin.deacetylation
+2026-04-15 00:39:16.91899 INFO::Fitting model to feature number 269, PWY.7165..L.ascorbate.biosynthesis.VIII..engineered.pathway.
+2026-04-15 00:39:16.923088 INFO::Fitting model to feature number 270, PWY.7184..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:16.927055 INFO::Fitting model to feature number 271, PWY.7185..UTP.and.CTP.dephosphorylation.I
+2026-04-15 00:39:16.930823 INFO::Fitting model to feature number 272, PWY.7187..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:16.934528 INFO::Fitting model to feature number 273, PWY.7196..superpathway.of.pyrimidine.ribonucleosides.salvage
+2026-04-15 00:39:16.938246 INFO::Fitting model to feature number 274, PWY.7197..pyrimidine.deoxyribonucleotide.phosphorylation
+2026-04-15 00:39:16.942515 INFO::Fitting model to feature number 275, PWY.7198..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.IV
+2026-04-15 00:39:16.946384 INFO::Fitting model to feature number 276, PWY.7199..pyrimidine.deoxyribonucleosides.salvage
+2026-04-15 00:39:16.950057 INFO::Fitting model to feature number 277, PWY.7200..superpathway.of.pyrimidine.deoxyribonucleoside.salvage
+2026-04-15 00:39:16.953895 INFO::Fitting model to feature number 278, PWY.7204..pyridoxal.5..phosphate.salvage.II..plants.
+2026-04-15 00:39:16.957979 INFO::Fitting model to feature number 279, PWY.7208..superpathway.of.pyrimidine.nucleobases.salvage
+2026-04-15 00:39:16.961733 INFO::Fitting model to feature number 280, PWY.7209..superpathway.of.pyrimidine.ribonucleosides.degradation
+2026-04-15 00:39:16.96543 INFO::Fitting model to feature number 281, PWY.7210..pyrimidine.deoxyribonucleotides.biosynthesis.from.CTP
+2026-04-15 00:39:16.969145 INFO::Fitting model to feature number 282, PWY.7211..superpathway.of.pyrimidine.deoxyribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:16.973075 INFO::Fitting model to feature number 283, PWY.7220..adenosine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:16.976835 INFO::Fitting model to feature number 284, PWY.7221..guanosine.ribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:16.980515 INFO::Fitting model to feature number 285, PWY.7222..guanosine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:16.984143 INFO::Fitting model to feature number 286, PWY.7228..superpathway.of.guanosine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:16.988018 INFO::Fitting model to feature number 287, PWY.7229..superpathway.of.adenosine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:16.992186 INFO::Fitting model to feature number 288, PWY.7234..inosine.5..phosphate.biosynthesis.III
+2026-04-15 00:39:16.99592 INFO::Fitting model to feature number 289, PWY.7237..myo...chiro..and.scyllo.inositol.degradation
+2026-04-15 00:39:16.99965 INFO::Fitting model to feature number 290, PWY.7238..sucrose.biosynthesis.II
+2026-04-15 00:39:17.003435 INFO::Fitting model to feature number 291, PWY.7242..D.fructuronate.degradation
+2026-04-15 00:39:17.007613 INFO::Fitting model to feature number 292, PWY.7245..superpathway.of.NAD.NADP...NADH.NADPH.interconversion..yeast.
+2026-04-15 00:39:17.011488 INFO::Fitting model to feature number 293, PWY.724..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.II
+2026-04-15 00:39:17.015182 INFO::Fitting model to feature number 294, PWY.7254..TCA.cycle.VII..acetate.producers.
+2026-04-15 00:39:17.019084 INFO::Fitting model to feature number 295, PWY.7268..cytosolic.NADPH.production..yeast.
+2026-04-15 00:39:17.023051 INFO::Fitting model to feature number 296, PWY.7269..mitochondrial.NADPH.production..yeast.
+2026-04-15 00:39:17.026937 INFO::Fitting model to feature number 297, PWY.7282..4.amino.2.methyl.5.diphosphomethylpyrimidine.biosynthesis.II
+2026-04-15 00:39:17.030703 INFO::Fitting model to feature number 298, PWY.7294..D.xylose.degradation.IV
+2026-04-15 00:39:17.034457 INFO::Fitting model to feature number 299, PWY.7315..dTDP.N.acetylthomosamine.biosynthesis
+2026-04-15 00:39:17.038201 INFO::Fitting model to feature number 300, PWY.7323..superpathway.of.GDP.mannose.derived.O.antigen.building.blocks.biosynthesis
+2026-04-15 00:39:17.042121 INFO::Fitting model to feature number 301, PWY.7328..superpathway.of.UDP.glucose.derived.O.antigen.building.blocks.biosynthesis
+2026-04-15 00:39:17.045683 INFO::Fitting model to feature number 302, PWY.7340..9.cis..11.trans.octadecadienoyl.CoA.degradation..isomerase.dependent..yeast.
+2026-04-15 00:39:17.049186 INFO::Fitting model to feature number 303, PWY.7345..superpathway.of.anaerobic.sucrose.degradation
+2026-04-15 00:39:17.05261 INFO::Fitting model to feature number 304, PWY.7356..thiamine.diphosphate.salvage.IV..yeast.
+2026-04-15 00:39:17.056003 INFO::Fitting model to feature number 305, PWY.7357..thiamine.phosphate.formation.from.pyrithiamine.and.oxythiamine..yeast.
+2026-04-15 00:39:17.059387 INFO::Fitting model to feature number 306, PWY.7383..anaerobic.energy.metabolism..invertebrates..cytosol.
+2026-04-15 00:39:17.062732 INFO::Fitting model to feature number 307, PWY.7385..1.3.propanediol.biosynthesis..engineered.
+2026-04-15 00:39:17.066701 INFO::Fitting model to feature number 308, PWY.7388..octanoyl..acyl.carrier.protein..biosynthesis..mitochondria..yeast.
+2026-04-15 00:39:17.070235 INFO::Fitting model to feature number 309, PWY.7391..isoprene.biosynthesis.II..engineered.
+2026-04-15 00:39:17.07402 INFO::Fitting model to feature number 310, PWY.7392..taxadiene.biosynthesis..engineered.
+2026-04-15 00:39:17.077706 INFO::Fitting model to feature number 311, PWY.7396..butanol.and.isobutanol.biosynthesis..engineered.
+2026-04-15 00:39:17.08112 INFO::Fitting model to feature number 312, PWY.7400..L.arginine.biosynthesis.IV..archaebacteria.
+2026-04-15 00:39:17.084455 INFO::Fitting model to feature number 313, PWY.7409..phospholipid.remodeling..phosphatidylethanolamine..yeast.
+2026-04-15 00:39:17.087811 INFO::Fitting model to feature number 314, PWY.7434..terminal.O.glycans.residues.modification..via.type.2.precursor.disaccharide.
+2026-04-15 00:39:17.091655 INFO::Fitting model to feature number 315, PWY.7446..sulfoquinovose.degradation.I
+2026-04-15 00:39:17.095322 INFO::Fitting model to feature number 316, PWY.7456...beta...1.4..mannan.degradation
+2026-04-15 00:39:17.098799 INFO::Fitting model to feature number 317, PWY.7560..methylerythritol.phosphate.pathway.II
+2026-04-15 00:39:17.102183 INFO::Fitting model to feature number 318, PWY.7616..methanol.oxidation.to.carbon.dioxide
+2026-04-15 00:39:17.105548 INFO::Fitting model to feature number 319, PWY.7663..gondoate.biosynthesis..anaerobic.
+2026-04-15 00:39:17.108868 INFO::Fitting model to feature number 320, PWY.7664..oleate.biosynthesis.IV..anaerobic.
+2026-04-15 00:39:17.112618 INFO::Fitting model to feature number 321, PWY.7723..bacterial.bioluminescence
+2026-04-15 00:39:17.116265 INFO::Fitting model to feature number 322, PWY.7761..NAD.salvage.pathway.II..PNC.IV.cycle.
+2026-04-15 00:39:17.119696 INFO::Fitting model to feature number 323, PWY.7783..plasmalogen.degradation
+2026-04-15 00:39:17.123094 INFO::Fitting model to feature number 324, PWY.7790..UMP.biosynthesis.II
+2026-04-15 00:39:17.126643 INFO::Fitting model to feature number 325, PWY.7791..UMP.biosynthesis.III
+2026-04-15 00:39:17.130018 INFO::Fitting model to feature number 326, PWY.7805...aminomethyl.phosphonate.degradation
+2026-04-15 00:39:17.133434 INFO::Fitting model to feature number 327, PWY.7807..glyphosate.degradation.III
+2026-04-15 00:39:17.13684 INFO::Fitting model to feature number 328, PWY.7851..coenzyme.A.biosynthesis.II..eukaryotic.
+2026-04-15 00:39:17.140342 INFO::Fitting model to feature number 329, PWY.7858...5Z..dodecenoate.biosynthesis.II
+2026-04-15 00:39:17.143987 INFO::Fitting model to feature number 330, PWY.7873..D.erythronate.degradation.II
+2026-04-15 00:39:17.147505 INFO::Fitting model to feature number 331, PWY.7874..L.threonate.degradation
+2026-04-15 00:39:17.150915 INFO::Fitting model to feature number 332, PWY.7883..anhydromuropeptides.recycling.II
+2026-04-15 00:39:17.154287 INFO::Fitting model to feature number 333, PWY.7942..5.oxo.L.proline.metabolism
+2026-04-15 00:39:17.158055 INFO::Fitting model to feature number 334, PWY.7953..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.III..meso.diaminopimelate.containing.
+2026-04-15 00:39:17.161518 INFO::Fitting model to feature number 335, PWY.7977..L.methionine.biosynthesis.IV
+2026-04-15 00:39:17.164907 INFO::Fitting model to feature number 336, PWY.8004..Entner.Doudoroff.pathway.I
+2026-04-15 00:39:17.16829 INFO::Fitting model to feature number 337, PWY.8011..L.serine.biosynthesis.II
+2026-04-15 00:39:17.171674 INFO::Fitting model to feature number 338, PWY.801..homocysteine.and.cysteine.interconversion
+2026-04-15 00:39:17.175289 INFO::Fitting model to feature number 339, PWY.8073..lipid.IVA.biosynthesis..P..putida.
+2026-04-15 00:39:17.17875 INFO::Fitting model to feature number 340, PWY.8131..5..deoxyadenosine.degradation.II
+2026-04-15 00:39:17.182144 INFO::Fitting model to feature number 341, PWY.8178..pentose.phosphate.pathway..non.oxidative.branch..II
+2026-04-15 00:39:17.18552 INFO::Fitting model to feature number 342, PWY.8187..L.arginine.degradation.XIII..reductive.Stickland.reaction.
+2026-04-15 00:39:17.188933 INFO::Fitting model to feature number 343, PWY.821..superpathway.of.sulfur.amino.acid.biosynthesis..Saccharomyces.cerevisiae.
+2026-04-15 00:39:17.192405 INFO::Fitting model to feature number 344, PWY.822..fructan.biosynthesis
+2026-04-15 00:39:17.195761 INFO::Fitting model to feature number 345, PWY.841..superpathway.of.purine.nucleotides.de.novo.biosynthesis.I
+2026-04-15 00:39:17.199083 INFO::Fitting model to feature number 346, PWY.922..mevalonate.pathway.I..eukaryotes.and.bacteria.
+2026-04-15 00:39:17.202494 INFO::Fitting model to feature number 347, PWY.I9..L.cysteine.biosynthesis.VI..from.L.methionine.
+2026-04-15 00:39:17.206004 INFO::Fitting model to feature number 348, PWY0.1061..superpathway.of.L.alanine.biosynthesis
+2026-04-15 00:39:17.216243 INFO::Fitting model to feature number 349, PWY0.1221..putrescine.degradation.II
+2026-04-15 00:39:17.220039 INFO::Fitting model to feature number 350, PWY0.1241..ADP.L.glycero..beta..D.manno.heptose.biosynthesis
+2026-04-15 00:39:17.223805 INFO::Fitting model to feature number 351, PWY0.1261..anhydromuropeptides.recycling.I
+2026-04-15 00:39:17.227335 INFO::Fitting model to feature number 352, PWY0.1277..3.phenylpropanoate.and.3..3.hydroxyphenyl.propanoate.degradation
+2026-04-15 00:39:17.230785 INFO::Fitting model to feature number 353, PWY0.1296..purine.ribonucleosides.degradation
+2026-04-15 00:39:17.234253 INFO::Fitting model to feature number 354, PWY0.1297..superpathway.of.purine.deoxyribonucleosides.degradation
+2026-04-15 00:39:17.238007 INFO::Fitting model to feature number 355, PWY0.1298..superpathway.of.pyrimidine.deoxyribonucleosides.degradation
+2026-04-15 00:39:17.241487 INFO::Fitting model to feature number 356, PWY0.1319..CDP.diacylglycerol.biosynthesis.II
+2026-04-15 00:39:17.244966 INFO::Fitting model to feature number 357, PWY0.1337..oleate..beta..oxidation
+2026-04-15 00:39:17.248568 INFO::Fitting model to feature number 358, PWY0.1338..polymyxin.resistance
+2026-04-15 00:39:17.252573 INFO::Fitting model to feature number 359, PWY0.1415..superpathway.of.heme.b.biosynthesis.from.uroporphyrinogen.III
+2026-04-15 00:39:17.256116 INFO::Fitting model to feature number 360, PWY0.1477..ethanolamine.utilization
+2026-04-15 00:39:17.259499 INFO::Fitting model to feature number 361, PWY0.1479..tRNA.processing
+2026-04-15 00:39:17.262891 INFO::Fitting model to feature number 362, PWY0.1533..methylphosphonate.degradation.I
+2026-04-15 00:39:17.266646 INFO::Fitting model to feature number 363, PWY0.1586..peptidoglycan.maturation..meso.diaminopimelate.containing.
+2026-04-15 00:39:17.270213 INFO::Fitting model to feature number 364, PWY0.162..superpathway.of.pyrimidine.ribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:17.27372 INFO::Fitting model to feature number 365, PWY0.166..superpathway.of.pyrimidine.deoxyribonucleotides.de.novo.biosynthesis..E..coli.
+2026-04-15 00:39:17.277182 INFO::Fitting model to feature number 366, PWY0.301..L.ascorbate.degradation.I..bacterial..anaerobic.
+2026-04-15 00:39:17.280618 INFO::Fitting model to feature number 367, PWY0.41..allantoin.degradation.IV..anaerobic.
+2026-04-15 00:39:17.284568 INFO::Fitting model to feature number 368, PWY0.42..2.methylcitrate.cycle.I
+2026-04-15 00:39:17.28806 INFO::Fitting model to feature number 369, PWY0.461..L.lysine.degradation.I
+2026-04-15 00:39:17.292159 INFO::Fitting model to feature number 370, PWY0.781..aspartate.superpathway
+2026-04-15 00:39:17.295802 INFO::Fitting model to feature number 371, PWY0.845..superpathway.of.pyridoxal.5..phosphate.biosynthesis.and.salvage
+2026-04-15 00:39:17.299307 INFO::Fitting model to feature number 372, PWY0.862...5Z..dodecenoate.biosynthesis.I
+2026-04-15 00:39:17.3027 INFO::Fitting model to feature number 373, PWY0.881..superpathway.of.fatty.acid.biosynthesis.I..E..coli.
+2026-04-15 00:39:17.306286 INFO::Fitting model to feature number 374, PWY1G.0..mycothiol.biosynthesis
+2026-04-15 00:39:17.309766 INFO::Fitting model to feature number 375, PWY1ZNC.1..assimilatory.sulfate.reduction.IV
+2026-04-15 00:39:17.313273 INFO::Fitting model to feature number 376, PWY3O.4107..NAD.salvage.pathway.V..PNC.V.cycle.
+2026-04-15 00:39:17.316818 INFO::Fitting model to feature number 377, PWY4FS.7..phosphatidylglycerol.biosynthesis.I..plastidic.
+2026-04-15 00:39:17.320291 INFO::Fitting model to feature number 378, PWY4FS.8..phosphatidylglycerol.biosynthesis.II..non.plastidic.
+2026-04-15 00:39:17.323928 INFO::Fitting model to feature number 379, PWY4LZ.257..superpathway.of.fermentation..Chlamydomonas.reinhardtii.
+2026-04-15 00:39:17.327398 INFO::Fitting model to feature number 380, PWY5F9.12..biphenyl.degradation
+2026-04-15 00:39:17.330865 INFO::Fitting model to feature number 381, PWY66.389..phytol.degradation
+2026-04-15 00:39:17.334261 INFO::Fitting model to feature number 382, PWY66.391..fatty.acid..beta..oxidation.VI..mammalian.peroxisome.
+2026-04-15 00:39:17.3377 INFO::Fitting model to feature number 383, PWY66.399..gluconeogenesis.III
+2026-04-15 00:39:17.341123 INFO::Fitting model to feature number 384, PWY66.409..superpathway.of.purine.nucleotide.salvage
+2026-04-15 00:39:17.344608 INFO::Fitting model to feature number 385, PWY66.429..fatty.acid.biosynthesis.initiation..mitochondria.
+2026-04-15 00:39:17.348087 INFO::Fitting model to feature number 386, PWY66.430..myristate.biosynthesis..mitochondria.
+2026-04-15 00:39:17.351522 INFO::Fitting model to feature number 387, PYRIDNUCSAL.PWY..NAD.salvage.pathway.I..PNC.VI.cycle.
+2026-04-15 00:39:17.354929 INFO::Fitting model to feature number 388, PYRIDNUCSYN.PWY..NAD.de.novo.biosynthesis.I..from.aspartate.
+2026-04-15 00:39:17.358314 INFO::Fitting model to feature number 389, PYRIDOXSYN.PWY..pyridoxal.5..phosphate.biosynthesis.I
+2026-04-15 00:39:17.362582 INFO::Fitting model to feature number 390, REDCITCYC..TCA.cycle.VI..Helicobacter.
+2026-04-15 00:39:17.36621 INFO::Fitting model to feature number 391, RHAMCAT.PWY..L.rhamnose.degradation.I
+2026-04-15 00:39:17.369646 INFO::Fitting model to feature number 392, RIBOSYN2.PWY..flavin.biosynthesis.I..bacteria.and.plants.
+2026-04-15 00:39:17.373072 INFO::Fitting model to feature number 393, RUMP.PWY..formaldehyde.oxidation.I
+2026-04-15 00:39:17.376614 INFO::Fitting model to feature number 394, SALVADEHYPOX.PWY..adenosine.nucleotides.degradation.II
+2026-04-15 00:39:17.380145 INFO::Fitting model to feature number 395, SER.GLYSYN.PWY..superpathway.of.L.serine.and.glycine.biosynthesis.I
+2026-04-15 00:39:17.383462 INFO::Fitting model to feature number 396, SO4ASSIM.PWY..assimilatory.sulfate.reduction.I
+2026-04-15 00:39:17.386777 INFO::Fitting model to feature number 397, SULFATE.CYS.PWY..superpathway.of.sulfate.assimilation.and.cysteine.biosynthesis
+2026-04-15 00:39:17.390154 INFO::Fitting model to feature number 398, TCA.GLYOX.BYPASS..superpathway.of.glyoxylate.bypass.and.TCA
+2026-04-15 00:39:17.393703 INFO::Fitting model to feature number 399, TCA..TCA.cycle.I..prokaryotic.
+2026-04-15 00:39:17.397134 INFO::Fitting model to feature number 400, THISYN.PWY..superpathway.of.thiamine.diphosphate.biosynthesis.I
+2026-04-15 00:39:17.400549 INFO::Fitting model to feature number 401, THISYNARA.PWY..superpathway.of.thiamine.diphosphate.biosynthesis.III..eukaryotes.
+2026-04-15 00:39:17.4039 INFO::Fitting model to feature number 402, THREOCAT.PWY..superpathway.of.L.threonine.metabolism
+2026-04-15 00:39:17.40724 INFO::Fitting model to feature number 403, THRESYN.PWY..superpathway.of.L.threonine.biosynthesis
+2026-04-15 00:39:17.410565 INFO::Fitting model to feature number 404, TRNA.CHARGING.PWY..tRNA.charging
+2026-04-15 00:39:17.413873 INFO::Fitting model to feature number 405, TRPSYN.PWY..L.tryptophan.biosynthesis
+2026-04-15 00:39:17.417172 INFO::Fitting model to feature number 406, UBISYN.PWY..superpathway.of.ubiquinol.8.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:17.420497 INFO::Fitting model to feature number 407, UDPNACETYLGALSYN.PWY..UDP.N.acetyl.D.glucosamine.biosynthesis.II
+2026-04-15 00:39:17.422845 INFO::Fitting model to feature number 408, UDPNAGSYN.PWY..UDP.N.acetyl.D.glucosamine.biosynthesis.I
+2026-04-15 00:39:17.426181 INFO::Fitting model to feature number 409, URDEGR.PWY..superpathway.of.allantoin.degradation.in.plants
+2026-04-15 00:39:17.429586 INFO::Fitting model to feature number 410, URSIN.PWY..ureide.biosynthesis
+2026-04-15 00:39:17.432913 INFO::Fitting model to feature number 411, VALSYN.PWY..L.valine.biosynthesis
+2026-04-15 00:39:17.503718 WARNING::Deleting existing model objects file: MAASLIN_PATHWAY_TERMNESS/fits/models_linear.rds
+2026-04-15 00:39:17.505483 INFO::Writing model objects to file MAASLIN_PATHWAY_TERMNESS/fits/models_linear.rds
+2026-04-15 00:39:18.218429 WARNING::Deleting existing residuals file: MAASLIN_PATHWAY_TERMNESS/fits/residuals_linear.rds
+2026-04-15 00:39:18.220002 INFO::Writing residuals to file MAASLIN_PATHWAY_TERMNESS/fits/residuals_linear.rds
+2026-04-15 00:39:18.230577 WARNING::Deleting existing fitted file: MAASLIN_PATHWAY_TERMNESS/fits/fitted_linear.rds
+2026-04-15 00:39:18.231843 INFO::Writing fitted values to file MAASLIN_PATHWAY_TERMNESS/fits/fitted_linear.rds
+2026-04-15 00:39:18.241625 WARNING::Deleting existing model objects file: MAASLIN_PATHWAY_TERMNESS/fits/models_logistic.rds
+2026-04-15 00:39:18.246147 INFO::Writing model objects to file MAASLIN_PATHWAY_TERMNESS/fits/models_logistic.rds
+2026-04-15 00:39:23.001298 WARNING::Deleting existing residuals file: MAASLIN_PATHWAY_TERMNESS/fits/residuals_logistic.rds
+2026-04-15 00:39:23.002736 INFO::Writing residuals to file MAASLIN_PATHWAY_TERMNESS/fits/residuals_logistic.rds
+2026-04-15 00:39:23.020017 WARNING::Deleting existing fitted file: MAASLIN_PATHWAY_TERMNESS/fits/fitted_logistic.rds
+2026-04-15 00:39:23.02126 INFO::Writing fitted values to file MAASLIN_PATHWAY_TERMNESS/fits/fitted_logistic.rds
+2026-04-15 00:39:23.043358 INFO::Writing all the results to file (ordered 
+            by increasing individual q-values): MAASLIN_PATHWAY_TERMNESS/all_results.tsv
+2026-04-15 00:39:23.075314 INFO::Writing the significant results without errors (those which have joint q-values less than or equal to the threshold of 0.100000 ) to file (ordered by increasing individual q-values): MAASLIN_PATHWAY_TERMNESS/significant_results.tsv
+2026-04-15 00:39:23.082331 INFO::Writing summary plot of significant
+                        results to file: MAASLIN_PATHWAY_TERMNESS/figures/summary_plot.pdf
+2026-04-15 00:39:23.959788 INFO::Writing association plots (one for each significant association) to output folder: MAASLIN_PATHWAY_TERMNESS/figures
+2026-04-15 00:39:23.961327 INFO::Plotting associations from most to least significant, grouped by metadata
+2026-04-15 00:39:23.967042 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.822..fructan.biosynthesis
+2026-04-15 00:39:24.011804 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.241..C4.photosynthetic.carbon.assimilation.cycle..NADP.ME.type
+2026-04-15 00:39:24.052091 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6124..inosine.5..phosphate.biosynthesis.II
+2026-04-15 00:39:24.088435 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.3841..folate.transformations.II..plants.
+2026-04-15 00:39:24.127967 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.5130..2.oxobutanoate.degradation.I
+2026-04-15 00:39:24.174171 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.2942..L.lysine.biosynthesis.III
+2026-04-15 00:39:24.222237 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs DTDPRHAMSYN.PWY..dTDP..beta..L.rhamnose.biosynthesis
+2026-04-15 00:39:24.26663 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs HOMOSER.METSYN.PWY..L.methionine.biosynthesis.I
+2026-04-15 00:39:24.309621 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs FASYN.INITIAL.PWY..superpathway.of.fatty.acid.biosynthesis.initiation..E..coli.
+2026-04-15 00:39:24.348485 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs METSYN.PWY..superpathway.of.L.homoserine.and.L.methionine.biosynthesis
+2026-04-15 00:39:24.397232 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs COA.PWY.1..superpathway.of.coenzyme.A.biosynthesis.III..mammals.
+2026-04-15 00:39:24.450387 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs MET.SAM.PWY..superpathway.of.S.adenosyl.L.methionine.biosynthesis
+2026-04-15 00:39:24.488605 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs MET.SAM.PWY..superpathway.of.S.adenosyl.L.methionine.biosynthesis
+2026-04-15 00:39:24.528444 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs METSYN.PWY..superpathway.of.L.homoserine.and.L.methionine.biosynthesis
+2026-04-15 00:39:24.565154 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs NONMEVIPP.PWY..methylerythritol.phosphate.pathway.I
+2026-04-15 00:39:24.604658 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs OANTIGEN.PWY..O.antigen.building.blocks.biosynthesis..E..coli.
+2026-04-15 00:39:24.643397 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY.5347..superpathway.of.L.methionine.biosynthesis..transsulfuration.
+2026-04-15 00:39:24.676971 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5347..superpathway.of.L.methionine.biosynthesis..transsulfuration.
+2026-04-15 00:39:24.719482 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6121..5.aminoimidazole.ribonucleotide.biosynthesis.I
+2026-04-15 00:39:24.754955 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7221..guanosine.ribonucleotides.de.novo.biosynthesis
+2026-04-15 00:39:24.793807 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7269..mitochondrial.NADPH.production..yeast.
+2026-04-15 00:39:24.82947 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7851..coenzyme.A.biosynthesis.II..eukaryotic.
+2026-04-15 00:39:24.865316 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.8131..5..deoxyadenosine.degradation.II
+2026-04-15 00:39:24.900955 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY1ZNC.1..assimilatory.sulfate.reduction.IV
+2026-04-15 00:39:24.936188 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs COA.PWY..coenzyme.A.biosynthesis.I..prokaryotic.
+2026-04-15 00:39:24.970946 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs HOMOSER.METSYN.PWY..L.methionine.biosynthesis.I
+2026-04-15 00:39:25.009913 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6122..5.aminoimidazole.ribonucleotide.biosynthesis.II
+2026-04-15 00:39:25.045236 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6123..inosine.5..phosphate.biosynthesis.I
+2026-04-15 00:39:25.081284 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6277..superpathway.of.5.aminoimidazole.ribonucleotide.biosynthesis
+2026-04-15 00:39:25.116874 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7858...5Z..dodecenoate.biosynthesis.II
+2026-04-15 00:39:25.152363 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs AST.PWY..L.arginine.degradation.II..AST.pathway.
+2026-04-15 00:39:25.188222 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs LACTOSECAT.PWY..lactose.and.galactose.degradation.I
+2026-04-15 00:39:25.223974 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.2941..L.lysine.biosynthesis.II
+2026-04-15 00:39:25.266242 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5676..acetyl.CoA.fermentation.to.butanoate.II
+2026-04-15 00:39:25.302284 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7115..C4.photosynthetic.carbon.assimilation.cycle..NAD.ME.type
+2026-04-15 00:39:25.337557 INFO::Creating tile plot for categorical data (logistic), Termness vs DENITRIFICATION.PWY..nitrate.reduction.I..denitrification.
+2026-04-15 00:39:25.379265 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.7383..anaerobic.energy.metabolism..invertebrates..cytosol.
+2026-04-15 00:39:25.422607 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY66.399..gluconeogenesis.III
+2026-04-15 00:39:25.464551 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs GLUCUROCAT.PWY..superpathway.of..beta..D.glucuronosides.degradation
+2026-04-15 00:39:25.500081 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs P4.PWY..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.I
+2026-04-15 00:39:25.539 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs ECASYN.PWY..enterobacterial.common.antigen.biosynthesis
+2026-04-15 00:39:25.574318 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs HEME.BIOSYNTHESIS.II.1..heme.b.biosynthesis.V..aerobic.
+2026-04-15 00:39:25.609832 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs P4.PWY..superpathway.of.L.lysine..L.threonine.and.L.methionine.biosynthesis.I
+2026-04-15 00:39:25.645696 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PEPTIDOGLYCANSYN.PWY..peptidoglycan.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:25.681663 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5005..biotin.biosynthesis.II
+2026-04-15 00:39:25.717943 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6386..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.II..lysine.containing.
+2026-04-15 00:39:25.753345 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6387..UDP.N.acetylmuramoyl.pentapeptide.biosynthesis.I..meso.diaminopimelate.containing.
+2026-04-15 00:39:25.795527 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6629..superpathway.of.L.tryptophan.biosynthesis
+2026-04-15 00:39:25.831067 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7977..L.methionine.biosynthesis.IV
+2026-04-15 00:39:25.865887 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY0.1261..anhydromuropeptides.recycling.I
+2026-04-15 00:39:25.903505 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs SO4ASSIM.PWY..assimilatory.sulfate.reduction.I
+2026-04-15 00:39:25.939867 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY66.430..myristate.biosynthesis..mitochondria.
+2026-04-15 00:39:25.982138 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7315..dTDP.N.acetylthomosamine.biosynthesis
+2026-04-15 00:39:26.023969 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6385..peptidoglycan.biosynthesis.III..mycobacteria.
+2026-04-15 00:39:26.061009 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7187..pyrimidine.deoxyribonucleotides.de.novo.biosynthesis.II
+2026-04-15 00:39:26.096699 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.7388..octanoyl..acyl.carrier.protein..biosynthesis..mitochondria..yeast.
+2026-04-15 00:39:26.138666 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs P461.PWY..hexitol.fermentation.to.lactate..formate..ethanol.and.acetate
+2026-04-15 00:39:26.174252 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs HISTSYN.PWY..L.histidine.biosynthesis
+2026-04-15 00:39:26.210188 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5972..stearate.biosynthesis.I..animals.
+2026-04-15 00:39:26.245898 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6151..S.adenosyl.L.methionine.salvage.I
+2026-04-15 00:39:26.287103 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.7340..9.cis..11.trans.octadecadienoyl.CoA.degradation..isomerase.dependent..yeast.
+2026-04-15 00:39:26.329042 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY66.391..fatty.acid..beta..oxidation.VI..mammalian.peroxisome.
+2026-04-15 00:39:26.370812 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs HEME.BIOSYNTHESIS.II..heme.b.biosynthesis.I..aerobic.
+2026-04-15 00:39:26.406685 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY.6588..pyruvate.fermentation.to.acetone
+2026-04-15 00:39:26.439875 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY.8187..L.arginine.degradation.XIII..reductive.Stickland.reaction.
+2026-04-15 00:39:26.47353 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs TRPSYN.PWY..L.tryptophan.biosynthesis
+2026-04-15 00:39:26.515241 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7118..chitin.deacetylation
+2026-04-15 00:39:26.550673 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs P161.PWY..acetylene.degradation..anaerobic.
+2026-04-15 00:39:26.586195 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6803..phosphatidylcholine.acyl.editing
+2026-04-15 00:39:26.622659 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PPGPPMET.PWY..ppGpp.metabolism
+2026-04-15 00:39:26.659302 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7723..bacterial.bioluminescence
+2026-04-15 00:39:26.695328 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5675..nitrate.reduction.V..assimilatory.
+2026-04-15 00:39:26.737677 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY.6284..superpathway.of.unsaturated.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:26.770547 INFO::Creating tile plot for categorical data (logistic), Termness vs X3.HYDROXYPHENYLACETATE.DEGRADATION.PWY..4.hydroxyphenylacetate.degradation
+2026-04-15 00:39:26.812409 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY.5367..petroselinate.biosynthesis
+2026-04-15 00:39:26.846125 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs FAO.PWY..fatty.acid..beta..oxidation.I..generic.
+2026-04-15 00:39:26.881913 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5138..fatty.acid..beta..oxidation.IV..unsaturated..even.number.
+2026-04-15 00:39:26.917975 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5505..L.glutamate.and.L.glutamine.biosynthesis
+2026-04-15 00:39:26.958688 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY.6285..superpathway.of.fatty.acids.biosynthesis..E..coli.
+2026-04-15 00:39:26.992228 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6549..L.glutamine.biosynthesis.III
+2026-04-15 00:39:27.027593 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7942..5.oxo.L.proline.metabolism
+2026-04-15 00:39:27.063422 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY1ZNC.1..assimilatory.sulfate.reduction.IV
+2026-04-15 00:39:27.099311 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.7200..superpathway.of.pyrimidine.deoxyribonucleoside.salvage
+2026-04-15 00:39:27.135907 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.622..starch.biosynthesis
+2026-04-15 00:39:27.185309 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs TRNA.CHARGING.PWY..tRNA.charging
+2026-04-15 00:39:27.22096 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5913..partial.TCA.cycle..obligate.autotrophs.
+2026-04-15 00:39:27.256056 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY0.1296..purine.ribonucleosides.degradation
+2026-04-15 00:39:27.290007 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5030..L.histidine.degradation.III
+2026-04-15 00:39:27.326908 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs FOLSYN.PWY..superpathway.of.tetrahydrofolate.biosynthesis.and.salvage
+2026-04-15 00:39:27.362149 INFO::Creating scatter plot for continuous 
+                        data (linear), Read_depth vs PWY.5154..L.arginine.biosynthesis.III..via.N.acetyl.L.citrulline.
+2026-04-15 00:39:27.477807 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5855..ubiquinol.7.biosynthesis..early.decarboxylation.
+2026-04-15 00:39:27.513649 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5897..superpathway.of.menaquinol.11.biosynthesis
+2026-04-15 00:39:27.549252 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5898..superpathway.of.menaquinol.12.biosynthesis
+2026-04-15 00:39:27.584996 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.5899..superpathway.of.menaquinol.13.biosynthesis
+2026-04-15 00:39:27.621227 INFO::Creating tile plot for categorical data (logistic), Termness vs PWY.7434..terminal.O.glycans.residues.modification..via.type.2.precursor.disaccharide.
+2026-04-15 00:39:27.669515 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs COMPLETE.ARO.PWY..superpathway.of.aromatic.amino.acid.biosynthesis
+2026-04-15 00:39:27.70527 INFO::Creating box plot for categorical data (linear), 
+                        Termness vs PWY.6163..chorismate.biosynthesis.from.3.dehydroquinate

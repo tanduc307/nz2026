@@ -1,0 +1,296 @@
+---
+title: "FIGURE_10_GESTATION"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+# IMPORT DATASET
+
+```{r}
+library(readxl)
+df_clinic <- read_excel("df_clinic_final.xlsx")
+df_clinic <- as.data.frame(df_clinic)
+row.names(df_clinic) <- df_clinic$Sample
+
+names(df_clinic)[12] <- "Gestation"
+
+df_clinic -> df_clinic_ori
+```
+
+```{r}
+library(readxl)
+df_SCFA <- read_excel("SCFA_stool.xlsx")
+df_SCFA <- as.data.frame(df_SCFA)
+
+names(df_SCFA) <- c("Sample", "acetate_stool", "propionate_stool", "isobutyrate_stool", "butyrate_stool")
+
+row.names(df_SCFA) <- df_SCFA$Sample
+
+# df_SCFA <- df_SCFA[row.names(df_clinic), ]
+```
+
+```{r}
+# identical(df_clinic$Sample, df_SCFA$Sample)
+
+df_clinic <- merge(x = df_clinic[ , c("Sample", "Termness")],
+                  y = df_SCFA,
+                  all = T,
+                  by = "Sample")
+
+row.names(df_clinic) <- df_clinic$Sample
+```
+
+
+```{r}
+library(readxl)
+df_meconium <- read_excel("SCFA_meconium.xlsx")
+df_meconium <- as.data.frame(df_meconium)
+
+names(df_meconium) <- c("Sample", "acetate_meconium", "propionate_meconium", "isobutyrate_meconium", "butyrate_meconium")
+
+row.names(df_meconium) <- df_meconium$Sample
+
+```
+
+```{r}
+df_clinic <- merge(x = df_clinic,
+                  y = df_meconium,
+                  all = T,
+                  by = "Sample")
+
+row.names(df_clinic) <- df_clinic$Sample
+```
+
+```{r}
+df_clinic$Termness[grep("^HD",
+     df_clinic$Sample,
+     value = F)] <- "adult"
+
+df_clinic |> dplyr:::arrange(Termness, Sample) -> df_clinic
+
+library(openxlsx)
+ 
+# CB22	term
+# CB39	term
+# CB40	term
+# CB41	term
+# CB47	preterm
+# CB48	preterm
+# CB62	
+# CB65	preterm
+# CB79	preterm
+
+
+df_clinic$Termness[which(df_clinic$Sample == "CB22")] <- "term"
+df_clinic$Termness[which(df_clinic$Sample == "CB39")] <- "term"
+df_clinic$Termness[which(df_clinic$Sample == "CB40")] <- "term"
+df_clinic$Termness[which(df_clinic$Sample == "CB41")] <- "term"
+df_clinic$Termness[which(df_clinic$Sample == "CB47")] <- "preterm"
+df_clinic$Termness[which(df_clinic$Sample == "CB48")] <- "preterm"
+df_clinic$Termness[which(df_clinic$Sample == "CB65")] <- "preterm"
+df_clinic$Termness[which(df_clinic$Sample == "CB79")] <- "preterm"
+```
+
+# BABY
+
+```{r}
+df_clinic |> subset(Termness != "adult") -> df_clinic
+```
+
+```{r}
+df_reg <- merge(x = df_clinic,
+                y = df_clinic_ori[ , c("Sample", "Gestation")],
+                all.x = T,
+                by = "Sample")
+```
+
+```{r}
+lapply(df_reg[ , -c(1,2)],
+       summary)
+```
+
+# MECONIUM
+
+```{r}
+df_reg_meconium <- df_reg[ , c(1,2,11,7:10)]
+
+library(tidyr)
+df_long <- tidyr:::pivot_longer(df_reg_meconium, 
+                        cols = c(4:7), 
+                        names_to = "SCFA", 
+                        values_to = "value")
+
+df_long <- as.data.frame(df_long)
+
+df_long <- na.omit(df_long)
+
+df_long$value <- log(df_long$value+0.001)
+
+
+gsub(pattern = "_meconium",
+     replacement = "",
+     df_long$SCFA) -> df_long$SCFA
+
+```
+
+```{r}
+fit_acetate <- lm(acetate_meconium ~ Gestation,
+                  data = df_reg_meconium)
+
+summary(fit_acetate)
+
+fit_propionate <- lm(propionate_meconium ~ Gestation,
+                  data = df_reg_meconium)
+
+summary(fit_propionate)
+
+fit_isobutyrate <- lm(isobutyrate_meconium ~ Gestation,
+                  data = df_reg_meconium)
+
+summary(fit_isobutyrate)
+
+fit_butyrate <- lm(butyrate_meconium ~ Gestation,
+                  data = df_reg_meconium)
+
+summary(fit_butyrate)
+```
+
+
+```{r}
+library(ggplot2)
+ggplot(data = df_long,
+       mapping = aes(x = Gestation,
+                     y = value)) +
+  
+  geom_point(alpha = 0.5) + 
+  
+  geom_smooth(method = "lm") +
+  
+  facet_wrap(~ SCFA,
+             scale = "free") +
+  
+  theme_bw(base_size = 16) +
+
+  theme(legend.position = "none") +
+  
+  labs(x = "",
+       y = "log \u03bcM/g",
+       title = "Meconium") +
+  
+  coord_cartesian(clip = "off")
+
+ggsave(filename = "FIGURE_10_GESTATION_MECONIUM.svg",
+       width = 8,
+       height = 6,
+       dpi = 300,
+       units = "in")
+```
+
+
+
+
+# STOOL
+
+```{r}
+df_reg_stool <- df_reg[ , c(1,2,11,3:6)]
+
+library(tidyr)
+df_long <- tidyr:::pivot_longer(df_reg_stool, 
+                        cols = c(4:7), 
+                        names_to = "SCFA", 
+                        values_to = "value")
+
+df_long <- as.data.frame(df_long)
+
+df_long <- na.omit(df_long)
+
+df_long$value <- log(df_long$value+0.001)
+
+
+gsub(pattern = "_stool",
+     replacement = "",
+     df_long$SCFA) -> df_long$SCFA
+
+```
+
+```{r}
+fit_acetate <- lm(acetate_stool ~ Gestation,
+                  data = df_reg_stool)
+
+summary(fit_acetate)
+
+fit_propionate <- lm(propionate_stool ~ Gestation,
+                  data = df_reg_stool)
+
+summary(fit_propionate)
+
+fit_isobutyrate <- lm(isobutyrate_stool ~ Gestation,
+                  data = df_reg_stool)
+
+summary(fit_isobutyrate)
+
+fit_butyrate <- lm(butyrate_stool ~ Gestation,
+                  data = df_reg_stool)
+
+summary(fit_butyrate)
+```
+
+```{r}
+library(ggplot2)
+ggplot(data = df_long,
+       mapping = aes(x = Gestation,
+                     y = value)) +
+  
+  geom_point(alpha = 0.5) + 
+  
+  geom_smooth(method = "lm") +
+  
+  facet_wrap(~ SCFA,
+             scale = "free") +
+  
+  theme_bw(base_size = 16) +
+
+  theme(legend.position = "none") +
+  
+  labs(x = "",
+       y = "log \u03bcM/g",
+       title = "Stool") +
+  
+  coord_cartesian(clip = "off")
+
+ggsave(filename = "FIGURE_10_GESTATION_STOOL.svg",
+      
+       width = 8,
+       height = 6,
+       dpi = 300,
+       units = "in")
+```
+
+
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
