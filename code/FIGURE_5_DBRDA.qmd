@@ -1,0 +1,295 @@
+---
+title: "FIGURE_5_DBRDA"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-title: "TOC"
+    toc-expand: 8
+    toc-depth: 6
+    toc-location: left
+    code-fold: true
+    code-summary: "Show the code"
+    number-sections: false
+    number-depth: 8
+    page-layout: full
+    embed-resources: true
+    anchor-sections: true
+    smooth-scroll: true
+engine: knitr
+knitr:
+  opts_chunk:
+    R.options:
+      width: 120
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, echo=FALSE, results='hide'}
+knitr::opts_chunk$set(message = FALSE,  
+                      warning = FALSE)   
+```
+
+Factors associated with microbiome, Adonis
+
+DBRDA
+
+It gives some measure of constrained versus unconstrained variance in the microbiome. That is to say the compositional variance that can be explained by the variables (such as termness, antibiotics, sex, etc.) that you have and the unconstrained, defined as that variance that is unable to be explained by the variables you have included in the model. 
+
+The plot you have shown is a biplot that gives some indication of direction of explained variance by each factor and this package lets you do this very well.
+
+# Import
+
+```{r}
+df_species <- read.delim("baby_species.tsv")
+names(df_species)[1] <- "Sample"
+library(readxl)
+df_clinic <- read_excel("df_clinic_final.xlsx")
+df_clinic <- as.data.frame(df_clinic)
+```
+
+```{r}
+df_species <- df_species[df_species$Sample %in% df_clinic$Sample, ]
+```
+
+```{r}
+row.names(df_species) <- df_species$Sample
+
+df_species <- df_species[ , -1]
+
+df_species <- df_species + 0.001
+```
+
+
+```{r}
+row.names(df_clinic) <- df_clinic$Sample
+```
+
+
+```{r}
+df_species <- df_species[row.names(df_clinic), ]
+```
+
+# Compare
+
+```{r}
+library(compareGroups)
+
+df_clinic$Termness <- factor(df_clinic$Termness)
+
+table_compare <- createTable(compareGroups(Termness ~ .,
+                                        data = df_clinic[ , c("Termness",
+                                                              "Sex",
+                                                              "Delivery_mode",
+                                                              "Feeding_method",
+                                                              "Probiotics",
+                                                              "Antibiotics",
+                                                              "Ethnicity")],
+                                        ref = 1,
+                                        riskratio = FALSE,
+                                        byrow = TRUE),
+                          show.ratio = TRUE,
+                          show.p.ratio = FALSE,
+                          show.p.overall = TRUE)
+table_compare
+```
+
+
+```{r}
+table(Feeding_method = df_clinic$Feeding_method,
+      Delivery_mode = df_clinic$Delivery_mode)
+
+table(Probiotics = df_clinic$Probiotics,
+      Antibiotics = df_clinic$Antibiotics)
+
+table(Probiotics = df_clinic$Probiotics,
+      Ethnicity = df_clinic$Ethnicity)
+
+table(Sex = df_clinic$Sex,
+      Termness = df_clinic$Termness)
+```
+
+
+# CONVERT NUMERIC
+
+```{r}
+df_clinic$Termness <- factor(df_clinic$Termness,
+                             levels = c("term", "preterm"))
+
+df_clinic$Termness <- as.numeric(df_clinic$Termness) - 1
+```
+
+```{r}
+df_clinic$Sex <- factor(df_clinic$Sex,
+                             levels = c("Male", "Female"))
+
+df_clinic$Sex <- as.numeric(df_clinic$Sex) - 1
+```
+
+```{r}
+df_clinic$Delivery_mode <- factor(df_clinic$Delivery_mode,
+                             levels = c("Vaginal", "C-section"))
+
+df_clinic$Delivery_mode <- as.numeric(df_clinic$Delivery_mode) - 1
+```
+
+```{r}
+df_clinic$Feeding_method <- factor(df_clinic$Feeding_method,
+                             levels = c("Non-breastfed", "Breastfed"))
+
+df_clinic$Feeding_method <- as.numeric(df_clinic$Feeding_method) - 1
+```
+
+```{r}
+df_clinic$Probiotics <- factor(df_clinic$Probiotics,
+                             levels = c("No", "Yes"))
+
+df_clinic$Probiotics <- as.numeric(df_clinic$Probiotics) - 1
+```
+
+```{r}
+df_clinic$Antibiotics <- factor(df_clinic$Antibiotics,
+                             levels = c("No", "Yes"))
+
+df_clinic$Antibiotics <- as.numeric(df_clinic$Antibiotics) - 1
+```
+
+```{r}
+df_clinic$Ethnicity <- factor(df_clinic$Ethnicity,
+                             levels = c("non-European", "European"))
+
+df_clinic$Ethnicity <- as.numeric(df_clinic$Ethnicity) - 1
+```
+
+
+# PLOT
+
+
+
+```{r, fig.width=8, fig.height=8}
+library(vegan)
+
+# The RHS can have a special term Condition that defines variables to be “partialled out” before constraints
+
+## avoid negative eigenvalues with sqrt distances
+dbrda_1 <- vegan:::dbrda(df_species ~ Termness + Sex + Delivery_mode + Probiotics + Antibiotics + Feeding_method + Ethnicity,
+            data = df_clinic,
+            dist="bray")
+
+svg(filename = "FIGURE_5_DBRDA.svg",
+    width = 8,
+    height = 8)
+
+vegan:::plot.cca(dbrda_1,
+                 choices = c(1, 2),
+                 correlation = T,
+                 arrows = F,
+                 display = c(
+                  "sp",
+                  "wa",
+                  "cn" # centroids of factor constraints
+                  # "all"
+                    ))
+
+# locator(n = 1) -> ok
+
+text(x = 0.2575,
+     y = -0.8198,
+     labels = "Female",
+     col = "red")
+
+text(x = 2,
+     y = 0.9,
+     labels = "preterm",
+     col = "red")
+
+text(x = 0.5,
+     y = 1.8,
+     labels = "C-section",
+     col = "red")
+
+text(x = -0.5,
+     y = 1.8,
+     labels = "Breastfed",
+     col = "red")
+
+text(x = -1,
+     y = 0.3,
+     labels = "European",
+     col = "red")
+
+text(x = 1.6,
+     y = 0.5,
+     labels = "Yes",
+     col = "red")
+
+text(x = 2.5,
+     y = 0.4,
+     labels = "Yes",
+     col = "red")
+
+dev.off()
+```
+
+```{r}
+anova(dbrda_1)
+
+anova(dbrda_1, 
+      by="terms",
+      permu=200) 
+
+summary(dbrda_1)
+
+```
+
+```{r}
+
+```
+
+Biện luận:
+
+2 biến cùng chiều
+
+Feeding method là Breastfed (là 1, càng lớn) thì Delivery mode là C-section là 1 lớn
+
+==> Feeding method là Breastfed  thì càng nhiều Delivery mode là C-section
+
+```{r}
+table(Feeding_method = df_clinic$Feeding_method,
+      Delivery_mode = df_clinic$Delivery_mode)
+```
+
+
+2 biến ngược chiều 
+
+Probiotics là Yes (là 1, càng lớn) thì Ethnicity là European là 1 càng nhỏ
+
+==> Probiotics là Yes thì càng ít là European
+
+```{r}
+table(Probiotics = df_clinic$Probiotics,
+      Ethnicity = df_clinic$Ethnicity)
+```
+
+
+2 biến vuông góc thì không liên quan nhau
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

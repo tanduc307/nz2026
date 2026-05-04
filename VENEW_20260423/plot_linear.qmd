@@ -1,0 +1,47 @@
+---
+title: "plot_linear"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+# species
+
+butyric - Clostridium_perfringens.t__SGB6191
+
+```{r}
+data_transformed <- read.delim("ALL_VAR_SPECIES_MAASLIN_SCFA/features/data_transformed.tsv")
+
+dat1 <- data_transformed[  , "Clostridium_perfringens.t__SGB6191", F]
+```
+
+```{r}
+models_linear <- readRDS("ALL_VAR_SPECIES_MAASLIN_SCFA/fits/models_linear.rds")
+
+ok <- models_linear$`Clostridium_perfringens.t__SGB6191`$model
+
+library(ggplot2)
+
+ggplot(data = ok,
+       mapping = aes(x = butyrate,
+                     y = expr)) +
+  
+  geom_point(mapping = aes(x = butyrate,
+                     y = expr,
+                     col = termness),
+             size = 3) +
+  
+  geom_smooth(method = "lm") +
+  
+  labs(x = "butyric",
+       y = "Clostridium_perfringens.t__SGB6191") +
+  
+  theme_bw()
+  
+```
+
+
+
+
+
+

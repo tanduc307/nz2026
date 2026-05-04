@@ -1,0 +1,2 @@
+- run lai toan bo maaslin va network, volcano voi TERM la reference
+

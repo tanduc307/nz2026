@@ -1,0 +1,306 @@
+---
+title: "FIGURE_4A_ALPHA_DIVERSITY"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+# Import
+
+```{r}
+df_species <- read.delim("baby_species.tsv")
+names(df_species)[1] <- "Sample"
+library(readxl)
+df_clinic <- read_excel("df_clinic_final.xlsx")
+df_clinic <- as.data.frame(df_clinic)
+row.names(df_clinic) <- df_clinic$Sample
+```
+
+```{r}
+df_species <- df_species[df_species$Sample %in% df_clinic$Sample, ]
+```
+
+```{r}
+row.names(df_species) <- df_species$Sample
+
+df_species <- df_species[row.names(df_clinic), ]
+
+df_species <- df_species[ , -1]
+```
+
+# ALPHA DIVERSITY
+
+`https://cran.r-project.org/web/packages/tabula/vignettes/alpha.html`
+
+```{r}
+library(tabula)
+```
+
+```{r}
+df_alpha_clean <- df_species
+
+diversity(df_alpha_clean, evenness = F) -> df_a1
+
+df_a1$ID <- row.names(df_a1)
+
+evenness(df_alpha_clean) -> df_a2
+```
+
+
+```{r}
+class(df_a2)
+
+df_a2@.Data -> evenness_ok
+
+df_alpha_kq <- cbind(df_a1[  , c(12, 3, 5, 7) ],  evenness_ok)
+
+names(df_alpha_kq) <- c("Sample", "shannon", "simpson", "richness", "evenness")
+```
+
+
+```{r}
+df_alpha_kq
+```
+
+# MERGE
+
+```{r}
+df_merge_alpha <- merge(x = df_clinic,
+                        y = df_alpha_kq,
+                        all.x = T,
+                        by = "Sample")
+```
+
+```{r}
+df_merge_alpha$Termness <- factor(df_merge_alpha$Termness,
+                                  levels = c("term",
+                                             "preterm"))
+```
+
+# RICHNESS
+
+```{r}
+library(ggstatsplot)
+library(ggsignif)
+library(tidyverse)
+
+options(digits = 4)
+options(scipen = 4)
+
+g1 <- ggplot(df_merge_alpha,
+       mapping = aes(x = Termness,
+                     y = richness,
+                     fill = Termness)) +
+  
+  geom_boxplot(outliers = F) +
+
+  geom_jitter(width = 0.1,
+              alpha = 0.5) +
+  
+  scale_fill_manual(values = c("#FFD700", "#E08AF9")) +
+  
+  scale_y_continuous(limits = c(0, 4.5)) +
+  
+  
+  
+    ggsignif:::geom_signif(comparisons =  list(c("term", "preterm")),
+                         map_signif_level = function(p_ok) {
+
+                          capture.output(cat(p_ok)) -> p_ok_final
+                         paste0("p", " = ", p_ok_final)
+
+                         },
+                         textsize = 6,
+                         vjust = -0.5,
+                         # step_increase = 0.6,
+                         test = "t.test",
+                         test.args = list(paired = F)
+                         ) +
+  
+  theme_classic(base_size = 19) +
+  
+  labs(y = "Richness") +
+  
+  theme(legend.position = "none") 
+
+g1
+
+ggsave(filename = "FIGURE_4_RICHNESS.svg",
+       plot = g1,
+       width = 9,
+       height = 6)
+```
+
+
+
+# SHANNON
+
+```{r}
+library(ggstatsplot)
+library(ggsignif)
+library(tidyverse)
+
+options(digits = 4)
+options(scipen = 4)
+
+g1 <- ggplot(df_merge_alpha,
+       mapping = aes(x = Termness,
+                     y = shannon,
+                     fill = Termness)) +
+  
+  geom_boxplot(outliers = F) +
+
+  geom_jitter(width = 0.1,
+              alpha = 0.5) +
+  
+  scale_fill_manual(values = c("#FFD700", "#E08AF9")) +
+  
+  scale_y_continuous(limits = c(0, 3)) +
+  
+  
+  
+    ggsignif:::geom_signif(comparisons =  list(c("term", "preterm")),
+                         map_signif_level = function(p_ok) {
+
+                          capture.output(cat(p_ok)) -> p_ok_final
+                         paste0("p", " = ", p_ok_final)
+
+                         },
+                         textsize = 6,
+                         vjust = -0.5,
+                         # step_increase = 0.6,
+                         test = "t.test",
+                         test.args = list(paired = F)
+                         ) +
+  
+  theme_classic(base_size = 19) +
+  
+  labs(y = "Shannon") +
+  
+  theme(legend.position = "none") 
+
+g1
+
+ggsave(filename = "FIGURE_4_SHANNON.svg",
+       plot = g1,
+       width = 9,
+       height = 6)
+```
+
+
+# SIMPSON
+
+```{r}
+library(ggstatsplot)
+library(ggsignif)
+library(tidyverse)
+
+options(digits = 4)
+options(scipen = 4)
+
+g1 <- ggplot(df_merge_alpha,
+       mapping = aes(x = Termness,
+                     y = simpson,
+                     fill = Termness)) +
+  
+  geom_boxplot(outliers = F) +
+
+  geom_jitter(width = 0.1,
+              alpha = 0.5) +
+  
+  scale_fill_manual(values = c("#FFD700", "#E08AF9")) +
+  
+  scale_y_continuous(limits = c(0, 1.2)) +
+  
+  
+  
+    ggsignif:::geom_signif(comparisons =  list(c("term", "preterm")),
+                         map_signif_level = function(p_ok) {
+
+                          capture.output(cat(p_ok)) -> p_ok_final
+                         paste0("p", " = ", p_ok_final)
+
+                         },
+                         textsize = 6,
+                         vjust = -0.5,
+                         # step_increase = 0.6,
+                         test = "t.test",
+                         test.args = list(paired = F)
+                         ) +
+  
+  theme_classic(base_size = 19) +
+  
+  labs(y = "Simpson") +
+  
+  theme(legend.position = "none") 
+
+g1
+
+ggsave(filename = "FIGURE_4_SIMPSON.svg",
+       plot = g1,
+       width = 9,
+       height = 6)
+```
+
+
+
+# EVENNESS
+
+```{r}
+library(ggstatsplot)
+library(ggsignif)
+library(tidyverse)
+
+options(digits = 4)
+options(scipen = 4)
+
+g1 <- ggplot(df_merge_alpha,
+       mapping = aes(x = Termness,
+                     y = evenness,
+                     fill = Termness)) +
+  
+  geom_boxplot(outliers = F) +
+
+  geom_jitter(width = 0.1,
+              alpha = 0.5) +
+  
+  scale_fill_manual(values = c("#FFD700", "#E08AF9")) +
+  
+  scale_y_continuous(limits = c(0, 1)) +
+  
+  
+  
+    ggsignif:::geom_signif(comparisons =  list(c("term", "preterm")),
+                         map_signif_level = function(p_ok) {
+
+                          capture.output(cat(p_ok)) -> p_ok_final
+                         paste0("p", " = ", p_ok_final)
+
+                         },
+                         textsize = 6,
+                         vjust = -0.5,
+                         # step_increase = 0.6,
+                         test = "t.test",
+                         test.args = list(paired = F)
+                         ) +
+  
+  theme_classic(base_size = 19) +
+  
+  labs(y = "Evenness") +
+  
+  theme(legend.position = "none") 
+
+g1
+
+ggsave(filename = "FIGURE_4_EVENNESS.svg",
+       plot = g1,
+       width = 9,
+       height = 6)
+```
+
+
+
+```{r}
+
+```
+
