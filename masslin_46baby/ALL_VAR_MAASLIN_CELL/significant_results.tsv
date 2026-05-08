@@ -1,0 +1,5 @@
+"feature"	"metadata"	"value"	"name"	"coef"	"null_hypothesis"	"stderr"	"pval_individual"	"qval_individual"	"pval_joint"	"qval_joint"	"error"	"model"	"N"	"N_not_zero"
+"PC"	"Delivery_mode"	"C-section"	"Delivery_modeC-section"	2.36576777128828	0	0.675050374848188	0.00253086002207826	0.0911109607948173	0.00253086002207826	0.0911109607948173	NA	"abundance"	46	46
+"AC"	"Delivery_mode"	"C-section"	"Delivery_modeC-section"	3.46508411238547	0	1.09872475820226	0.00549317976392869	0.0988772357507165	0.00549317976392869	0.0988772357507165	NA	"abundance"	46	46
+"AC"	"Delivery_mode"	"C-section"	"Delivery_modeC-section"	NA	0	NA	NA	NA	0.00549317976392869	0.0988772357507165	"All logistic values are the same"	"prevalence"	46	46
+"PC"	"Delivery_mode"	"C-section"	"Delivery_modeC-section"	NA	0	NA	NA	NA	0.00253086002207826	0.0911109607948173	"All logistic values are the same"	"prevalence"	46	46
